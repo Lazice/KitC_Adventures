@@ -6,10 +6,10 @@ def error (options):
     else:
         print("Get lost.")
 
-print("""greetings")
+print("""greetings
 [Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]")
 [They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]")
-1: Oh hi Roulx.")
+1: Oh hi Roulx.
 2: Who are you?"
 3: [Points.] What are you holding?
 4: [Do nothing/walk away.]""")
