@@ -16,8 +16,6 @@ print("""greetings")
 
 Chat1 = input("Please input a number --> ") 
 
-
-
 if (Chat1 == 1):
         print("Roulx: Olive? How have you been?")
         print("1: Who's Olive?")
@@ -29,6 +27,5 @@ elif (Chat1 == 3):
 elif (Chat1 == 4): 
 
 else:
-    
     error()
 
