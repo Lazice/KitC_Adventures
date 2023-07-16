@@ -142,7 +142,7 @@ Roulx: “I like them. But am otherwise neutral to their existence. Why do you a
 
 [It’s about a 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]
 
-“I quite like this cafe,” [you says after greeting a waiter, asking for two seats inside.] “It’s usually pretty quiet, but the people I do meet here are incredibly kind. They also renovated recently, that’s why the outside looks so new.”
+“I quite like this cafe,” [you say after greeting a waiter, asking for two seats inside.] “It’s usually pretty quiet, but the people I do meet here are incredibly kind. They also renovated recently, that’s why the outside looks so new.”
 [Roulx curiously peers its head around the space,] 
 Roulx: “it does look cosy.” 
 [It does, it does. It heads to take a seat, one that’s orange against the wall.]
@@ -160,7 +160,7 @@ Roulx: “it does look cosy.”
 ['''[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]
 Roulx: “Alrighty.”
 [Ki leans, tapping a hand on the table mindlessly.]
-[You take a sip of the latte, served to you atop of a small black plate and along with a ceramic teaspoon.
+[You take a sip of the latte, served to you atop a small black plate and along with a ceramic teaspoon.
 Mmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]''',
     "Are you sure you don't want anything else?",
     "How is Hugo doing?",
