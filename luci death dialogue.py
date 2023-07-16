@@ -30,20 +30,23 @@ def allocate(dialogue, ans):
         if ans == 1:
             return 6
     elif dialogue == 6:
-        if ans == 2:
+        if ans == 1:
             return 7
     elif dialogue == 7:
-        if ans == 3:
+        if ans == 2:
             return 8
     elif dialogue == 8:
-        if ans == 2:
+        if ans == 3:
             return 9
     elif dialogue == 9:
-        if ans == 1:
+        if ans == 2:
             return 10
     elif dialogue == 10:
         if ans == 1:
             return 11
+    elif dialogue == 11:
+        if ans == 2:
+            return 12
     else:
         print("Answer doesn't exist yet :P.")
         return 0
@@ -93,7 +96,7 @@ Roulx: "Well, nice to meet you Autumn, though you already know my name."
 
 ['''[They look around, the store seems spacious, Roulx themself have new earrings and a shoulder tote bag of books and trinkets.] 
 Roulx: "I'm only here to buy things for my Hugo. We're stopping near by for sightseeing and business." 
-[They shrug. A swing and there some badges and trinkes clink against eachother on the surface of their bag.]''',
+[They shrug. A swing and there some badges and trinkets clink against each other on the surface of their bag.]''',
     '"I like your earrings."',
     '"Those badges look lovely. They suit you."',
     '"Hugo? Are they your partner?"',
