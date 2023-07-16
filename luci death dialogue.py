@@ -13,7 +13,7 @@ def allocate(original_id, ans):
         if id == chat[index][-1]:
             return index
     else:
-        print("\n" + "Answer doesn't exist yet :P. Id number: " + id)
+        print("\nAnswer doesn't exist yet :P. Id number: " + id)
         return 0
 
 input_msg = "Please input a number --> "
@@ -145,10 +145,9 @@ while not end_game:
     num = len(chat[chat_count]) - 1
     for i in range(1, num):
         print(str(i) + ". " + chat[chat_count][i])
-    print("")
     
     #request input from user
-    ans = input(input_msg)
+    ans = input("\n" + input_msg)
     while not (1 <= int(ans) < num):
         error(num - 1)
         ans = int(input(input_msg))
