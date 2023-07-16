@@ -46,14 +46,23 @@ Roulx: Olive? How have you been?
         ]
 
 while not end_game:
+    #print interaction
     print("\n" + chat[chat_count][0] + "\n")
+
+    #list options
     num = len(chat[chat_count])
     for i in range(1, num):
         print(str(i) + ". " + chat[chat_count][i])
     print("")
+    
+    #request input from user
     ans = input(input_msg)
     while not (1 <= int(ans) < num):
         error(num - 1)
         ans = int(input(input_msg))
+    
+    #print selected response
     print("\n" + str(ans) + ". " + chat[chat_count][int(ans)])
+    
+    #find next piece of interaction
     chat_count = allocate(chat_count, int(ans))
