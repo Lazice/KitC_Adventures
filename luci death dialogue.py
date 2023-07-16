@@ -13,7 +13,7 @@ def allocate(original_id, ans):
         if id == chat[index][-1]:
             return index
     else:
-        print("Answer doesn't exist yet :P. Id number: " + id)
+        print("\n Answer doesn't exist yet :P. Id number: " + id)
         return 0
 
 input_msg = "Please input a number --> "
