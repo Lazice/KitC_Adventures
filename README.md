@@ -1,7 +1,7 @@
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="Screenshot_20230712_100407_Crusaders.jpg" width="100%" height="60px">
- <source media="(prefers-color-scheme: light)" srcset="1B8EBF01-DC24-4FFB-8252-8E53EA232CB8.png">
- <img alt="the header image. purely for decoration." src="1B8EBF01-DC24-4FFB-8252-8E53EA232CB8.png">
+ <source media="(prefers-color-scheme: dark)" srcset="Screenshot_20230712_100407_Crusaders.jpg" width="100%" height="40px">
+ <source media="(prefers-color-scheme: light)" srcset="1B8EBF01-DC24-4FFB-8252-8E53EA232CB8.png"width="100%" height="40px">
+ <img alt="the header image. purely for decoration." src="1B8EBF01-DC24-4FFB-8252-8E53EA232CB8.png"width="100%" height="40px">
 </picture>
 
 # KitC_Adventures
