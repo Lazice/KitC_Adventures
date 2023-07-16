@@ -1,5 +1,5 @@
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="darkmode-image">
+ <source media="(prefers-color-scheme: dark)" srcset="Screenshot_20230712_100407_Crusaders.jpg">
  <source media="(prefers-color-scheme: light)" srcset="1B8EBF01-DC24-4FFB-8252-8E53EA232CB8.png">
  <img alt="the header image. purely for decoration." src="1B8EBF01-DC24-4FFB-8252-8E53EA232CB8.png">
 </picture>
