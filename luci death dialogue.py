@@ -222,31 +222,31 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
 
 ['''[They run after you. Though your crowded surroundings makes obstacles for you.]
 [After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]''',
-    '[Risk a glance back.]',
-    ['[Catch your breath.]', '2(1)33(1)1'],
+    ['[Risk a glance back.]', ('2(1)33(1)1(1)', '2(1)33(1)1(2)'), (0.5, 0.5)],
+    ['[Catch your breath.]', ('2(1)33(1)1(1)', '2(1)33(1)1(2)'), (0.5, 0.5)],
     '[Keep running. Don\'t look back.]',
     '2(1)33(1)'],
 
 ['''[Guess what mfer. Out of the lone sounds of the city noise, you hear in haste. Running.]''',
     '[Run.]',
     '[Just give up already. You can\'t hide.]',
-    '2(1)33(1)1'],
+    '2(1)33(1)1(1)'],
 
 ['''[Are you sure you're gonna keep on running? Buddy. Do you even know who you're running up against?... Well, you take off again. But they sound like they're catching up. Are you seriously gonna?]''',
     '[Give. Up.]',
     '[Keep. Running.]',
-    '2(1)33(1)11'],
+    '2(1)33(1)1(1)1'],
 
 ['''[... It's behind you. It's behind you. It's behind you. It's.]''',
     '[Run.]',
     '[Freeze.]',
-    '2(1)33(1)112'],
+    '2(1)33(1)1(1)12'],
 
 ['''Roulx: "hmph-" 
 [Something, *someone* fell. The footsteps have stopped.]''',
     ['[Run.]', '02'],
     '[Turn.]',
-    '2(1)33(1)1121'],
+    '2(1)33(1)1(1)121'],
 
 ['''Roulx: "..." 
 [You keep on running. There's nothing making indication of them still chasing you.]''',
@@ -263,8 +263,60 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     ['["Who\'s Olive?"]', "#"],
     '021111'],
 
+['''[You seemed to have lost them... You find yourself upon the sidewalks of a street you don't recognise. Red brick walls censored with graffiti, cig buds lay trash to the exposed roots of trees.]''',
+    '',
+    '2(1)33(1)1(2)'],
 
+['''[Upon your vision, your dear friend falls collapsed on the cement. Not from being tripped, no, they're better than that.]''',
+    '[Wait for a sign of movement.]',
+    ['[Run away.]', '02'],
+    "...I'm. Sorry. ...",
+    '2(1)33(1)1(1)1212'],
 
+['''[There are twitches in their shoulder. White hair splayed on the ground, they do eventually make to slowly sit up.]
+[They simply...]
+[Look at you.]
+[You can't tell their expression. Is it confusion? Is it coldness? Is it frustration?]''',
+    '[Hold your silence.]',
+    '[Offer a hand.]',
+    '"...I\'m. So sorry. ..."',
+    '2(1)33(1)1(1)12121'],
+
+['''[Their response is slow. Their own hand, though gloved, reaches up to take yours.]''',
+    '"Are you hurt?"',
+    '"Sorry I ran away. I didn\'t recognise you."',
+    '"..."',
+    '2(1)33(1)1(1)121212'],
+
+['''[You help them up.]
+Roulx: "I'm alright." 
+[They take a stance in front of you. Slower breaths.] 
+Roulx: "Are you,, are you alright?"''',
+    '"Yes. I\'m alright."',
+    '2(1)33(1)1(1)1212121'],
+
+['''[They breathe. Inhale, exhale. But then take themself to gain poise.]
+Roulx: "How have you been, Olive?"''',
+    '"...Who\'s Olive?"',
+    '2(1)33(1)1(1)12121211'],
+
+['''[You help them up.]
+Roulx: "That,, that's alright." 
+[They look away to the side.] 
+"What... How have you been, Olive?"''',
+    '"...Who\'s Olive?"',
+    '2(1)33(1)1(1)1212122']
+
+['''[The doors of the mall closes behind you,, seconds later than you would imagine. Hmm. That’s odd.]''',
+    '[Run.]',
+    '[Turn around.]',
+    '"...Hello, Roulx."',
+    '2(1)33(2)'],
+
+['''[...You feel someone tapping on your shoulder in your half stumbling stroll. Who might that be?]''',
+    '[Freeze.]',
+    '"...Hello, Roulx."',
+    '2(1)33(3)']
 ]
 
 while not end_game:
