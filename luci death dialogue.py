@@ -23,13 +23,13 @@ def roll(original_id):
         return ''.join(random.choices(original_id[1], original_id[2]))
     else:
         dice_value = random.randint(1, 20)
-        print("rolled dice: " + dice_value)
+        print("rolled dice: " + str(dice_value))
         dice_percentage = dice_value/20
         counter = 0
         for value in original_id[2]:
             dice_percentage -= value
             if dice_percentage <= 0:
-                return print(original_id[1][counter])
+                return original_id[1][counter]
             counter += 1
 
 def search_for_id(id):
