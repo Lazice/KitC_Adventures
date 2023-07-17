@@ -16,9 +16,7 @@ def allocate(original_id, ans):
         return str(original_id) + str(ans)
     
 def roll(original_id):
-    if original_id[1] == "#":
-        exit()
-    elif len(original_id[1]) == 2:
+    if len(original_id[1]) == 2:
         print("coin toss")
         return ''.join(random.choices(original_id[1], original_id[2]))
     else:
@@ -33,6 +31,8 @@ def roll(original_id):
             counter += 1
 
 def search_for_id(id):
+    if id == "#":
+        exit()
     for index in range(len(chat)):
         if id == chat[index][-1]:
             return index
@@ -42,6 +42,7 @@ def search_for_id(id):
 input_msg = "Please input a number --> "
 end_game = False
 chat_count = 0
+location = "mall"
 
 chat = [
 ['''"greetings"
@@ -136,7 +137,7 @@ Roulx: “I like them. But am otherwise neutral to their existence. Why do you a
 [Ki strolls slightly to your right, only a step behind.]
 “Nice. I think you wouldn’t mind it there then. Come with me.”
 
-[It’s about a 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]
+[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]
 
 “I quite like this cafe,” [you say after greeting a waiter, asking for two seats inside.] “It’s usually pretty quiet, but the people I do meet here are incredibly kind. They also renovated recently, that’s why the outside looks so new.”
 [Roulx curiously peers its head around the space,] 
@@ -239,7 +240,7 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     '[Crane your head over the railing to get a better look.]',
     '2(2)222221'],
 
-['''[They run after you. Though your crowded surroundings makes obstacles for you.]
+['''[They run after you. Though your crowded surroundings make obstacles for you.]
 [After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]''',
     ['[Risk a glance back.]', ('2(1)33(1)1(1)', '2(1)33(1)1(2)'), (0.5, 0.5)],
     ['[Catch your breath.]', ('2(1)33(1)1(1)', '2(1)33(1)1(2)'), (0.5, 0.5)],
