@@ -6,22 +6,23 @@ def error(options):
 
 def allocate(original_id, ans):
     if original_id == '0':
-        id = str(ans)
+        return str(ans)
     else:
-        id = str(original_id) + str(ans)
-    for index in range(len(chat)):
-        if id == chat[index][-1]:
-            return index
-    else:
-        print("\nAnswer doesn't exist yet :P. Id number: " + id)
-        return 0
+        return str(original_id) + str(ans)
     
-def roll(id):
-    if len(id[1]) == 2:
+def roll(original_id):
+    if len(original_id[1]) == 2:
         print("coin toss")
     else:
         print("dice")
-    return ''.join(random.choices(id[1], id[2]))
+    return ''.join(random.choices(original_id[1], original_id[2]))
+
+def search_for_id(id):
+    for index in range(len(chat)):
+        if id == chat[index][-1]:
+            return index
+    print("\nAnswer doesn't exist yet :P. Id number: " + id)
+    return 0
 
 input_msg = "Please input a number --> "
 end_game = False
@@ -32,7 +33,7 @@ chat = [
 [Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]
 [They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]''',
     '[Pretend not to notice.]',
-    '[Begin to walk away.]',
+    ['[Begin to walk away.]', ('01', '2'), (0.5, 0.5)],
     '"... Roulx?"', '0'],
 
 ['''Ki seemed to shiver at that. Barely noticeable, but you've known kime for long enough.]
@@ -147,7 +148,7 @@ Mmm. Cold. There's just something inexplicably satisfying about having a cold dr
 [They attempt to walk up to your side.]''',
     '[Freeze.]',
     '[Turn to them.]',
-    '[Keep walking. Deep breaths.]', ['2', ('01', '2'), (0.5, 0.5)]]
+    '[Keep walking. Deep breaths.]', '2']
 ]
 
 while not end_game:
@@ -157,7 +158,7 @@ while not end_game:
     #list options
     num = len(chat[chat_count]) - 1
     for i in range(1, num):
-        print(str(i) + ". " + chat[chat_count][i])
+        print(str(i) + ". " + chat[chat_count][i][0])
     
     #request input from user
     ans = input("\n" + input_msg)
@@ -166,10 +167,12 @@ while not end_game:
         ans = int(input(input_msg))
     
     #print selected response
-    print("\n" + str(ans) + ". " + chat[chat_count][int(ans)])
+    print("\n" + str(ans) + ". " + chat[chat_count][int(ans)][0])
     
     #find next piece of interaction
-    chat_count = allocate(chat[chat_count][-1], int(ans))
-    
-    if len(chat[chat_count][-1]) != 1:
-        chat_count = roll(chat[chat_count][-1])
+    if len(chat[chat_count][int(ans)]) == 1:
+        id = allocate(chat[chat_count][-1], int(ans))
+    else:
+        id = roll(chat[chat_count][int(ans)])
+    print(id)
+    chat_count = search_for_id(id)
