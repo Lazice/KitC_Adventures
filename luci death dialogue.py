@@ -13,7 +13,9 @@ def allocate(original_id, ans):
         return str(original_id) + str(ans)
     
 def roll(original_id):
-    if len(original_id[1]) == 2:
+    if original_id[1] == "#":
+        exit()
+    elif len(original_id[1]) == 2:
         print("coin toss")
     else:
         print("dice")
@@ -163,7 +165,7 @@ Mmm. Cold. There's just something inexplicably satisfying about having a cold dr
 [They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
     '[Give up.]',
     ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
-    '[Break into a run.]',
+    '[Break into a run. (Roll for running.), ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)]',
     '2(1)3'],
 
 ['''[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] 
@@ -171,7 +173,7 @@ Roulx: "Hey."
 [...]''',
     '[Feign innocence.]',
     '[Freeze.]',
-    '[Break into a run. (Roll for running)]',
+    '[Break into a run. (Roll for running.), ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)]',
     '2(1)32'],
 
 ['''[They no longer follow. But you can still feel their gaze on you for a little longer, before the gaze fades.]''',
@@ -191,8 +193,8 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     ['Revert to previous move.', '2(2)2'],
     '01'],
 
-['''Yes, this is true. Roulx, a former ally that you knew, is still in the mall. You have no idea what they are doing in there, nor how long they plan to stay.
-...''',
+['''[Yes, this is true. Roulx, a former ally that you knew, is still in the mall. You have no idea what they are doing in there, nor how long they plan to stay.
+...]''',
     ['[Walk away. Try to forget.]', '01'],
     '[Return to the mall.]',
     '2(2)22'],
@@ -200,7 +202,68 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
 ['''[Great. Now what are you going to do?]''',
     '[Walk up to them. Greet them like any normal person.]',
     '[Observe their movements.]',
-    '2(2)222']
+    '2(2)222'],
+
+['''[Roulx is only a block away from its original spot. Now having lost its original target, it is staring over metal railings to the floor below...]''',
+    '[Sneak around on the same floor.]',
+    '[Go up the escalator to observe them from above.]',
+    '2(2)2222'],
+
+['''[You make your way up the escalator. Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]''',
+    '["I wonder what they are buying."]',
+    '["I wonder why they\'re spending so luxuriously."]',
+    '2(2)22222'],
+
+['''[How curious.. What do they have... Clothes, jewels, tools... As you inspect the items abound, you don't forget who *you* are looking out for. Roulx has found their way into a tools repair workshop.]''',
+    '[Idly wonder what they are buying.]',
+    '[Creep back downstairs.]',
+    '[Crane your head over the railing to get a better look.]',
+    '2(2)222221'],
+
+['''[They run after you. Though your crowded surroundings makes obstacles for you.]
+[After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]''',
+    '[Risk a glance back.]',
+    ['[Catch your breath.]', '2(1)33(1)1'],
+    '[Keep running. Don\'t look back.]',
+    '2(1)33(1)'],
+
+['''[Guess what mfer. Out of the lone sounds of the city noise, you hear in haste. Running.]''',
+    '[Run.]',
+    '[Just give up already. You can\'t hide.]',
+    '2(1)33(1)1'],
+
+['''[Are you sure you're gonna keep on running? Buddy. Do you even know who you're running up against?... Well, you take off again. But they sound like they're catching up. Are you seriously gonna?]''',
+    '[Give. Up.]',
+    '[Keep. Running.]',
+    '2(1)33(1)11'],
+
+['''[... It's behind you. It's behind you. It's behind you. It's.]''',
+    '[Run.]',
+    '[Freeze.]',
+    '2(1)33(1)112'],
+
+['''Roulx: "hmph-" 
+[Something, *someone* fell. The footsteps have stopped.]''',
+    ['[Run.]', '02'],
+    '[Turn.]',
+    '2(1)33(1)1121'],
+
+['''Roulx: "..." 
+[You keep on running. There's nothing making indication of them still chasing you.]''',
+    '[Run.]',
+    '02'],
+
+['', '[Run.]', '021'],
+
+['', '[Run.]', '0211'],
+
+['', '[Run.]', '02111'],
+
+['''[Pant, pant, pant.   '...  You can't... You can't keep doing this to yourself, Olive. ...']''',
+    ['["Who\'s Olive?"]', "#"],
+    '021111'],
+
+
 
 ]
 
