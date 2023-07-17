@@ -7,7 +7,6 @@ def error(options):
         print("... There is literally only one option.")
 
 def allocate(original_id, ans):
-    if len(original_id)
     if original_id == '0':
         return str(ans)
     else:
@@ -212,7 +211,7 @@ while not end_game:
     #list options
     num = len(chat[chat_count]) - 1
     for i in range(1, num):
-        if len(chat[chat_count][i]) == 3:
+        if len(chat[chat_count][i]) == 3  or len(chat[chat_count][i]) == 2:
             print(str(i) + ". " + chat[chat_count][i][0])
         else:
             print(str(i) + ". " + chat[chat_count][i])
