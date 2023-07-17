@@ -1,3 +1,5 @@
+import random
+
 def error(options):
     if (options != 1):
         print(f"... There are only {options}.")
@@ -158,10 +160,10 @@ while not end_game:
     #list options
     num = len(chat[chat_count]) - 1
     for i in range(1, num):
-        if len(chat[chat_count][i]) == 1:
-            print(str(i) + ". " + chat[chat_count][i])
-        else:
+        if len(chat[chat_count][i]) == 3:
             print(str(i) + ". " + chat[chat_count][i][0])
+        else:
+            print(str(i) + ". " + chat[chat_count][i])
     
     #request input from user
     ans = input("\n" + input_msg)
@@ -170,12 +172,12 @@ while not end_game:
         ans = int(input(input_msg))
     
     #print selected response
-    print("\n" + str(ans) + ". " + chat[chat_count][int(ans)][0])
-    
-    #find next piece of interaction
-    if len(chat[chat_count][int(ans)]) == 1:
-        id = allocate(chat[chat_count][-1], int(ans))
-    else:
+    if len(chat[chat_count][int(ans)]) == 3:
+        print(str(ans) + ". " + chat[chat_count][int(ans)][0])
         id = roll(chat[chat_count][int(ans)])
+    else:
+        print(str(ans) + ". " + chat[chat_count][int(ans)])
+        id = allocate(chat[chat_count][-1], int(ans))
+    
     print(id)
     chat_count = search_for_id(id)
