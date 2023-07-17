@@ -15,6 +15,13 @@ def allocate(original_id, ans):
     else:
         print("\nAnswer doesn't exist yet :P. Id number: " + id)
         return 0
+    
+def roll(id):
+    if len(id[1]) == 2:
+        print("coin toss")
+    else:
+        print("dice")
+    return ''.join(random.choices(id[1], id[2]))
 
 input_msg = "Please input a number --> "
 end_game = False
@@ -134,7 +141,13 @@ Roulx: “Alrighty.”
 Mmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]''',
     "Are you sure you don't want anything else?",
     "How is Hugo doing?",
-    "Yeah. So, what were we talking about before?", '311121123212']
+    "Yeah. So, what were we talking about before?", '311121123212'],
+
+['''Roulx: "Olive Stanford."
+[They attempt to walk up to your side.]''',
+    '[Freeze.]',
+    '[Turn to them.]',
+    '[Keep walking. Deep breaths.]', ['2', ('01', '2'), (0.5, 0.5)]]
 ]
 
 while not end_game:
@@ -157,3 +170,6 @@ while not end_game:
     
     #find next piece of interaction
     chat_count = allocate(chat[chat_count][-1], int(ans))
+    
+    if len(chat[chat_count][-1]) != 1:
+        chat_count = roll(chat[chat_count][-1])
