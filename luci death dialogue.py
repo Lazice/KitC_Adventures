@@ -173,7 +173,7 @@ Roulx: "Hey."
 [...]''',
     '[Feign innocence.]',
     '[Freeze.]',
-    ['[Break into a run. (Roll for running.)]', ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)'],
+    ['[Break into a run. (Roll for running.)]', ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)],
     '2(1)32'],
 
 ['''[They no longer follow. But you can still feel their gaze on you for a little longer, before the gaze fades.]''',
