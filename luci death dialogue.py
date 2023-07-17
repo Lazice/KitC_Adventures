@@ -154,6 +154,14 @@ Mmm. Cold. There's just something inexplicably satisfying about having a cold dr
     "Yeah. So, what were we talking about before?",
     '311121123212'],
 
+['''Roulx: "He's been doing fine. It wouldn't've been a long time since he'd left. But I'll say that he's doing fine.",
+[It takes its tastes of the water. Lukewarm.] 
+Roulx: "What did you think of him?"''',
+    "He certainly lightens the room with his presence. Charismatic, might be the word. They're a good fit for you, I think. Is he good to you?",
+    "Honestly I don't think I know them as well as I could have, but they seemed like a good person. Friendly, easy to talk to. What do *you* think of him?",
+    "He's a time traveller, right? We talked a few times, he told me about some of his journeys. There must be so much going on out there, I can't possibly imagine. Do you two travel often?",
+    '3111211232122'],
+
 ['''Roulx: "Olive Stanford."
 [They attempt to walk up to your side.]''',
     '[Freeze.]',
@@ -308,7 +316,7 @@ Roulx: "That,, that's alright."
     '2(1)33(1)1(1)1212122'],
 
 ['''[The doors of the mall closes behind you,, seconds later than you would imagine. Hmm. That’s odd.]''',
-    '[Run.]',
+    ['[Run.]', '2(1)33(1)'],
     '[Turn around.]',
     '"...Hello, Roulx."',
     '2(1)33(2)'],
