@@ -165,7 +165,7 @@ Mmm. Cold. There's just something inexplicably satisfying about having a cold dr
 [They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
     '[Give up.]',
     ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
-    '[Break into a run. (Roll for running.), ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)]',
+    ['[Break into a run. (Roll for running.)]', ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)],
     '2(1)3'],
 
 ['''[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] 
@@ -173,7 +173,7 @@ Roulx: "Hey."
 [...]''',
     '[Feign innocence.]',
     '[Freeze.]',
-    '[Break into a run. (Roll for running.), ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)]',
+    ['[Break into a run. (Roll for running.)]', ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)'],
     '2(1)32'],
 
 ['''[They no longer follow. But you can still feel their gaze on you for a little longer, before the gaze fades.]''',
@@ -305,7 +305,7 @@ Roulx: "That,, that's alright."
 [They look away to the side.] 
 "What... How have you been, Olive?"''',
     '"...Who\'s Olive?"',
-    '2(1)33(1)1(1)1212122']
+    '2(1)33(1)1(1)1212122'],
 
 ['''[The doors of the mall closes behind you,, seconds later than you would imagine. Hmm. That’s odd.]''',
     '[Run.]',
