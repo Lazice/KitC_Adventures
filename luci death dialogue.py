@@ -7,6 +7,7 @@ def error(options):
         print("... There is literally only one option.")
 
 def allocate(original_id, ans):
+    if len(original_id)
     if original_id == '0':
         return str(ans)
     else:
@@ -35,27 +36,31 @@ chat = [
 [Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]
 [They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]''',
     '[Pretend not to notice.]',
-    ['[Begin to walk away.]', ('01', '2'), (0.5, 0.5)],
-    '"... Roulx?"', '0'],
+    ['[Begin to walk away.]', ('2(1)', '2(2)'), (0.5, 0.5)],
+    '"... Roulx?"',
+    '0'],
 
 ['''Ki seemed to shiver at that. Barely noticeable, but you've known kime for long enough.]
 Roulx: "Olive? You're here!"
 [They smile, relieved as they comprehend your presence.]''',
     '[Smile back.]',
     '[Leave. This was a bad idea.]',
-    '"..."', '3'],
+    '"..."',
+    '3'],
 
 ['''[You smile back at them. They are your friend. Smiling is the polite thing to do.]
 Roulx: "How have you been?"
 [It stands, the two its hands gloved, clasped in front of itself idly.]
 "..."''',
-    '"...Roulx. I\'m not Olive."', '31'],
+    '"...Roulx. I\'m not Olive."',
+    '31'],
 
 ['''[Their smile lowers, but doesn't disappear as they tilt their head.]
 Roulx: "What do you mean? ... You look just like him?"
 "Autumn. My name is Autumn. You must have confused me for someone else."
 Roulx: "Autumn? You're Autumn?.. Do you,, well you don't but... Do you know of someone by the name Olive Stanford?"''',
-    '"No. I do not."', '311'],
+    '"No. I do not."',
+    '311'],
 
 ['''Roulx: "...Alright..."
 [It shifts in its stance. Looking down to the side... It wears the same white suit and outfit from the very before, yellow bow tie sitting in the exact same.] 
@@ -135,7 +140,8 @@ Roulx: “it does look cosy.”
 [Its bag remains on its shoulder, the back of its hand visible on the wooden table. Its politeness still unchanged.]''',
     '"Alright. Maybe I\'ll just have that too."',
     '"I\'ll get a latte. Tends to be the usual choice."',
-    '[Smile.] "Please make yourself comfortable."', '31112112321'],
+    '[Smile.] "Please make yourself comfortable."',
+    '31112112321'],
 
 ['''[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]
 Roulx: “Alrighty.”
@@ -144,13 +150,59 @@ Roulx: “Alrighty.”
 Mmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]''',
     "Are you sure you don't want anything else?",
     "How is Hugo doing?",
-    "Yeah. So, what were we talking about before?", '311121123212'],
+    "Yeah. So, what were we talking about before?",
+    '311121123212'],
 
 ['''Roulx: "Olive Stanford."
 [They attempt to walk up to your side.]''',
     '[Freeze.]',
     '[Turn to them.]',
-    '[Keep walking. Deep breaths.]', '2']
+    ['[Keep walking. Deep breaths.]', ('2(1)3', '2(2)'), (1/3, 2/3)], 
+    '2(1)'],
+
+['''Roulx: "Hey!" 
+[They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
+    '[Give up.]',
+    ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
+    '[Break into a run.]',
+    '2(1)3'],
+
+['''[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] 
+Roulx: "Hey."
+[...]''',
+    '[Feign innocence.]',
+    '[Freeze.]',
+    '[Break into a run. (Roll for running)]',
+    '2(1)32'],
+
+['''[They no longer follow. But you can still feel their gaze on you for a little longer, before the gaze fades.]''',
+    '[Risk a glance back.]',
+    '[Keep walking. You\'re almost out.]', 
+    '2(2)'],
+
+['''[You are out of the mall. Cars pass by on the road in front of you.
+You should be safe now.]''',
+    ['[Keep walking.]', '01'],
+    '[..."Roulx was in there."]', 
+    '2(2)2'],
+
+['''Ending 1.   Strangers in the End.
+Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
+    ['Restart.', '0'],
+    ['Revert to previous move.', '2(2)2'],
+    '01'],
+
+['''Yes, this is true. Roulx, a former ally that you knew, is still in the mall. You have no idea what they are doing in there, nor how long they plan to stay.
+...''',
+    ['[Walk away. Try to forget.]', '01'],
+    '[Return to the mall.]',
+    '2(2)22'],
+
+['''[Great. Now what are you going to do?]''',
+    '[Walk up to them. Greet them like any normal person.]',
+    '[Observe their movements.]',
+    '2(2)222']
+
 ]
 
 while not end_game:
@@ -175,6 +227,8 @@ while not end_game:
     if len(chat[chat_count][int(ans)]) == 3:
         print(str(ans) + ". " + chat[chat_count][int(ans)][0])
         id = roll(chat[chat_count][int(ans)])
+    else if len(chat[chat_count][int(ans)]) == 2:
+        id = chat[chat_count][int(ans)][1]
     else:
         print(str(ans) + ". " + chat[chat_count][int(ans)])
         id = allocate(chat[chat_count][-1], int(ans))
