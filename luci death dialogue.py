@@ -158,7 +158,10 @@ while not end_game:
     #list options
     num = len(chat[chat_count]) - 1
     for i in range(1, num):
-        print(str(i) + ". " + chat[chat_count][i][0])
+        if len(chat[chat_count][i]) == 1:
+            print(str(i) + ". " + chat[chat_count][i])
+        else:
+            print(str(i) + ". " + chat[chat_count][i][0])
     
     #request input from user
     ans = input("\n" + input_msg)
