@@ -33,7 +33,7 @@ end_game = False
 chat_count = 0
 
 chat = [
-['''greetings
+['''"greetings"
 [Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]
 [They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]''',
     '[Pretend not to notice.]',
@@ -41,7 +41,7 @@ chat = [
     '"... Roulx?"',
     '0'],
 
-['''Ki seemed to shiver at that. Barely noticeable, but you've known kime for long enough.]
+['''[Ki seemed to shiver at that. Barely noticeable, but you've known kime for long enough.]
 Roulx: "Olive? You're here!"
 [They smile, relieved as they comprehend your presence.]''',
     '[Smile back.]',
