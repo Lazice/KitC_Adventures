@@ -6,6 +6,9 @@ def error(options):
     else:
         print("... There is literally only one option.")
 
+def reset_memory():
+    return {'Hugo': 0, 'chase': False}
+
 def allocate(original_id, ans):
     if original_id == '0':
         return str(ans)
@@ -17,9 +20,17 @@ def roll(original_id):
         exit()
     elif len(original_id[1]) == 2:
         print("coin toss")
+        return ''.join(random.choices(original_id[1], original_id[2]))
     else:
-        print("dice")
-    return ''.join(random.choices(original_id[1], original_id[2]))
+        dice_value = random.randint(1, 20)
+        print("rolled dice: " + dice_value)
+        dice_percentage = dice_value/20
+        counter = 0
+        for value in original_id[2]:
+            dice_percentage -= value
+            if dice_percentage <= 0:
+                return print(original_id[1][counter])
+            counter += 1
 
 def search_for_id(id):
     for index in range(len(chat)):
@@ -108,7 +119,7 @@ Roulx: "How have you been? It's been a long time since we'd last talked."
 "It certainly has."''',
     '"There\'ve been a lot of changes, but recently it\'s been peaceful. I\'m doing alright."',
     '"I couldn\'t have asked for much more."',
-    '"Actually... Could we talk somewhere else? I\'m not a big fan of crowded areas."',
+    ['"Actually... Could we talk somewhere else? I\'m not a big fan of crowded areas."', '31113'],
     '31112112'],
 
 ['''Roulx: "Sure of course. It's been sometime since we properly talked. I don't enjoy crowded places either."
@@ -118,7 +129,7 @@ Roulx: "you lead the way."
     '[You head to a park.]',
     '[You head to a local cafe.]',
     '[You head to a library in the mall.]',
-    '311121123'],
+    '31113'],
 
 ['''“..How do you feel about birds, Roulx?”
 Roulx: “I like them. But am otherwise neutral to their existence. Why do you ask?” 
@@ -135,14 +146,14 @@ Roulx: “it does look cosy.”
     '"Do you want to order anything? The drinks here are nice."',
     '"It is. I come here sometimes just for some fresh air, listen to an audiobook or something. Or to meet up with people on occasion."',
     '"Yeah. So, what were we talking about before?"',
-    '3111211232'],
+    '311132'],
 
 ['''Roulx: “I don’t think I’ll have anything. A cup of water, maybe.”
 [Its bag remains on its shoulder, the back of its hand visible on the wooden table. Its politeness still unchanged.]''',
     '"Alright. Maybe I\'ll just have that too."',
     '"I\'ll get a latte. Tends to be the usual choice."',
     '[Smile.] "Please make yourself comfortable."',
-    '31112112321'],
+    '3111321'],
 
 ['''[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]
 Roulx: “Alrighty.”
@@ -152,7 +163,7 @@ Mmm. Cold. There's just something inexplicably satisfying about having a cold dr
     "Are you sure you don't want anything else?",
     "How is Hugo doing?",
     "Yeah. So, what were we talking about before?",
-    '311121123212'],
+    '31113212'],
 
 ['''Roulx: "He's been doing fine. It wouldn't've been a long time since he'd left. But I'll say that he's doing fine.",
 [It takes its tastes of the water. Lukewarm.] 
@@ -160,7 +171,7 @@ Roulx: "What did you think of him?"''',
     "He certainly lightens the room with his presence. Charismatic, might be the word. They're a good fit for you, I think. Is he good to you?",
     "Honestly I don't think I know them as well as I could have, but they seemed like a good person. Friendly, easy to talk to. What do *you* think of him?",
     "He's a time traveller, right? We talked a few times, he told me about some of his journeys. There must be so much going on out there, I can't possibly imagine. Do you two travel often?",
-    '3111211232122'],
+    '311132122'],
 
 ['''Roulx: "Olive Stanford."
 [They attempt to walk up to your side.]''',
@@ -173,7 +184,7 @@ Roulx: "What did you think of him?"''',
 [They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
     '[Give up.]',
     ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
-    ['[Break into a run. (Roll for running.)]', ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)],
+    ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
     '2(1)3'],
 
 ['''[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] 
@@ -181,7 +192,7 @@ Roulx: "Hey."
 [...]''',
     '[Feign innocence.]',
     '[Freeze.]',
-    ['[Break into a run. (Roll for running.)]', ('2(1)33(1)', '2(1)33(2)', '2(1)33(3)'), (1/2, 1/4, 1/4)],
+    ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
     '2(1)32'],
 
 ['''[They no longer follow. But you can still feel their gaze on you for a little longer, before the gaze fades.]''',
@@ -271,8 +282,10 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     ['["Who\'s Olive?"]', "#"],
     '021111'],
 
-['''[You seemed to have lost them... You find yourself upon the sidewalks of a street you don't recognise. Red brick walls censored with graffiti, cig buds lay trash to the exposed roots of trees.]''',
-    '',
+['''[You seemed to have lost them... You find yourself upon the sidewalks of a street you don't recognise. Red brick walls censored with graffiti, cig buds lay trash to the exposed roots of trees.]
+[Well damn how are you gonna get back now?...]''',
+    '[Find current location on phone.]',
+    '[Try to retrace steps back to the mall.]',
     '2(1)33(1)1(2)'],
 
 ['''[Upon your vision, your dear friend falls collapsed on the cement. Not from being tripped, no, they're better than that.]''',
@@ -327,6 +340,7 @@ Roulx: "That,, that's alright."
     '2(1)33(3)']
 ]
 
+memory = reset_memory()
 while not end_game:
     #print interaction
     print("\n" + chat[chat_count][0] + "\n")
