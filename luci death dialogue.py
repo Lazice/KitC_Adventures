@@ -12,9 +12,10 @@ def reset_memory():
 def modify_memory(id):
     if id == '311132':
         memory['location'] = 'cafe'
-    if id == '3111211':
+        print('memory modified')
+    elif id == '3111211':
         memory['wedding'] = True
-    print('memory modified')
+        print('memory modified')
 
 def allocate(original_id, ans):
     if original_id == '0':
