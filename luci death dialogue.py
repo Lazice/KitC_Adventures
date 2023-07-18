@@ -7,7 +7,14 @@ def error(options):
         print("... There is literally only one option.")
 
 def reset_memory():
-    return {'Hugo': 0, 'chase': False}
+    return {'Hugo': 0, 'wedding': False, 'chase': False, 'location': 'mall'}
+
+def modify_memory(id):
+    if id == '311132':
+        memory['location'] = 'cafe'
+    if id == '3111211':
+        memory['wedding'] = True
+    print('memory modified')
 
 def allocate(original_id, ans):
     if original_id == '0':
@@ -42,7 +49,6 @@ def search_for_id(id):
 input_msg = "Please input a number --> "
 end_game = False
 chat_count = 0
-location = "mall"
 
 chat = [
 ['''"greetings"
@@ -207,7 +213,7 @@ You should be safe now.]''',
     '[..."Roulx was in there."]', 
     '2(2)2'],
 
-['''Ending 1.   Strangers in the End.
+['''Ending 1.  Strangers in the End.
 Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     ['Restart.', '0'],
     ['Revert to previous move.', '2(2)2'],
@@ -372,3 +378,4 @@ while not end_game:
     
     print(id)
     chat_count = search_for_id(id)
+    modify_memory(id)
