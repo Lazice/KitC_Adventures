@@ -1,4 +1,5 @@
 import random
+import winsound
 
 def error(options):
     if (options != 1):
@@ -25,9 +26,11 @@ def allocate(original_id, ans):
     
 def roll(original_id):
     if len(original_id[1]) == 2:
+        winsound.PlaySound("coin-toss.wav")
         print("coin toss")
         return ''.join(random.choices(original_id[1], original_id[2]))
     else:
+        winsound.PlaySound("dice-roll.wav")
         dice_value = random.randint(1, 20)
         print("rolled dice: " + str(dice_value))
         dice_percentage = dice_value/20
