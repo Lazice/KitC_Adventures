@@ -54,6 +54,9 @@ input_msg = "Please input a number --> "
 end_game = False
 chat_count = 0
 
+stalk1 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
+stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
+
 chat = [
 ['''"greetings"
 [Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]
@@ -299,6 +302,11 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     '[Try to retrace steps back to the mall.]',
     '2(1)33(1)1(2)'],
 
+['''[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]
+[... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]''',
+
+    '2(1)33(1)1(2)']
+
 ['''[Upon your vision, your dear friend falls collapsed on the cement. Not from being tripped, no, they're better than that.]''',
     '[Wait for a sign of movement.]',
     ['[Run away.]', '02'],
@@ -348,7 +356,31 @@ Roulx: "That,, that's alright."
 ['''[...You feel someone tapping on your shoulder in your half stumbling stroll. Who might that be?]''',
     '[Freeze.]',
     '"...Hello, Roulx."',
-    '2(1)33(3)']
+    '2(1)33(3)'],
+
+['''[You ponder what they might be buying, staying in spot. Roulx is inside the tools repair workshop.]
+[Roulx... Usually utilises tools that are more ordinary for their work. It's rather peculiar to see them ponder items that,, by what you know, seldom in their standard.]''',
+    ['[Creep back downstairs.]', '2(2)2222212'],
+    ['[Crane your head over the railing to get a better look.]', '2(2)2222213']
+    '2(2)2222211'],
+
+[f'''[You crane your head over the railings, they feel cold under your hands.]
+{stalk1}''',
+    '[Wait around.]',
+    '[Listen in on their conversation.]',
+    ['[Creep back downstairs.]', '2(2)2222213'],
+    '2(2)2222213'],
+
+[f'''[You creep back downstairs.]
+{stalk_downstairs}''',
+    '[Peer into the shop they\'re at.]',
+    '[Go talk to them after all.]',
+    '2(2)2222212'],
+
+[f'''{stalk_downstairs}''',
+    '[Peer into the shop they\'re at.]',
+    '[Go talk to them after all.]',
+    '2(2)22221']
 ]
 
 memory = reset_memory()
