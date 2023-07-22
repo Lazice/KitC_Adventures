@@ -414,7 +414,16 @@ Roulx: “…”
     '[Stare back.]',
     ['"...Roulx?"', '2(1)31'],
     '"...Hello, Roulx."'
-    '2(1)1']
+    '2(1)1'],
+
+['''[Oh a staring contest?…]
+[…]
+[…]
+[…]
+[Their face scrunches up uncomfortably.]''',
+    '[You\'re on.]',
+    ['"...Roulx?"', '2(1)31'],
+    '2(1)11']
 
 ]
 
