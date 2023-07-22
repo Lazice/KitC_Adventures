@@ -194,7 +194,7 @@ Roulx: "What did you think of him?"''',
 
 ['''Roulx: "Olive Stanford."
 [They attempt to walk up to your side.]''',
-    ['[Freeze.]', '2(1)1'],
+    '[Freeze.]',
     '[Turn to them.]',
     ['[Keep walking. Deep breaths.]', ('2(1)3', '2(2)'), (1/3, 2/3)], 
     '2(1)'],
@@ -210,7 +210,7 @@ Roulx: "What did you think of him?"''',
 Roulx: "Hey."
 [...]''',
     ['[Feign innocence.]', '2(1)31'],
-    '[Freeze.]',
+    ['[Freeze.]', '2(1)1'],
     ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
     '2(1)32'],
 
@@ -405,7 +405,7 @@ Roulx: “O-Oh.”
 Roulx: “Ah… My apologies. I.. Must’ve mistaken you for a friend of mine.” 
 [Friend.]''',
     ['"That\'s alright. Mistakes happen all the time."', '3111'],
-    '2(2)22211'],
+    '2(1)311'],
 
 ['''[You go very, very still. As though that will help you now, Heh.]
 [How silly of you!. Well they simply stare down at you, huffing, but slowing breaths noticeable as they stand right in front of you.] 
@@ -413,7 +413,7 @@ Roulx: “…”
 [It stares.]''',
     '[Stare back.]',
     ['"...Roulx?"', '2(1)31'],
-    '"...Hello, Roulx."'
+    '"...Hello, Roulx."',
     '2(1)1'],
 
 ['''[Oh a staring contest?…]
