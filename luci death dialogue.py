@@ -56,6 +56,11 @@ chat_count = 0
 
 stalk1 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
 stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
+feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
+Roulx: “… Yes? Olive, it’s me.” 
+[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]
+"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?"
+"...Wait."'''
 
 chat = [
 ['''"greetings"
@@ -189,14 +194,14 @@ Roulx: "What did you think of him?"''',
 
 ['''Roulx: "Olive Stanford."
 [They attempt to walk up to your side.]''',
-    '[Freeze.]',
+    ['[Freeze.]', '2(1)1'],
     '[Turn to them.]',
     ['[Keep walking. Deep breaths.]', ('2(1)3', '2(2)'), (1/3, 2/3)], 
     '2(1)'],
 
 ['''Roulx: "Hey!" 
 [They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
-    '[Give up.]',
+    ['[Give up.]', '2(1)31'],
     ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
     ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
     '2(1)3'],
@@ -204,7 +209,7 @@ Roulx: "What did you think of him?"''',
 ['''[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] 
 Roulx: "Hey."
 [...]''',
-    '[Feign innocence.]',
+    ['[Feign innocence.]', '2(1)31'],
     '[Freeze.]',
     ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
     '2(1)32'],
@@ -305,7 +310,7 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
 ['''[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]
 [... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]''',
 
-    '2(1)33(1)1(2)']
+    '2(1)33(1)1(2)'],
 
 ['''[Upon your vision, your dear friend falls collapsed on the cement. Not from being tripped, no, they're better than that.]''',
     '[Wait for a sign of movement.]',
@@ -361,26 +366,56 @@ Roulx: "That,, that's alright."
 ['''[You ponder what they might be buying, staying in spot. Roulx is inside the tools repair workshop.]
 [Roulx... Usually utilises tools that are more ordinary for their work. It's rather peculiar to see them ponder items that,, by what you know, seldom in their standard.]''',
     ['[Creep back downstairs.]', '2(2)2222212'],
-    ['[Crane your head over the railing to get a better look.]', '2(2)2222213']
+    ['[Crane your head over the railing to get a better look.]', '2(2)2222213'],
     '2(2)2222211'],
 
 [f'''[You crane your head over the railings, they feel cold under your hands.]
 {stalk1}''',
     '[Wait around.]',
     '[Listen in on their conversation.]',
-    ['[Creep back downstairs.]', '2(2)2222213'],
+    ['[Creep back downstairs.]', '2(2)2222212'],
     '2(2)2222213'],
 
 [f'''[You creep back downstairs.]
 {stalk_downstairs}''',
     '[Peer into the shop they\'re at.]',
-    '[Go talk to them after all.]',
+    ['[Go talk to them after all.]', "2(2)2221"],
     '2(2)2222212'],
 
 [f'''{stalk_downstairs}''',
     '[Peer into the shop they\'re at.]',
-    '[Go talk to them after all.]',
-    '2(2)22221']
+    ['[Go talk to them after all.]', "2(2)2221"],
+    '2(2)22221'],
+
+[f'''{feign_innocence}''',
+    '"Who\'s Olive?"',
+    '2(1)31'],
+
+[f'''[You approach them with a look of surprise.]
+{feign_innocence}''',
+    ['"Who\'s Olive?"', '2(1)311'],
+    '2(2)2221'],
+
+['''Roulx: “Hmm? You’re Olive. Right?”
+[They tilt their head, a gesture of confusion. A right hand which taps less patient than their tone may tell.]
+"...Huh?" I\'m not Olive. I\'m Autumn. Autumn Sky. You must have confused me for someone else."
+[Their expression drops, even if there weren’t much except for the way they stared at you.] 
+Roulx: “O-Oh.” 
+[They fidget, eyes darting away to the ground beside and their hand fiddling with tote bag straps on their shoulder.]
+Roulx: “Ah… My apologies. I.. Must’ve mistaken you for a friend of mine.” 
+[Friend.]''',
+    ['"That\'s alright. Mistakes happen all the time."', '3111'],
+    '2(2)22211'],
+
+['''[You go very, very still. As though that will help you now, Heh.]
+[How silly of you!. Well they simply stare down at you, huffing, but slowing breaths noticeable as they stand right in front of you.] 
+Roulx: “…” 
+[It stares.]''',
+    '[Stare back.]',
+    ['"...Roulx?"', '2(1)31'],
+    '"...Hello, Roulx."'
+    '2(1)1']
+
 ]
 
 memory = reset_memory()
