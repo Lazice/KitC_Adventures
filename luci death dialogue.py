@@ -11,9 +11,15 @@ def reset_memory():
     return {'Hugo': 0, 'wedding': False, 'chase': False, 'location': 'mall'}
 
 def modify_memory(id, chat_count):
+    if id == '311131':
+        memory['location'] = 'park'
     if id == '311132':
         memory['location'] = 'cafe'
-        print('memory modified')
+        if memory['chase'] == True:
+            chat[chat_count][0] == f'''{cafe_description}
+            “Um, so,,, yeah." [You ask the waiter for two seats inside, gesturing Roulx to follow.] "Here would be nice. ..."'''
+    if id == '311133':
+        memory['location'] = 'library'
     elif id == '3111211':
         memory['wedding'] = True
         print('memory modified')
@@ -55,6 +61,7 @@ def search_for_id(id):
 input_msg = "Please input a number --> "
 end_game = False
 chat_count = 0
+cafe_description = "[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]"
 
 stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
 stalk2 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
@@ -153,12 +160,12 @@ Roulx: "you lead the way."
     '[You head to a library in the mall.]',
     '31113'],
 
-['''“..How do you feel about birds, Roulx?”
+[f'''“..How do you feel about birds, Roulx?”
 Roulx: “I like them. But am otherwise neutral to their existence. Why do you ask?” 
 [Ki strolls slightly to your right, only a step behind.]
 “Nice. I think you wouldn’t mind it there then. Come with me.”
 
-[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]
+{cafe_description}
 
 “I quite like this cafe,” [you say after greeting a waiter, asking for two seats inside.] “It’s usually pretty quiet, but the people I do meet here are incredibly kind. They also renovated recently, that’s why the outside looks so new.”
 [Roulx curiously peers its head around the space,] 
@@ -204,7 +211,7 @@ Roulx: "What did you think of him?"''',
 
 ['''Roulx: "Hey!" 
 [They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
-    ['[Give up.]', '2(1)31'],
+    '[Give up.]',
     ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
     ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
     '2(1)3'],
