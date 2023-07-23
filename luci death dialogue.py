@@ -10,13 +10,15 @@ def error(options):
 def reset_memory():
     return {'Hugo': 0, 'wedding': False, 'chase': False, 'location': 'mall'}
 
-def modify_memory(id):
+def modify_memory(id, chat_count):
     if id == '311132':
         memory['location'] = 'cafe'
         print('memory modified')
     elif id == '3111211':
         memory['wedding'] = True
         print('memory modified')
+    elif id == '2(2)22221':
+
 
 def allocate(original_id, ans):
     if original_id == '0':
@@ -54,7 +56,8 @@ input_msg = "Please input a number --> "
 end_game = False
 chat_count = 0
 
-stalk1 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
+stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
+stalk2 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
 stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
 feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
 Roulx: “… Yes? Olive, it’s me.” 
@@ -247,7 +250,8 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     '[Go up the escalator to observe them from above.]',
     '2(2)2222'],
 
-['''[You make your way up the escalator. Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]''',
+[f'''[You make your way up the escalator. 
+{stalk1}''',
     '["I wonder what they are buying."]',
     '["I wonder why they\'re spending so luxuriously."]',
     '2(2)22222'],
@@ -370,7 +374,7 @@ Roulx: "That,, that's alright."
     '2(2)2222211'],
 
 [f'''[You crane your head over the railings, they feel cold under your hands.]
-{stalk1}''',
+{stalk2}''',
     '[Wait around.]',
     '[Listen in on their conversation.]',
     ['[Creep back downstairs.]', '2(2)2222212'],
@@ -382,7 +386,8 @@ Roulx: "That,, that's alright."
     ['[Go talk to them after all.]', "2(2)2221"],
     '2(2)2222212'],
 
-[f'''{stalk_downstairs}''',
+[f'''{stalk_downstairs}
+{stalk1}''',
     '[Peer into the shop they\'re at.]',
     ['[Go talk to them after all.]', "2(2)2221"],
     '2(2)22221'],
@@ -458,4 +463,4 @@ while not end_game:
     
     print(id)
     chat_count = search_for_id(id)
-    modify_memory(id)
+    modify_memory(id, chat_count)
