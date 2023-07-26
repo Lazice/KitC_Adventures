@@ -38,12 +38,14 @@ def modify_memory(id, count):
         if id == '2(2)222211':
             chat[count][2] = up_choice1
             chat[count][3] = up_choice2
-        if id == '2(2)2222111':
+        elif id == '2(2)2222111':
             chat[count][1] = up_choice1
             chat[count][2] = up_choice2
-        if id == '2(2)2222112':
+        elif id == '2(2)2222112':
             chat[count][0] = "[You crane your head over the railings, they feel cold under your hands.]\n" + chat[count][0]
             chat[count].insert(3, up_choice1)
+        elif id == '2(2)2222113':
+            memory['location'] = 'mall'
     
     elif id == '311131':
         memory['location'] = 'park'
@@ -61,8 +63,6 @@ def modify_memory(id, count):
         chat_count = search_for_id('2(2)22221')
         chat[chat_count][0] = f'''[You make your way up the escalator.]
 {stalk1}'''
-    elif id == '2(2)2222113':
-        memory['location'] = 'mall'
         
         
 def allocate(original_id, ans):
