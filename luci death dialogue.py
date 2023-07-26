@@ -1,6 +1,26 @@
 import random
 import winsound
 
+input_msg = "Please input a number --> "
+end_game = False
+chat_count = 0
+cafe_description = "[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]"
+
+stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
+stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
+feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
+Roulx: “… Yes? Olive, it’s me.” 
+[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]
+"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?"
+"...Wait."'''
+
+down_choice1 = ['[Peer into the shop they\'re at.]', '2(2)2222112']
+down_choice2 =['[Go talk to them after all.]', '2(2)2221']
+up_choice1 = ['[Creep back downstairs.]', '2(2)2222113']
+up_choice2 = ['[Crane your head over the railing to get a better look.]', '2(2)2222112']
+wait = ['[Wait around.]', ('2(2)22221121(1)', '2(2)22221121(2)'), (0.5, 0.5)]
+watch = ['[Watch Roulx.]', '2(2)22221121(2)1']
+
 def error(options):
     if (options != 1):
         print(f"... There are only {options}.")
@@ -10,22 +30,38 @@ def error(options):
 def reset_memory():
     return {'Hugo': 0, 'wedding': False, 'chase': False, 'location': 'mall'}
 
-def modify_memory(id, chat_count):
-    if id == '311131':
+def modify_memory(id, count):
+    global chat_count
+    if memory['location'] == 'mall2':
+        if id == '2(2)222211':
+            chat[count][2] = up_choice1
+            chat[count][3] = up_choice2
+        if id == '2(2)2222111':
+            chat[count][1] = up_choice1
+            chat[count][2] = up_choice2
+        if id == '2(2)2222112':
+            chat[count][0] = "[You crane your head over the railings, they feel cold under your hands.]" + chat[count][0]
+            chat[count].insert(3, up_choice1)
+    
+    elif id == '311131':
         memory['location'] = 'park'
     elif id == '311132':
         memory['location'] = 'cafe'
         if memory['chase'] == True:
-            chat[chat_count][0] == f'''{cafe_description}
+            chat[count][0] == f'''{cafe_description}
             “Um, so,,, yeah." [You ask the waiter for two seats inside, gesturing Roulx to follow.] "Here would be nice. ..."'''
     elif id == '311133':
         memory['location'] = 'library'
     elif id == '3111211':
         memory['wedding'] = True
-    elif id == '2(2)2222212':
-        memory['location'] = 'mall'
     elif id == '2(2)22222':
         memory['location'] = 'mall2'
+        chat_count = search_for_id('2(2)22221')
+        chat[chat_count][0] = f'''[You make your way up the escalator.]
+{stalk1}'''
+    elif id == '2(2)2222113':
+        memory['location'] = 'mall'
+        
 
 
 def allocate(original_id, ans):
@@ -59,20 +95,6 @@ def search_for_id(id):
             return index
     print("\nAnswer doesn't exist yet :P. Id number: " + id)
     return 0
-
-input_msg = "Please input a number --> "
-end_game = False
-chat_count = 0
-cafe_description = "[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]"
-
-stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
-stalk2 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
-stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
-feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
-Roulx: “… Yes? Olive, it’s me.” 
-[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]
-"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?"
-"...Wait."'''
 
 chat = [
 ['''"greetings"
@@ -254,23 +276,6 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     '[Observe their movements.]',
     '2(2)222'],
 
-['''[Roulx is only a block away from its original spot. Now having lost its original target, it is staring over metal railings to the floor below...]''',
-    '[Sneak around on the same floor.]',
-    '[Go up the escalator to observe them from above.]',
-    '2(2)2222'],
-
-[f'''[You make your way up the escalator.]
-{stalk1}''',
-    '["I wonder what they are buying."]',
-    '["I wonder why they\'re spending so luxuriously."]',
-    '2(2)22222'],
-
-['''[How curious.. What do they have... Clothes, jewels, tools... As you inspect the items abound, you don't forget who *you* are looking out for. Roulx has found their way into a tools repair workshop.]''',
-    '[Idly wonder what they are buying.]',
-    '[Creep back downstairs.]',
-    '[Crane your head over the railing to get a better look.]',
-    '2(2)222221'],
-
 ['''[They run after you. Though your crowded surroundings make obstacles for you.]
 [After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]''',
     ['[Risk a glance back.]', ('2(1)33(1)1(1)', '2(1)33(1)1(2)'), (0.5, 0.5)],
@@ -376,30 +381,83 @@ Roulx: "That,, that's alright."
     '"...Hello, Roulx."',
     '2(1)33(3)'],
 
-['''[You ponder what they might be buying, staying in spot. Roulx is inside the tools repair workshop.]
-[Roulx... Usually utilises tools that are more ordinary for their work. It's rather peculiar to see them ponder items that,, by what you know, seldom in their standard.]''',
-    ['[Creep back downstairs.]', '2(2)2222212'],
-    ['[Crane your head over the railing to get a better look.]', '2(2)2222213'],
-    '2(2)2222211'],
-
-[f'''[You crane your head over the railings, they feel cold under your hands.]
-{stalk2}''',
-    '[Wait around.]',
-    '[Listen in on their conversation.]',
-    ['[Creep back downstairs.]', '2(2)2222212'],
-    '2(2)2222213'],
-
-[f'''[You creep back downstairs.]
-{stalk_downstairs}''',
-    '[Peer into the shop they\'re at.]',
-    ['[Go talk to them after all.]', "2(2)2221"],
-    '2(2)2222212'],
+['''[Roulx is only a block away from its original spot. Now having lost its original target, it is staring over metal railings to the floor below...]''',
+    '[Sneak around on the same floor.]',
+    '[Go up the escalator to observe them from above.]',
+    '2(2)2222'],
 
 [f'''{stalk_downstairs}
 {stalk1}''',
     '["I wonder what they are buying."]',
     '["I wonder why they\'re spending so luxuriously."]',
     '2(2)22221'],
+
+['''[How curious.. What do they have... Clothes, jewels, tools... As you inspect the items abound, you don't forget who *you* are looking out for. Roulx has found their way into a tools repair workshop.]''',
+    '[Idly wonder what they are buying.]', down_choice1, down_choice2,
+    '2(2)222211'],
+
+['''[You ponder what they might be buying, staying in spot. Roulx is inside the tools repair workshop.]
+[Roulx... Usually utilises tools that are more ordinary for their work. It's rather peculiar to see them ponder items that,, by what you know, seldom in their standard.]''',
+    down_choice1, down_choice2,
+    '2(2)2222111'],
+
+[f'''[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]''',
+    wait,
+    '[Listen in on their conversation.]',
+    '2(2)2222112'],
+
+["",
+    '["...I\'m curious."]',
+    ['["This is literally none of my business."]', '2(2)222211221'],
+    '2(2)22221122'],
+
+["😒",
+    wait,
+    ['[JUST GO TALK TO THEM GODDAMMIT]', '2(2)2221'],
+    '2(2)222211221'],
+
+['''[You wait around on the spot.]
+[Roulx comes out of the store, noticing you creeping around the storefront... They look towards you, saying nothing but just a strange look.]''',
+    '[Pretend you hadn’t noticed. Walk off again.]',
+    '[Frown at them, like it\’s weird that they\’re staring. They\’re strangers after all.]',
+    ['[Give in.]', '2(2)2221'],
+    '2(2)22221121(1)'],
+
+['''[Roulx comes out of the store. Luckily, they turn the other way, strolling past your sneaky behaviour.]''',
+    watch,
+    '2(2)22221121(2)'],
+
+['''[You spin around before you they get the chance to make eye contact with you. Tucking your hands in pockets and sucking in a quick breath, you walk off. The way that you turn, almost reminds one of a video game NPC.]
+[But they don't move. Completely silent the moment that they've spotted you. That when you turn away, you can tell from the net zero audio cue, that they have hadn't any steps taken away at all.]''',
+    '',
+    '2(2)22221121(1)1'],
+
+['''[You frown at Roulx. They seem put off by that expression, tilting their head at you.]
+Roulx: "Hmm? My apologies." 
+[They turn, moving out of your way to the other side of the walkway. Presumably giving *you* space, as any polite stranger would.]''',
+    '[Buy something. Anything.]',
+    watch,
+    '2(2)22221121(1)2'],
+
+['''[You began to look for something to buy. Perhaps to make yourself look less suspicious.]
+[However. The area that you are in doesn’t serve the cheapest… Well, to the least there is a food court near the same entrance that you came from, but that’s a few walls of distance as well.]''',
+    '[Just browse, then.]',
+    watch,
+    '2(2)22221121(1)21'],
+
+['''"..."''',
+    watch,
+    '2(2)22221121(1)211'],
+
+['''[... You come to the sense, to watch. Roulx.]
+[You turn around to them away. How they move as quiet as you remembered with coldness. But they haven’t left your sight. Or to say, you haven’t allowed them to leave your sight.]''',
+    '[Follow them. You can’t afford to lose them.]',
+    '2(2)22221121(2)1'],
+
+[f'''[You creep back downstairs.]
+{stalk_downstairs}''',
+    down_choice1, down_choice2,
+    '2(2)2222113'],
 
 [f'''{feign_innocence}''',
     '"Who\'s Olive?"',
