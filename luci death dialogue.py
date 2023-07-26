@@ -419,7 +419,7 @@ Roulx: "That,, that's alright."
     ['["This is literally none of my business."]', '2(2)222211221'],
     '2(2)22221122'],
 
-["😒",
+["[😒]",
     wait,
     ['[JUST GO TALK TO THEM GODDAMMIT]', '2(2)2221'],
     '2(2)222211221'],
