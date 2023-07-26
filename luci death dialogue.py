@@ -440,7 +440,7 @@ Roulx: "Hmm? My apologies."
     watch,
     '2(2)22221121(1)2'],
 
-['''[You began to look for something to buy. Perhaps to make yourself look less suspicious.]
+['''[You begin to look for something to buy. Perhaps to make yourself look less suspicious.]
 [However. The area that you are in doesn’t serve the cheapest… Well, to the least there is a food court near the same entrance that you came from, but that’s a few walls of distance as well.]''',
     '[Just browse, then.]',
     watch,
@@ -535,4 +535,4 @@ while not end_game:
     modify_memory(id, chat_count)
     if chat_count == 0:
         print("\nAnswer doesn't exist yet :P. Id number: " + id)
-        reset_memory()
+        memory = reset_memory()
