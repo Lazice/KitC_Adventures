@@ -95,6 +95,8 @@ Roulx: “… Yes? Olive, it’s me.”
 "Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?"
 "...Wait."'''
 
+hello_roulx = ['"...Hello, Roulx."', '2(1)13']
+break_run = ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)]
 down_choice1 = ['[Peer into the shop they\'re at.]', '2(2)2222112']
 down_choice2 =['[Go talk to them after all.]', '2(2)2221']
 up_choice1 = ['[Creep back downstairs.]', '2(2)2222113']
@@ -243,7 +245,7 @@ Roulx: "What did you think of him?"''',
 [They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]''',
     '[Give up.]',
     ['[Keep walking.]', ('2(1)32', '2(2)'), (2/3, 1/3)],
-    ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
+    break_run,
     '2(1)3'],
 
 ['''[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] 
@@ -251,7 +253,7 @@ Roulx: "Hey."
 [...]''',
     ['[Feign innocence.]', '2(1)31'],
     ['[Freeze.]', '2(1)1'],
-    ['[Break into a run. (Roll for running.)]', ('2(1)33(3)', '2(1)33(2)', '2(1)33(1)'), (1/4, 1/4, 1/2)],
+    break_run,
     '2(1)32'],
 
 ['''[They no longer follow. But you can still feel their gaze on you for a little longer, before the gaze fades.]''',
@@ -379,12 +381,12 @@ Roulx: "That,, that's alright."
 ['''[The doors of the mall closes behind you,, seconds later than you would imagine. Hmm. That’s odd.]''',
     ['[Run.]', '2(1)33(1)'],
     '[Turn around.]',
-    '"...Hello, Roulx."',
+    hello_roulx,
     '2(1)33(2)'],
 
 ['''[...You feel someone tapping on your shoulder in your half stumbling stroll. Who might that be?]''',
     ['[Freeze.]', '2(1)1'],
-    '"...Hello, Roulx."',
+    hello_roulx,
     '2(1)33(3)'],
 
 ['''[Roulx is only a block away from its original spot. Now having lost its original target, it is staring over metal railings to the floor below...]''',
@@ -492,7 +494,7 @@ Roulx: “…”
 [It stares.]''',
     '[Stare back.]',
     ['"...Roulx?"', '2(1)31'],
-    '"...Hello, Roulx."',
+    hello_roulx,
     '2(1)1'],
 
 ['''[Oh a staring contest?…]
