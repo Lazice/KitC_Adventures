@@ -1,26 +1,6 @@
 import random
 import winsound
-
-input_msg = "Please input a number --> "
-end_game = False
-chat_count = 0
-cafe_description = "[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]"
-
-stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
-stalk2 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
-stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
-feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
-Roulx: “… Yes? Olive, it’s me.” 
-[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]
-"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?"
-"...Wait."'''
-
-down_choice1 = ['[Peer into the shop they\'re at.]', '2(2)2222112']
-down_choice2 =['[Go talk to them after all.]', '2(2)2221']
-up_choice1 = ['[Creep back downstairs.]', '2(2)2222113']
-up_choice2 = ['[Crane your head over the railing to get a better look.]', '2(2)2222112']
-wait = ['[Wait around.]', ('2(2)22221121(1)', '2(2)22221121(2)'), (0.5, 0.5)]
-watch = ['[Watch Roulx.]', '2(2)22221121(2)1']
+import copy
 
 def error(options):
     if (options != 1):
@@ -30,7 +10,7 @@ def error(options):
 
 def reset_memory():
     global chat
-    chat = game_chat
+    chat = copy.deepcopy(game_chat)
     return {'Hugo': 0, 'wedding': False, 'chase': False, 'location': 'mall'}
 
 def modify_memory(id, count):
@@ -100,6 +80,27 @@ def search_for_id(id):
         if id == chat[index][-1]:
             return index
     return 0
+
+input_msg = "Please input a number --> "
+end_game = False
+chat_count = 0
+cafe_description = "[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]"
+
+stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
+stalk2 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
+stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
+feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
+Roulx: “… Yes? Olive, it’s me.” 
+[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]
+"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?"
+"...Wait."'''
+
+down_choice1 = ['[Peer into the shop they\'re at.]', '2(2)2222112']
+down_choice2 =['[Go talk to them after all.]', '2(2)2221']
+up_choice1 = ['[Creep back downstairs.]', '2(2)2222113']
+up_choice2 = ['[Crane your head over the railing to get a better look.]', '2(2)2222112']
+wait = ['[Wait around.]', ('2(2)22221121(1)', '2(2)22221121(2)'), (0.5, 0.5)]
+watch = ['[Watch Roulx.]', '2(2)22221121(2)1']
 
 game_chat = [
 ['''"greetings"
@@ -446,7 +447,7 @@ Roulx: "Hmm? My apologies."
     '2(2)22221121(1)2'],
 
 ['''[You begin to look for something to buy. Perhaps to make yourself look less suspicious.]
-[However. The area that you are in doesn’t serve the cheapest… Well, to the least there is a food court near the same entrance that you came from, but that’s a few walls of distance as well.]''',
+[However. The area that you are in doesn’t serve the cheapest... Well, to the least there is a food court near the same entrance that you came from, but that’s a few walls of distance as well.]''',
     '[Just browse, then.]',
     watch,
     '2(2)22221121(1)21'],
