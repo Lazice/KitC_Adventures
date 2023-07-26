@@ -13,17 +13,19 @@ def reset_memory():
 def modify_memory(id, chat_count):
     if id == '311131':
         memory['location'] = 'park'
-    if id == '311132':
+    elif id == '311132':
         memory['location'] = 'cafe'
         if memory['chase'] == True:
             chat[chat_count][0] == f'''{cafe_description}
             “Um, so,,, yeah." [You ask the waiter for two seats inside, gesturing Roulx to follow.] "Here would be nice. ..."'''
-    if id == '311133':
+    elif id == '311133':
         memory['location'] = 'library'
     elif id == '3111211':
         memory['wedding'] = True
-        print('memory modified')
-    elif id == '2(2)22221':
+    elif id == '2(2)2222212':
+        memory['location'] = 'mall'
+    elif id == '2(2)22222':
+        memory['location'] = 'mall2'
 
 
 def allocate(original_id, ans):
@@ -257,7 +259,7 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
     '[Go up the escalator to observe them from above.]',
     '2(2)2222'],
 
-[f'''[You make your way up the escalator. 
+[f'''[You make your way up the escalator.]
 {stalk1}''',
     '["I wonder what they are buying."]',
     '["I wonder why they\'re spending so luxuriously."]',
@@ -321,7 +323,7 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
 ['''[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]
 [... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]''',
 
-    '2(1)33(1)1(2)'],
+    '2(1)33(1)1(2)1'],
 
 ['''[Upon your vision, your dear friend falls collapsed on the cement. Not from being tripped, no, they're better than that.]''',
     '[Wait for a sign of movement.]',
@@ -370,7 +372,7 @@ Roulx: "That,, that's alright."
     '2(1)33(2)'],
 
 ['''[...You feel someone tapping on your shoulder in your half stumbling stroll. Who might that be?]''',
-    '[Freeze.]',
+    ['[Freeze.]', '2(1)1'],
     '"...Hello, Roulx."',
     '2(1)33(3)'],
 
@@ -395,8 +397,8 @@ Roulx: "That,, that's alright."
 
 [f'''{stalk_downstairs}
 {stalk1}''',
-    '[Peer into the shop they\'re at.]',
-    ['[Go talk to them after all.]', "2(2)2221"],
+    '["I wonder what they are buying."]',
+    '["I wonder why they\'re spending so luxuriously."]',
     '2(2)22221'],
 
 [f'''{feign_innocence}''',
