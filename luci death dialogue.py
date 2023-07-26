@@ -42,7 +42,7 @@ def modify_memory(id, count):
             chat[count][1] = up_choice1
             chat[count][2] = up_choice2
         if id == '2(2)2222112':
-            chat[count][0] = "[You crane your head over the railings, they feel cold under your hands.]" + chat[count][0]
+            chat[count][0] = "[You crane your head over the railings, they feel cold under your hands.]\n" + chat[count][0]
             chat[count].insert(3, up_choice1)
     
     elif id == '311131':
