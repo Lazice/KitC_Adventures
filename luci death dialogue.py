@@ -7,6 +7,7 @@ chat_count = 0
 cafe_description = "[It’s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name “Haven’s Parrot” is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there’s plenty of polished wooden tables and orange cushions to sit at on the inside.]"
 
 stalk1 = "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
+stalk2 = "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
 stalk_downstairs = "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
 feign_innocence = '''"Oh. ...Wait, Roulx? Is that you?"
 Roulx: “… Yes? Olive, it’s me.” 
@@ -42,11 +43,15 @@ def modify_memory(id, count):
             chat[count][1] = up_choice1
             chat[count][2] = up_choice2
         elif id == '2(2)2222112':
-            chat[count][0] = "[You crane your head over the railings, they feel cold under your hands.]\n" + chat[count][0]
+            chat[count][0] = "[You crane your head over the railings, they feel cold under your hands.]\n" + stalk2
             chat[count].insert(3, up_choice1)
         elif id == '2(2)2222113':
             memory['location'] = 'mall'
     
+    elif id == '2(2)2222112':
+        chat[count][0] = stalk2
+        if chat[count][3] == up_choice1:
+            chat[count].remove(3)
     elif id == '311131':
         memory['location'] = 'park'
     elif id == '311132':
@@ -401,7 +406,7 @@ Roulx: "That,, that's alright."
     down_choice1, down_choice2,
     '2(2)2222111'],
 
-[f'''[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]''',
+[f'''{stalk2}''',
     wait,
     '[Listen in on their conversation.]',
     '2(2)2222112'],
