@@ -523,6 +523,7 @@ while not end_game:
         print(str(ans) + ". " + chat[chat_count][int(ans)][0])
         id = roll(chat[chat_count][int(ans)])
     elif len(chat[chat_count][int(ans)]) == 2:
+        print(str(ans) + ". " + chat[chat_count][int(ans)][0])
         id = chat[chat_count][int(ans)][1]
     else:
         print(str(ans) + ". " + chat[chat_count][int(ans)])
