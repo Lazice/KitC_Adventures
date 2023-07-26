@@ -28,6 +28,8 @@ def error(options):
         print("... There is literally only one option.")
 
 def reset_memory():
+    global chat
+    chat = game_chat
     return {'Hugo': 0, 'wedding': False, 'chase': False, 'location': 'mall'}
 
 def modify_memory(id, count):
@@ -62,8 +64,7 @@ def modify_memory(id, count):
     elif id == '2(2)2222113':
         memory['location'] = 'mall'
         
-
-
+        
 def allocate(original_id, ans):
     if original_id == '0':
         return str(ans)
@@ -93,10 +94,9 @@ def search_for_id(id):
     for index in range(len(chat)):
         if id == chat[index][-1]:
             return index
-    print("\nAnswer doesn't exist yet :P. Id number: " + id)
     return 0
 
-chat = [
+game_chat = [
 ['''"greetings"
 [Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]
 [They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]''',
@@ -532,3 +532,6 @@ while not end_game:
     print(id)
     chat_count = search_for_id(id)
     modify_memory(id, chat_count)
+    if chat_count == 0:
+        print("\nAnswer doesn't exist yet :P. Id number: " + id)
+        reset_memory()
