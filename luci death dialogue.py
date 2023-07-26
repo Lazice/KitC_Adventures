@@ -51,7 +51,7 @@ def modify_memory(id, count):
     elif id == '2(2)2222112':
         chat[count][0] = stalk2
         if chat[count][3] == up_choice1:
-            chat[count].remove(3)
+            chat[count].remove(up_choice1)
     elif id == '311131':
         memory['location'] = 'park'
     elif id == '311132':
@@ -332,7 +332,7 @@ Roulx thinks that they'd simply mistaken them for kir dear friend. A pity.''',
 
 ['''[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]
 [... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]''',
-
+    '',
     '2(1)33(1)1(2)1'],
 
 ['''[Upon your vision, your dear friend falls collapsed on the cement. Not from being tripped, no, they're better than that.]''',
@@ -411,7 +411,7 @@ Roulx: "That,, that's alright."
     '[Listen in on their conversation.]',
     '2(2)2222112'],
 
-["",
+['''''',
     '["...I\'m curious."]',
     ['["This is literally none of my business."]', '2(2)222211221'],
     '2(2)22221122'],
