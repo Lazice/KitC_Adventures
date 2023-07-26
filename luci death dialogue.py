@@ -418,8 +418,8 @@ Roulx: "That,, that's alright."
 
 ['''[You wait around on the spot.]
 [Roulx comes out of the store, noticing you creeping around the storefront... They look towards you, saying nothing but just a strange look.]''',
-    '[Pretend you hadn’t noticed. Walk off again.]',
-    '[Frown at them, like it/’s weird that they/’re staring. They/’re strangers after all.]',
+    '[Pretend you hadn\'t noticed. Walk off again.]',
+    '[Frown at them, like it\'s weird that they\'re staring. They\'re strangers after all.]',
     ['[Give in.]', '2(2)2221'],
     '2(2)22221121(1)'],
 
