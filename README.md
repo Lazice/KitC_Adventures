@@ -13,4 +13,8 @@ This repository contains a collection of text-based adventure games written in P
 
 Nearly everything placed here are non-canonical, there will be introductions to how they differentiate from the canon. 
 
+## How to play? 
+Download, uh, everything. Then run luci death dialogue.py  in any program that can run python. :)
+
+
 (Like, a slight overview of what it's about. heart emoji:heart:)
