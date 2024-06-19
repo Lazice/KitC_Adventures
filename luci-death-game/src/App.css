@@ -7,12 +7,26 @@
 body{
   background-color: var(--back);
   margin: 20px 28px;
+  font-family: sans-serif;
 }
 
 .game-wrapper{
   border: 1px solid var(--text);
   margin: 30px 10px;
+  height: 75vh;
+}
+
+.text-wrapper{
   padding: 30px;
+}
+
+
+.box-heading{
+  background-color: var(--text);
+  color: var(--back);
+  margin: 0;
+  padding: 10px;
+  font-size: 25x;
 }
 
 p, button {
