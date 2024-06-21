@@ -7,5 +7,7 @@
     "lost": true,
     "feign_surprise": false,
     "creeping": false,
-    "finance_theory": false
+    "finance_theory": false,
+    "time_passage": false,
+    "bus": false
 }

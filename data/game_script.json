@@ -345,7 +345,11 @@
     },
     {
         "id": "2(1)2",
-        "msg": "",
+        "msg": 
+        [
+            "Roulx: \"Good afternoon.\"",
+            "[Roulx stares at you with a piercing gaze. Seething, to see right through you.]"
+        ],
         "options": [
             {
                 "option": "\"...Roulx?\"",
@@ -362,7 +366,8 @@
                     0.25,
                     0.25,
                     0.5
-                ]
+                ],
+                "pre_scene": "[They run after you. Though your crowded surroundings make obstacles for you.]"
             }
         ]
     },
@@ -399,7 +404,8 @@
                     0.25,
                     0.25,
                     0.5
-                ]
+                ],
+                "pre_scene": "[They run after you. Though your crowded surroundings make obstacles for you.]"
             }
         ]
     },
@@ -408,6 +414,7 @@
         "msg": 
         [
             "[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.]",
+            "",
             "Roulx: \"Hey.\"",
             "[...]"
         ],
@@ -431,7 +438,8 @@
                     0.25,
                     0.25,
                     0.5
-                ]
+                ],
+                "pre_scene": "[They run after you. Though your crowded surroundings make obstacles for you.]"
             }
         ]
     },
@@ -463,7 +471,8 @@
             {
                 "option": "[...\"Roulx was in there.\"]"
             }
-        ]
+        ],
+        "location": "mall_entrance"
     },
     {
         "id": "01",
@@ -514,15 +523,12 @@
             {
                 "option": "[Observe their movements.]"
             }
-        ]
+        ],
+        "location": "mall1"
     },
     {
         "id": "2(1)33(1)",
-        "msg": 
-        [
-            "[They run after you. Though your crowded surroundings make obstacles for you.]",
-            "[After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]"
-        ],
+        "msg": "[After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]",
         "options": [
             {
                 "option": "[Risk a glance back.]",
@@ -549,7 +555,8 @@
             {
                 "option": "[Keep running. Don't look back.]"
             }
-        ]
+        ],
+        "location": "streets"
     },
     {
         "id": "2(1)33(1)1(1)",
@@ -621,7 +628,6 @@
             "Roulx: \"You're Olive! You're... You're.\"",
             "[They hesitate, moving their gaze away from you, looking downwards to the ground.]",
             "",
-            "",
             "[You stare them back, regardless of their gaze towards you. Your eyes are as dead as your soul.]"
         ],
         "options":
@@ -632,10 +638,11 @@
         ]
     },
     {
-        "id": "",
+        "id": "2(1)33(1)1(1)222",
         "msg":
         [
             "Roulx: \"I'm... Right.\"",
+            "",
             "[Ki fiddles with their hands, fingertips intersecting each other like polygons that were poorly joined.]",
             "Roulx: \"I mean, it's okay, we can. We can restart from the beginning? You're here, I'm, here as well.\"",
             "[Who cares what lead to the end the years ago, Roulx doesn't.]",
@@ -643,8 +650,7 @@
             "",
             "",
             "[You say nothing, looking down at your shoes and the concrete.]",
-            "",
-            "[Olive doesn’t know how to smile anymore. Autumn does, but Olive doesn’t.]"
+            "[Olive doesn't know how to smile anymore. Autumn does, but Olive doesn't.]"
         ],
         "options":
         [
@@ -702,6 +708,7 @@
         "msg": 
         [
             "Roulx: \"...\"",
+            "",
             "[You keep on running. There's nothing making indication of them still chasing you.]"
         ],
         "options": [
@@ -765,7 +772,15 @@
                 "option": "[Find current location on phone.]"
             },
             {
-                "option": "[Try to retrace steps back to the mall.]"
+                "option": "[Try to retrace steps back to the mall.]",
+                "jumpto": [
+                    "2(1)33(1)1(2)2",
+                    "2(1)33(1)1(2)11"
+                    ],
+                "chance": [
+                    0.66666666666,
+                    0.33333333333
+                ]
             }
         ]
     },
@@ -774,6 +789,7 @@
         "msg": 
         [
             "[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]",
+            "",
             "[... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]"
         ],
         "options": [
@@ -788,6 +804,7 @@
         "msg": 
         [
             "[Through a bit of trouble (and a bit of disorientation. bro where did you ev), you have retraced your steps.]",
+            "",
             "[You stand in front of the mall's still open glass doors. Bright afternoon sun, shines warm tracing your back. The mall is placed at a very nice position in the suburb, good potential, good flow of people. There's even two bus stops near by.]"
         ],
         "options": [
@@ -799,7 +816,9 @@
             {
                 "option": "...Roulx is still here somewhere."
             }
-        ]
+        ],
+        "location": "mall_entrance",
+        "time_passage": true
     },
     {
         "id": "2(1)33(1)1(2)112",
@@ -807,6 +826,7 @@
         [
             "[Oh yes they are.]",
             "[But,, are you sure you'll be able to find them? Even if you've been here so many times..]",
+            "",
             "[It had taken you a bit of time to get back here.]",
             "[Don't you think that they would've left by now?]"
         ],
@@ -823,6 +843,33 @@
                 "option": "[...Open the group chat.]"
             }
         ]
+    },
+    {
+        "id": "2(1)33(1)1(2)1122",
+        "msg": "[Sure. Where do you poke around?]",
+        "options": [
+            {
+                "option": "[Scan the bus stops for kir presence.]"
+            },
+            {
+                "option": "[Look for kime in the mall.]",
+                "jumpto": "2(2)222"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)11221",
+        "msg": "[Well, here is a bus stop. You seriously sure you're looking around *here* for them? You don't even know if they know how to use buses! And besides this bus stop, there's this like, one other scrawny old lady waiting and a bird up there on the hanging wires.]",
+        "options": [
+            {
+                "option": "[Ask the nice lady whether they've seen an individual with white hair and a white suit, a tote bag, and a... yay-high height (like, 10cm taller than him).]"
+            },
+            {
+                "option": "[\"Eh.. Either they've already left or they're in the mall.\"]",
+                "jumpto": "2(2)222"
+            }
+        ],
+        "location": "bus_stop"
     },
     {
         "id": "2(1)33(1)1(1)1212",
@@ -929,13 +976,15 @@
                 "jumpto": "2(1)33(1)"
             },
             {
-                "option": "[Turn around.]"
+                "option": "[Turn around.]",
+                "jumpto": "2(1)2"
             },
             {
                 "option": "\"...Hello, Roulx.\"",
                 "jumpto": "2(1)13"
             }
-        ]
+        ],
+        "location": "mall_entrance"
     },
     {
         "id": "2(1)33(3)",
@@ -1528,5 +1577,110 @@
                 "option": "[Ask someone politely where this is.]"
             }
         ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2",
+        "msg":
+        [
+            "[Ohhh you do nottt recognise your surroundings. Is this really how you went though, sprinting in haste?]",
+            "",
+            "[You've been walking for ten minutes. The way the houses align each others' fences, seems still unfamiliar.]"
+        ],
+        "options":
+        [
+            {
+                "option": "[Check your phone for the location.]",
+                "jumpto": "2(1)33(1)1(2)1"
+            },
+            {
+                "option": "[Keep going, he's got this.]",
+                "jumpto": [
+                    "2(1)33(1)1(2)2(1)",
+                    "2(1)33(1)1(2)2(2)"
+                    ],
+                "chance": "coin"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)",
+        "msg": [
+            "[There's nowhere better to be lost at huh! You'd know it's purely luck that'd gotten you to an actual bus stop, and looking at the time table, it seems the next one should be coming in about 7 minutes. But you know by experience that buses around here are never quite on time, either a bit too early or much too late.]",
+            "[Besides that, there's no one else around. There's a bird sat up there on the hanging wires.]"
+        ],
+        "options":[
+            {
+                "option": "[Listen to an audiobook or something while you're waiting.]"
+            },
+            {
+                "option": "[Observe the snow.]",
+                "jumpto": "2(1)33(1)1(2)2(1)1"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)1",
+        "msg":
+        [
+            ""
+        ],
+        "options":[
+            {
+                "option": "[Ride home.]",
+                "jumpto": "01"
+            },
+            {
+                "option": "[Ride back to the mall.]",
+                "jumpto": "2(1)33(1)1(2)11",
+                "bus": true
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)",
+        "msg": "[Is this guy just... Lost at this point? Wha? The houses and an occasional park remains the usual sighting in your fore going tracks.]",
+        "options":[
+            {
+                "option": "['...Wait. I recognise this place.']"
+            },
+            {
+                "option": "[\"...Completedly foreign area. Huh.\"]"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)1",
+        "msg": 
+        [
+            "[Obviously. You used to work there dumbass.]",
+            "[Some ways ahead, across the wide, busy street, stands the recognisable sliding doors into Enlite's Sydney headquarters. The pavement of the sidewalk transforms into a series of furbished grey tiles at its entrance, letting people into its quiet maw.]"
+        ],
+        "options": [
+            {
+                "option": "[Enter the building.]"
+            },
+            {
+                "option": "['what the fuck do you think you're doing']"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "msg":
+        [
+            "-----------------------",
+            "MrBlueSky: Hey, is anyone at the shopping centre near palm street right now? Just wondering.",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: yeah, are you there too?",
+            "MrBlueSky: Yes, I’m nearby actually.",
+            "MrBlueSky: I’m looking for someone. I saw a glimpse of them before but it seems that I’ve lost them. So I think it should still be somewhere around but I can't seem to find it.",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: huh okay",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: friend of yours?"
+        ],
+        "options":[
+            {
+                "option": 
+            }
+        ],
+        "groupchat": "true"
     }
 ]

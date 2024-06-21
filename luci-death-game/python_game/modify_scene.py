@@ -37,8 +37,8 @@ def allocate(original_id, ans):
         return str(original_id) + str(ans)
 
 
-def search_new_scene(id, remember_id):
-    if id == "#":
+def search_new_scene(id, remember_id, end_game):
+    if id == "#" and end_game:
         exit()
     if id == "remember_id":
         id = remember_id
@@ -58,7 +58,16 @@ def cycle_progress(lst):
 def update_progress(scene):
     cycle_progress(scene)
 
+    if progress["groupchat"]:
+        with open("groupchat.py") as file:
+        exec(file.read())
+
     match scene["id"]:
+        case "2(2)222":
+            if progress["time_passage"]:
+                original = scene["msg"]
+                scene["msg"] = (["[You enter the mall in hurried steps, to find that, indeed, Roulx is still in the mall.]",
+                                 "", "", "[Phew.]", "", "", original])
         case "2(2)22221":
             if progress["location"] == "mall2":
                 scene["msg"][0] = "[You make your way up the escalator.]"
@@ -96,6 +105,8 @@ def update_progress(scene):
         case "2(1)33(1)1(2)11":
             if progress["lost"] == False:
                 scene["msg"][0] = "[You have retraced your steps.]"
+            elif progress["bus"] == True:
+                scene["msg"] = scene["msg"][2]
         case "51":
             if progress["finance_theory"]:
                 scene["msg"] = "[If you'd like to think that way. Everything looks the same when they're in that category of way too modern offices, just for the sake of efficiency.]"
@@ -125,6 +136,6 @@ def update_progress(scene):
                 future_id = option["jumpto"]
         else:
             future_id = allocate(scene["id"], counter)
-        if future_id not in ("", "remember_id") and search_new_scene(future_id, "") == None:
+        if future_id not in ("", "remember_id", "#") and search_new_scene(future_id, "", False) == None:
             option["option"] += " (OPTION NOT ADDED)"
         counter += 1

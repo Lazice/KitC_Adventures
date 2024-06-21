@@ -100,7 +100,7 @@ while not end_game:
             id = allocate(scene["id"], int(ans))
 
     print(id)
-    scene_pos = search_new_scene(id, remember_id)
+    scene_pos = search_new_scene(id, remember_id, True)
     if scene_pos == None:
         print("\nSooorry bud, this answer doesn't exist yet :P. Id number: " + id)
         scene_pos = 0
