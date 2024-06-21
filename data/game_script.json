@@ -1,7 +1,13 @@
 [
     {
         "id": "0",
-        "msg": "\"greetings\"\n[Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]\n[They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]",
+        "msg": 
+        [
+            "\"greetings\"",
+            "[Roulx stands in front of you, distant, familiar, close. It has been some years after, since it all happened... The people, the scheming, the lights. Isn't it all more than a memory?]",
+            "",
+            "[They stand there in front of you, seemingly stunned as the tapping of their fingers stands frozen mid-action.]"
+        ],
         "options": [
             {
                 "option": "[Pretend not to notice.]"
@@ -24,7 +30,12 @@
     },
     {
         "id": "3",
-        "msg": "[Ki seemed to shiver at that. Barely noticeable, but you've known kime for long enough.]\nRoulx: \"Olive? You're here!\"\n[They smile, relieved as they comprehend your presence.]",
+        "msg": 
+        [
+            "[Ki seemed to shiver at that. Barely noticeable, but you've known kime for long enough.]",
+            "Roulx: \"Olive? You're here!\"",
+            "[They smile, relieved as they comprehend your presence.]"
+        ],
         "options": [
             {
                 "option": "[Smile back.]"
@@ -39,7 +50,13 @@
     },
     {
         "id": "31",
-        "msg": "[You smile back at them. They are your friend. Smiling is the polite thing to do.]\nRoulx: \"How have you been?\"\n[It stands, the two its hands gloved, clasped in front of itself idly.]\n\"...\"",
+        "msg": 
+        [
+            "[You smile back at them. They are your friend. Smiling is the polite thing to do.]",
+            "Roulx: \"How have you been?\"",
+            "[It stands, the two its hands gloved, clasped in front of itself idly.]",
+            "[...]"
+        ],
         "options": [
             {
                 "option": "\"...Roulx. I'm not Olive.\""
@@ -48,7 +65,13 @@
     },
     {
         "id": "311",
-        "msg": "[Their smile lowers, but doesn't disappear as they tilt their head.]\nRoulx: \"What do you mean? ... You look just like him?\"\n\"Autumn. My name is Autumn. You must have confused me for someone else.\"\nRoulx: \"Autumn? You're Autumn?.. Do you,, well you don't but... Do you know of someone by the name Olive Stanford?\"",
+        "msg": 
+        [
+            "[Their smile lowers, but doesn't disappear as they tilt their head.]",
+            "Roulx: \"What do you mean? ... You look just like him?\"",
+            "\"Autumn. My name is Autumn. You must have confused me for someone else.\"",
+            "Roulx: \"Autumn? You're Autumn?.. Do you,, well you don't but... Do you know of someone by the name Olive Stanford?\""
+        ],
         "options": [
             {
                 "option": "\"No. I do not.\""
@@ -57,7 +80,17 @@
     },
     {
         "id": "3111",
-        "msg": "Roulx: \"...Alright...\"\n[It shifts in its stance. Looking down to the side... It wears the same white suit and outfit from the very before, yellow bow tie sitting in the exact same.] \nRoulx: \"Well, nice to meet you Autumn, though you already know my name.\" \n[Roulx reaches out a gloved right hand, to shake in polite greeting.]\n[You shake hands. It is a familiar feeling, a warm feeling. Having an ally on your side.]\n\"Nice to meet you too, Roulx.\"",
+        "msg":
+        [
+            "Roulx: \"...Alright...\"",
+            "",
+            "[It shifts in its stance. Looking down to the side... It wears the same white suit and outfit from the very before, yellow bow tie sitting in the exact same.]",
+            "Roulx: \"Well, nice to meet you Autumn, though you already know my name.\"",
+            "[Roulx reaches out a gloved right hand, to shake in polite greeting.]",
+            "",
+            "[You shake hands. It is a familiar feeling, a warm feeling. Having an ally on your side.]",
+            "\"Nice to meet you too, Roulx.\""
+        ],
         "options": [
             {
                 "option": "\"How are you?\""
@@ -72,7 +105,13 @@
     },
     {
         "id": "31112",
-        "msg": "[They look around, the store seems spacious, Roulx themself have new earrings and a shoulder tote bag of books and trinkets.] \nRoulx: \"I'm only here to buy things for my Hugo. We're stopping near by for sightseeing and business.\" \n[They shrug. A swing and there some badges and trinkets clink against each other on the surface of their bag.]",
+        "msg":
+        [
+            "[They look around, the store seems spacious, Roulx themself have new earrings and a shoulder tote bag of books and trinkets.]",
+            "Roulx: \"I'm only here to buy things for my Hugo. We're stopping near by for sightseeing and business.\"",
+            "",
+            "[They shrug. A swing and there some badges and trinkets clink against each other on the surface of their bag.]"
+        ],
         "options": [
             {
                 "option": "\"I like your earrings.\""
@@ -90,7 +129,11 @@
     },
     {
         "id": "311121",
-        "msg": "Roulx: \"Thanks! These are new, my partner gave me them for our anniversary last year.\"\n [Gold in material, the left one is a delicate replication of a moon. Simple, small and sways side to side as it tilts in its expressiveness. The right one, much more complicated, rings engraved with patterns and fancy symbols that are too small to read, rings layering on top of eachother, but which all idly spins in momentum with Roulx's movements.]",
+        "msg":
+        [
+            "Roulx: \"Thanks! These are new, my partner gave me them for our anniversary last year.\"",
+            "[Gold in material, the left one is a delicate replication of a moon. Simple, small and sways side to side as it tilts in its expressiveness. The right one, much more complicated, rings engraved with patterns and fancy symbols that are too small to read, rings layering on top of eachother, but which all idly spins in momentum with Roulx's movements.]"
+        ],
         "options": [
             {
                 "option": "\"Do you like the moon?\""
@@ -111,7 +154,13 @@
     },
     {
         "id": "3111211",
-        "msg": "Roulx: \"The moon!! Yes, of course.\" \n[They look to Autumn with excitement!]\nRoulx: \"I well, have it as an earring because me and Hugo were married on the moon! It's rather romantic,.. But also yes, I do quite like the moon for all its beauty in the night sky.\" \n[A left hand touches the earring fondly. Gayass.]",
+        "msg":
+        [
+            "Roulx: \"The moon!! Yes, of course.\"",
+            "[They look to Autumn with excitement!]",
+            "Roulx: \"I well, have it as an earring because me and Hugo were married on the moon! It's rather romantic,.. But also yes, I do quite like the moon for all its beauty in the night sky.\"",
+            "[A left hand touches the earring fondly. Gayass.]"
+        ],
         "options": [
             {
                 "option": "\"How did you manage that???\""
@@ -124,7 +173,17 @@
     },
     {
         "id": "31112112",
-        "msg": "[\"I didn't know you two were\u2014\"]\n\n\"That's cute. Congratulations!\" [You say with a grin.]\n[Ki smiles, lulling kir bag over kir shoulders again.] \nRoulx: \"How have you been? It's been a long time since we'd last talked.\"\n\"It certainly has.\"",
+        "msg": 
+        [
+            "[\"I didn't know you two were\u2014\"]",
+            "",
+            "\"That's cute. Congratulations!\"",
+            "[You say with a grin.]",
+            "",
+            "[Ki smiles, lulling kir bag over kir shoulders again.]",
+            "Roulx: \"How have you been? It's been a long time since we'd last talked.\"",
+            "\"It certainly has.\""
+        ],
         "options": [
             {
                 "option": "\"There've been a lot of changes, but recently it's been peaceful. I'm doing alright.\""
@@ -140,7 +199,13 @@
     },
     {
         "id": "31113",
-        "msg": "Roulx: \"Sure of course. It's been sometime since we properly talked. I don't enjoy crowded places either.\"\n[It looks around, glancing at the structures and the low hanging lights overhead.]\nRoulx: \"you lead the way.\"\n\u201cAlright.\u201d",
+        "msg": 
+        [
+            "Roulx: \"Sure of course. It's been sometime since we properly talked. I don't enjoy crowded places either.\"",
+            "[It looks around, glancing at the structures and the low hanging lights overhead.]",
+            "Roulx: \"you lead the way.\"",
+            "\"Alright.\""
+        ],
         "options": [
             {
                 "option": "[You head to a park.]"
@@ -155,68 +220,109 @@
     },
     {
         "id": "311132",
-        "msg": "\u201c..How do you feel about birds, Roulx?\u201d\nRoulx: \u201cI like them. But am otherwise neutral to their existence. Why do you ask?\u201d \n[Ki strolls slightly to your right, only a step behind.]\n\u201cNice. I think you wouldn\u2019t mind it there then. Come with me.\u201d\n\n[It\u2019s about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name \u201cHaven\u2019s Parrot\u201d is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there\u2019s plenty of polished wooden tables and orange cushions to sit at on the inside.]\n\n\u201cI quite like this cafe,\u201d [you say after greeting a waiter, asking for two seats inside.] \u201cIt\u2019s usually pretty quiet, but the people I do meet here are incredibly kind. They also renovated recently, that\u2019s why the outside looks so new.\u201d\n[Roulx curiously peers its head around the space,] \nRoulx: \u201cit does look cosy.\u201d \n[It does, it does. It heads to take a seat, one that\u2019s orange against the wall.]\n[You sit down opposite of Roulx. It's soft. You've always liked sitting at cushioned benches at restaurants.]",
+        "msg":
+        [
+            "\"..How do you feel about birds, Roulx?\"",
+            "Roulx: \"I like them. But am otherwise neutral to their existence. Why do you ask?\"",
+            "[Ki strolls slightly to your right, only a step behind.]",
+            "\"Nice. I think you wouldn't mind it there then. Come with me.\"",
+            "",
+            "[It's about an 8 minute walk from where you are until you reach a slightly less populated suburban area, where a stylish cafe stands with a raised wooden deck and circular white tables and parasols on its outside. The name \"Haven's Parrot\" is written in a chocolatey brown font on its front in cursive. There are some people at this time of day but it is not entirely packed, and there's plenty of polished wooden tables and orange cushions to sit at on the inside.]",
+            "\"I quite like this cafe,\" [you say after greeting a waiter, asking for two seats inside.] \"It's usually pretty quiet, but the people I do meet here are incredibly kind. They also renovated recently, that's why the outside looks so new.\"",
+            "",
+            "[Roulx curiously peers its head around the space.]",
+            "Roulx: \"it does look cosy.\"",
+            "[It does, it does. It heads to take a seat, one that's orange against the wall.]",
+            "[You sit down opposite of Roulx. It's soft. You've always liked sitting at cushioned benches at restaurants.]"
+        ],
         "options": [
             {
                 "option": "\"Do you want to order anything? The drinks here are nice.\""
             },
             {
-                "option": "\"It is. I come here sometimes just for some fresh air, listen to an audiobook or something. Or to meet up with people on occasion.\""
+                "option": "\"It is. I come here sometimes just for some fresh air, listen to an audiobook or something. Or to meet up with people on occasion.\"",
+                "chased_option": null
             },
             {
-                "option": "\"Yeah. So, what were we talking about before?\""
+                "option": "\"Yeah. So, what were we talking about before?\"",
+                "chased_option": "\"What were we talking about before?\""
             }
         ],
         "location": "cafe"
     },
     {
         "id": "3111321",
-        "msg": "Roulx: \u201cI don\u2019t think I\u2019ll have anything. A cup of water, maybe.\u201d\n[Its bag remains on its shoulder, the back of its hand visible on the wooden table. Its politeness still unchanged.]",
+        "msg": 
+        [
+            "Roulx: \"I don't think I'll have anything. A cup of water, maybe.\"",
+            "[Its bag remains on its shoulder, the back of its hand visible on the wooden table. Its politeness still unchanged.]"
+        ],
         "options": [
             {
-                "option": "\"Alright. Maybe I'll just have that too.\""
+                "option": "\"Alright. Maybe I'll just have that too.\"",
+                "chased_option": "\"Two waters, then.\""
             },
             {
-                "option": "\"I'll get a latte. Tends to be the usual choice.\""
+                "option": "\"I'll get a latte. Tends to be the usual choice.\"",
+                "chased_option": "\"I'll have a latte.\""
             },
             {
-                "option": "[Smile.] \"Please make yourself comfortable.\""
+                "option": "[Smile.] \"Please make yourself comfortable.\"",
+                "chased_option": null
             }
         ]
     },
     {
         "id": "31113212",
-        "msg": "[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]\nRoulx: \u201cAlrighty.\u201d\n[Ki leans, tapping a hand on the table mindlessly.]\n[You take a sip of the latte, served to you atop a small black plate and along with a ceramic teaspoon.\nMmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]",
+        "msg": 
+        [
+            "[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]",
+            "Roulx: \"Alrighty.\"",
+            "",
+            "[Ki leans, tapping a hand on the table mindlessly.]",
+            "[You take a sip of the latte, served to you atop a small black plate and along with a ceramic teaspoon.",
+            "Mmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]"
+        ],
         "options": [
             {
-                "option": "Are you sure you don't want anything else?"
+                "option": "\"Are you sure you don't want anything else?\""
             },
             {
-                "option": "How is Hugo doing?"
+                "option": "\"How is Hugo doing?\""
             },
             {
-                "option": "Yeah. So, what were we talking about before?"
+                "option": "\"Yeah. So, what were we talking about before?\""
             }
         ]
     },
     {
         "id": "311132122",
-        "msg": "Roulx: \"He's been doing fine. It wouldn't've been a long time since he'd left. But I'll say that he's doing fine.\",\n[It takes its tastes of the water. Lukewarm.] \nRoulx: \"What did you think of him?\"",
+        "msg": 
+        [
+            "Roulx: \"He's been doing fine. It wouldn't've been a long time since he'd left. But I'll say that he's doing fine.\"",
+            "[It takes its tastes of the water. Lukewarm.]",
+            "",
+            "Roulx: \"What did you think of him?\""
+        ],
         "options": [
             {
-                "option": "He certainly lightens the room with his presence. Charismatic, might be the word. They're a good fit for you, I think. Is he good to you?"
+                "option": "\"He certainly lightens the room with his presence. Charismatic, might be the word. They're a good fit for you, I think. Is he good to you?\""
             },
             {
-                "option": "Honestly I don't think I know them as well as I could have, but they seemed like a good person. Friendly, easy to talk to. What do *you* think of him?"
+                "option": "\"Honestly I don't think I know them as well as I could have, but they seemed like a good person. Friendly, easy to talk to. What do *you* think of him?\""
             },
             {
-                "option": "He's a time traveller, right? We talked a few times, he told me about some of his journeys. There must be so much going on out there, I can't possibly imagine. Do you two travel often?"
+                "option": "\"He's a time traveller, right? We talked a few times, he told me about some of his journeys. There must be so much going on out there, I can't possibly imagine. Do you two travel often?\""
             }
         ]
     },
     {
         "id": "2(1)",
-        "msg": "Roulx: \"Olive Stanford.\"\n[They attempt to walk up to your side.]",
+        "msg": 
+        [
+            "Roulx: \"Olive Stanford.\"",
+            "[They attempt to walk up to your side.]"
+        ],
         "options": [
             {
                 "option": "[Freeze.]"
@@ -262,7 +368,11 @@
     },
     {
         "id": "2(1)3",
-        "msg": "Roulx: \"Hey!\" \n[They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]",
+        "msg": 
+        [
+            "Roulx: \"Hey!\"",
+            "[They call out for you again, catching up with a trot. Your sight greets the corners of a patch of white.]"
+        ],
         "options": [
             {
                 "option": "[Give up.]"
@@ -295,7 +405,12 @@
     },
     {
         "id": "2(1)32",
-        "msg": "[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.] \nRoulx: \"Hey.\"\n[...]",
+        "msg": 
+        [
+            "[The person doesn't hesitate anymore, hopping in front of you directly blocking your path.]",
+            "Roulx: \"Hey.\"",
+            "[...]"
+        ],
         "options": [
             {
                 "option": "[Feign innocence.]",
@@ -334,11 +449,16 @@
     },
     {
         "id": "2(2)2",
-        "msg": "[You are out of the mall. Cars pass by on the road in front of you.\nYou should be safe now.]",
+        "msg": 
+        [
+            "[You are out of the mall. Cars pass by on the road in front of you.]",
+            "[You should be safe now.]"
+        ],
         "options": [
             {
                 "option": "[Keep walking.]",
-                "jumpto": "01"
+                "jumpto": "01",
+                "remember_id": true
             },
             {
                 "option": "[...\"Roulx was in there.\"]"
@@ -347,7 +467,11 @@
     },
     {
         "id": "01",
-        "msg": "Ending 1.  Strangers in the End.\nRoulx thinks that they'd simply mistaken them for kir dear friend. A pity.",
+        "msg": 
+        [
+            "Ending 1.  Strangers in the End.",
+            "Roulx thinks that they'd simply mistaken them for kir dear friend. A pity."
+        ],
         "options": [
             {
                 "option": "Restart.",
@@ -355,17 +479,23 @@
             },
             {
                 "option": "Revert to previous move.",
-                "jumpto": "2(2)2"
+                "jumpto": "remember_id"
             }
         ]
     },
     {
         "id": "2(2)22",
-        "msg": "[Yes, this is true. Roulx, a former ally that you knew, is still in the mall. You have no idea what they are doing in there, nor how long they plan to stay.\n...]",
+        "msg": 
+        [
+            "[Yes, this is true. Roulx, a former ally that you knew, is still in the mall. You have no idea what they are doing in there, nor how long they plan to stay.]",
+            "",
+            "[...]"
+        ],
         "options": [
             {
                 "option": "[Walk away. Try to forget.]",
-                "jumpto": "01"
+                "jumpto": "01",
+                "remember_id": true
             },
             {
                 "option": "[Return to the mall.]"
@@ -377,7 +507,9 @@
         "msg": "[Great. Now what are you going to do?]",
         "options": [
             {
-                "option": "[Walk up to them. Greet them like any normal person.]"
+                "option": "[Walk up to them. Greet them like any normal person.]",
+                "jumpto": "2(1)31",
+                "feign_surprise": true
             },
             {
                 "option": "[Observe their movements.]"
@@ -386,7 +518,11 @@
     },
     {
         "id": "2(1)33(1)",
-        "msg": "[They run after you. Though your crowded surroundings make obstacles for you.]\n[After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]",
+        "msg": 
+        [
+            "[They run after you. Though your crowded surroundings make obstacles for you.]",
+            "[After a while of running, you seem to have lost them. The streets run bare. The strange person is nowhere in your sense.]"
+        ],
         "options": [
             {
                 "option": "[Risk a glance back.]",
@@ -429,7 +565,14 @@
     },
     {
         "id": "2(1)33(1)1(1)2",
-        "msg": "[You come to a halt, huffing, aching in your lungs. You haven't run quite so much in a while... huh. You must be getting old.\nSweat trickles down the side of your face as you hear the light footsteps catching up behind you.]\n[The footsteps slows down, right, behind you.]\nRoulx: \"What are you running for?\"",
+        "msg": 
+        [
+            "[You come to a halt, huffing, aching in your lungs. You haven't run quite so much in a while... huh. You must be getting old.]",
+            "[Sweat trickles down the side of your face as you hear the light footsteps catching up behind you.]",
+            "[The footsteps slows down, right, behind you.]",
+            "",
+            "Roulx: \"What are you running for?\""
+        ],
         "options": [
             {
                 "option": "\"...   I don't want to talk to you.\""
@@ -441,13 +584,72 @@
     },
     {
         "id": "2(1)33(1)1(1)21",
-        "msg": "Roulx: \"Why not...\"\n[They look sad, in the ever so kind of way that you can tell. Or is it disappointment?]\n\"...\"",
+        "msg": 
+        [
+            "Roulx: \"Why not...\"",
+            "[They look sad, in the ever so kind of way that you can tell. Or is it disappointment?]",
+            "",
+            "\"...\""
+        ],
         "options": [
             {
-                "option": "\"Why, because I don't know you.\""
+                "option": "\"Why, because I don't know you.\"",
+                "jumpto": "2(1)33(1)1(1)22"
             },
             {
                 "option": "\"There's nothing that I can tell you.\""
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(1)22",
+        "msg": "Roulx: \"Olive. My- it's you, of course.\"",
+        "options":
+        [
+            {
+                "option": "Who's Olive?"
+            },
+            {
+                "option": "I have nothing to tell you. I have nothing to tell you that I can be proud of. I am sorry."
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(1)221",
+        "msg":
+        [
+            "Roulx: \"You're Olive! You're... You're.\"",
+            "[They hesitate, moving their gaze away from you, looking downwards to the ground.]",
+            "",
+            "",
+            "[You stare them back, regardless of their gaze towards you. Your eyes are as dead as your soul.]"
+        ],
+        "options":
+        [
+            {
+                "option": "I don't know them."
+            }
+        ]
+    },
+    {
+        "id": "",
+        "msg":
+        [
+            "Roulx: \"I'm... Right.\"",
+            "[Ki fiddles with their hands, fingertips intersecting each other like polygons that were poorly joined.]",
+            "Roulx: \"I mean, it's okay, we can. We can restart from the beginning? You're here, I'm, here as well.\"",
+            "[Who cares what lead to the end the years ago, Roulx doesn't.]",
+            "[Ki smiles taut and pulled outwards for you, outstretched hands shaking before you noticed and they retracted behind kimself.]",
+            "",
+            "",
+            "[You say nothing, looking down at your shoes and the concrete.]",
+            "",
+            "[Olive doesn’t know how to smile anymore. Autumn does, but Olive doesn’t.]"
+        ],
+        "options":
+        [
+            {
+                "option": "What is there to restart?"
             }
         ]
     },
@@ -479,7 +681,12 @@
     },
     {
         "id": "2(1)33(1)1(1)121",
-        "msg": "Roulx: \"hmph-\" \n[Something, *someone* fell. The footsteps have stopped.]",
+        "msg": 
+        [
+            "Roulx: \"hmph-\"",
+            "",
+            "[Something, *someone* fell. The footsteps have stopped.]"
+        ],
         "options": [
             {
                 "option": "[Run.]",
@@ -492,7 +699,11 @@
     },
     {
         "id": "02",
-        "msg": "Roulx: \"...\" \n[You keep on running. There's nothing making indication of them still chasing you.]",
+        "msg": 
+        [
+            "Roulx: \"...\"",
+            "[You keep on running. There's nothing making indication of them still chasing you.]"
+        ],
         "options": [
             {
                 "option": "[Run.]"
@@ -528,7 +739,13 @@
     },
     {
         "id": "021111",
-        "msg": "[Pant, pant, pant.   '...  You can't... You can't keep doing this to yourself, Olive. ...']",
+        "msg":
+        [
+            "[Pant, pant, pant..]",
+            "",
+            "",
+            "['...  You can't... You can't keep doing this to yourself, Olive. ...']"
+        ],
         "options": [
             {
                 "option": "[\"Who's Olive?\"]",
@@ -538,7 +755,11 @@
     },
     {
         "id": "2(1)33(1)1(2)",
-        "msg": "[You seemed to have lost them... You find yourself upon the sidewalks of a street you don't recognise. Red brick walls censored with graffiti, cig buds lay trash to the exposed roots of trees.]\n[Well damn how are you gonna get back now?...]",
+        "msg": 
+        [
+            "[You seemed to have lost them... You find yourself upon the sidewalks of a street you don't recognise. Red brick walls censored with graffiti, cig buds lay trash to the exposed roots of trees.]",
+            "[Well damn how are you gonna get back now?...]"
+        ],
         "options": [
             {
                 "option": "[Find current location on phone.]"
@@ -550,10 +771,56 @@
     },
     {
         "id": "2(1)33(1)1(2)1",
-        "msg": "[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]\n[... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]",
+        "msg": 
+        [
+            "[You open your map in search of your current location. You have, in miracle, ran as fast as you can all the way to further west of your suburb. Despite at least going out from time to time, you hadn't ever came around this far in this direction. Perhaps it's because of the lack of street lights around here, or the simply fewer people that'd even talked about.]",
+            "[... Luckily it's only a few minutes walk to get back to where you are more familiar. As you know where you are going.]"
+        ],
         "options": [
             {
-                "option": ""
+                "option": "[Retrace steps back to the mall.]"
+            }
+        ],
+        "lost": false
+    },
+    {
+        "id": "2(1)33(1)1(2)11",
+        "msg": 
+        [
+            "[Through a bit of trouble (and a bit of disorientation. bro where did you ev), you have retraced your steps.]",
+            "[You stand in front of the mall's still open glass doors. Bright afternoon sun, shines warm tracing your back. The mall is placed at a very nice position in the suburb, good potential, good flow of people. There's even two bus stops near by.]"
+        ],
+        "options": [
+            {
+                "option": "[Leave on the closest bus. Try to forget who you saw.]",
+                "jumpto": "01",
+                "remember_id": true
+            },
+            {
+                "option": "...Roulx is still here somewhere."
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)112",
+        "msg": 
+        [
+            "[Oh yes they are.]",
+            "[But,, are you sure you'll be able to find them? Even if you've been here so many times..]",
+            "[It had taken you a bit of time to get back here.]",
+            "[Don't you think that they would've left by now?]"
+        ],
+        "options": [
+            {
+                "option": "[Give up. Leave.]",
+                "jumpto": "01",
+                "remember_id": true
+            },
+            {
+                "option": "[Poke around a bit.]"
+            },
+            {
+                "option": "[...Open the group chat.]"
             }
         ]
     },
@@ -571,11 +838,18 @@
             {
                 "option": "...I'm. Sorry. ..."
             }
-        ]
+        ],
+        "chased": true
     },
     {
         "id": "2(1)33(1)1(1)12121",
-        "msg": "[There are twitches in their shoulder. White hair splayed on the ground, they do eventually make to slowly sit up.]\n[They simply...]\n[Look at you.]\n[You can't tell their expression. Is it confusion? Is it coldness? Is it frustration?]",
+        "msg": 
+        [
+            "[There are twitches in their shoulder. White hair splayed on the ground, they do eventually make to slowly sit up.]",
+            "[They simply...]",
+            "[Look at you.]",
+            "[You can't tell their expression. Is it confusion? Is it coldness? Is it frustration?]"
+        ],
         "options": [
             {
                 "option": "[Hold your silence.]"
@@ -605,7 +879,13 @@
     },
     {
         "id": "2(1)33(1)1(1)1212121",
-        "msg": "[You help them up.]\nRoulx: \"I'm alright.\" \n[They take a stance in front of you. Slower breaths.] \nRoulx: \"Are you,, are you alright?\"",
+        "msg": 
+        [
+            "[You help them up.]",
+            "Roulx: \"I'm alright.\"",
+            "[They take a stance in front of you. Slower breaths.]",
+            "Roulx: \"Are you,, are you alright?\""
+        ],
         "options": [
             {
                 "option": "\"Yes. I'm alright.\""
@@ -614,7 +894,11 @@
     },
     {
         "id": "2(1)33(1)1(1)12121211",
-        "msg": "[They breathe. Inhale, exhale. But then take themself to gain poise.]\nRoulx: \"How have you been, Olive?\"",
+        "msg": 
+        [
+            "[They breathe. Inhale, exhale. But then take themself to gain poise.]",
+            "Roulx: \"How have you been, Olive?\""
+        ],
         "options": [
             {
                 "option": "\"...Who's Olive?\""
@@ -623,7 +907,13 @@
     },
     {
         "id": "2(1)33(1)1(1)1212122",
-        "msg": "[You help them up.]\nRoulx: \"That,, that's alright.\" \n[They look away to the side.] \n\"What... How have you been, Olive?\"",
+        "msg": 
+        [
+            "[You help them up.]",
+            "Roulx: \"That,, that's alright.\"",
+            "[They look away to the side.]",
+            "Roulx: \"What... How have you been, Olive?\""
+        ],
         "options": [
             {
                 "option": "\"...Who's Olive?\""
@@ -632,7 +922,7 @@
     },
     {
         "id": "2(1)33(2)",
-        "msg": "[The doors of the mall closes behind you,, seconds later than you would imagine. Hmm. That\u2019s odd.]",
+        "msg": "[The doors of the mall closes behind you,, seconds later than you would imagine. Hmm. That's odd.]",
         "options": [
             {
                 "option": "[Run.]",
@@ -669,56 +959,46 @@
                 "option": "[Sneak around on the same floor.]"
             },
             {
-                "option": "[Go up the escalator to observe them from above.]"
+                "option": "[Go up the escalator to observe them from above.]",
+                "jumpto": "2(2)22221",
+                "location": "mall2"
             }
         ]
     },
     {
         "id": "2(2)22221",
-        "msg": "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]\n[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]",
+        "msg": 
+        [
+            "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]",
+            "",
+            "[Roulx has moved from their previous position, but as you peer around for even the tint of white, you spot them. They've gone strolling down the corridor, gazing pensively over the glass fronts of luxury items.]"
+        ],
         "options": [
             {
                 "option": "[\"I wonder what they are buying.\"]"
             },
             {
-                "option": "[\"I wonder why they're spending so luxuriously.\"]"
+                "option": "[\"I wonder why they're spending so luxuriously.\"]",
+                "jumpto": "2(2)222211"
             }
         ]
     },
     {
         "id": "2(2)222211",
-        "msg": "[How curious.. What do they have... Clothes, jewels, tools... As you inspect the items abound, you don't forget who *you* are looking out for. Roulx has found their way into a tools repair workshop.]",
-        "options": [
-            {
-                "option": "[Idly wonder what they are buying.]"
-            },
-            {
-                "option": "[Peer into the shop they're at.]",
-                "jumpto": "2(2)2222112"
-            },
-            {
-                "option": "[Go talk to them after all.]",
-                "jumpto": "2(2)2221"
-            }
-        ]
-    },
-    {
-        "id": "2(2)2222111",
-        "msg": "[You ponder what they might be buying, staying in spot. Roulx is inside the tools repair workshop.]\n[Roulx... Usually utilises tools that are more ordinary for their work. It's rather peculiar to see them ponder items that,, by what you know, seldom in their standard.]",
-        "options": [
-            {
-                "option": "[Peer into the shop they're at.]",
-                "jumpto": "2(2)2222112"
-            },
-            {
-                "option": "[Go talk to them after all.]",
-                "jumpto": "2(2)2221"
-            }
-        ]
+        "msg":
+        [
+            "[How curious.. What do they have... Clothes, jewels, tools...]",
+            "[As you inspect the items abound, you don't forget who *you* are looking out for. Roulx has found their way into a tools repair workshop.]"
+        ],
+        "options": []
     },
     {
         "id": "2(2)2222112",
-        "msg": "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls. But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]",
+        "msg":
+        [
+            "[Their bright figure is distinctive in the scarcely visited workshop. Peering, they take only short glances of the complicated parts and charts and diagrams on the walls.]",
+            "[But an item they take out of their decorated tote bag catches your attention. A gloved hand, holding up a small, grey, staff-like item, conducting quiet chatter with the facilitator from the desk - which you cannot tell what they're talking about from your position, as their back is turned towards you.]"
+        ],
         "options": [
             {
                 "option": "[Wait around.]",
@@ -738,7 +1018,20 @@
     },
     {
         "id": "2(2)22221122",
-        "msg": "",
+        "msg": 
+        [
+            "[Start of dialogue section:]",
+            "",
+            "\"Could you please disassemble this item for me?\"",
+            "\"Sure. May I ask what this thing is?\"",
+            "\"It's a device. But we just need some of its components.\"",
+            "\"And where might have you gotten it?\"",
+            "\"[A noticeable pause.]\"",
+            "\"I don't know.\"",
+            "\"That's alright. You can leave it here and if you could leave your contact information, we'll have it done in latest tomorrow.\"",
+            "",
+            "[End of dialogue.]"
+        ],
         "options": [
             {
                 "option": "[\"...I'm curious.\"]"
@@ -766,13 +1059,18 @@
             },
             {
                 "option": "[JUST GO TALK TO THEM GODDAMMIT]",
-                "jumpto": "2(2)2221"
+                "jumpto": "2(1)31",
+                "feign_surprise": true
             }
         ]
     },
     {
         "id": "2(2)22221121(1)",
-        "msg": "[You wait around on the spot.]\n[Roulx comes out of the store, noticing you creeping around the storefront... They look towards you, saying nothing but just a strange look.]",
+        "msg": 
+        [
+            "[You wait around on the spot.]",
+            "[Roulx comes out of the store, noticing you creeping around the storefront... They look towards you, saying nothing but just a strange look.]"
+        ],
         "options": [
             {
                 "option": "[Pretend you hadn't noticed. Walk off again.]"
@@ -782,13 +1080,18 @@
             },
             {
                 "option": "[Give in.]",
-                "jumpto": "2(2)2221"
+                "jumpto": "2(1)31",
+                "feign_surprise": true
             }
         ]
     },
     {
         "id": "2(2)22221121(2)",
-        "msg": "[You wait around on the spot.]\n[Roulx comes out of the store. Luckily, they turn the other way, strolling past your sneaky behaviour.]",
+        "msg": 
+        [
+            "[You wait around on the spot.]",
+            "[Roulx comes out of the store. Luckily, they turn the other way, strolling past your sneaky behaviour.]"
+        ],
         "options": [
             {
                 "option": "[Watch Roulx.]",
@@ -798,7 +1101,11 @@
     },
     {
         "id": "2(2)22221121(1)1",
-        "msg": "[You spin around before you they get the chance to make eye contact with you. Tucking your hands in pockets and sucking in a quick breath, you walk off. The way that you turn, almost reminds one of a video game NPC.]\n[But they don't move. Completely silent the moment that they've spotted you. That when you turn away, you can tell from the net zero audio cue, that they have hadn't any steps taken away at all.]",
+        "msg": 
+        [
+            "[You spin around before you they get the chance to make eye contact with you. Tucking your hands in pockets and sucking in a quick breath, you walk off. The way that you turn, almost reminds one of a video game NPC.]",
+            "[But they don't move. Completely silent the moment that they've spotted you. That when you turn away, you can tell from the net zero audio cue, that they have hadn't taken any steps away at all.]"
+        ],
         "options": [
             {
                 "option": ""
@@ -807,7 +1114,13 @@
     },
     {
         "id": "2(2)22221121(1)2",
-        "msg": "[You frown at Roulx. They seem put off by that expression, tilting their head at you.]\nRoulx: \"Hmm? My apologies.\" \n[They turn, moving out of your way to the other side of the walkway. Presumably giving *you* space, as any polite stranger would.]",
+        "msg": 
+        [
+            "[You frown at Roulx.]",
+            "[They seem put off by that expression, tilting their head at you.]",
+            "Roulx: \"Hmm? My apologies.\"",
+            "[They turn, moving out of your way to the other side of the walkway. Presumably giving *you* space, as any polite stranger would.]"
+        ],
         "options": [
             {
                 "option": "[Buy something. Anything.]"
@@ -820,7 +1133,12 @@
     },
     {
         "id": "2(2)22221121(1)21",
-        "msg": "[You begin to look for something to buy. Perhaps to make yourself look less suspicious.]\n[However. The area that you are in doesn\u2019t serve the cheapest... Well, to the least there is a food court near the same entrance that you came from, but that\u2019s a few walls of distance as well.]",
+        "msg": 
+        [
+            "[You begin to look for something to buy. Perhaps to make yourself look less suspicious.]",
+            "",
+            "[However. The area that you are in doesn't serve the cheapest... Well, to the least there is a food court near the same entrance that you came from, but that's a few walls of distance as well.]"
+        ],
         "options": [
             {
                 "option": "[Just browse, then.]"
@@ -843,30 +1161,29 @@
     },
     {
         "id": "2(2)22221121(2)1",
-        "msg": "[... You come to the sense, to watch. Roulx.]\n[You turn around to them away. How they move as quiet as you remembered with coldness. But they haven\u2019t left your sight. Or to say, you haven\u2019t allowed them to leave your sight.]",
+        "msg": 
+        [
+            "[... You come to the sense, to watch. Roulx.]",
+            "",
+            "[You turn around to them away. How they move as quiet as you remembered with coldness. But they haven't left your sight. Or to say, you haven't allowed them to leave your sight.]"
+        ],
         "options": [
             {
-                "option": "[Follow them. You can\u2019t afford to lose them.]"
-            }
-        ]
-    },
-    {
-        "id": "2(2)2222113",
-        "msg": "[You creep back downstairs.]\n[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]",
-        "options": [
-            {
-                "option": "[Peer into the shop they're at.]",
-                "jumpto": "2(2)2222112"
-            },
-            {
-                "option": "[Go talk to them after all.]",
-                "jumpto": "2(2)2221"
+                "option": "[Follow them. You can't afford to lose them.]"
             }
         ]
     },
     {
         "id": "2(1)31",
-        "msg": "\"Oh. ...Wait, Roulx? Is that you?\"\nRoulx: \u201c\u2026 Yes? Olive, it\u2019s me.\u201d \n[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]\n\"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?\"\n\"...Wait.\"",
+        "msg": 
+        [
+            "\"Oh. ...Wait, Roulx? Is that you?\"",
+            "Roulx: \"Yes? Olive, it's me.\"",
+            "[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]",
+            "",
+            "\"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?\"",
+            "\"...Wait.\""
+        ],
         "options": [
             {
                 "option": "\"Who's Olive?\""
@@ -874,18 +1191,30 @@
         ]
     },
     {
-        "id": "2(2)2221",
-        "msg": "[You approach them with a look of surprise.]\n\"Oh. ...Wait, Roulx? Is that you?\"\nRoulx: \u201c\u2026 Yes? Olive, it\u2019s me.\u201d \n[The two their hands point to themself, leaning forward in a,, almost pleading gesture?]\n\"Heh... Sorry, I just didn't realise it was you! Well we,, we haven't seen each other in a while, have we?\"\n\"...Wait.\"",
+        "id": "2(1)311",
+        "msg": 
+        [
+            "Roulx: \"Hmm? You're Olive. Right?\"",
+            "[They tilt their head, a gesture of confusion. A right hand which taps less patient than their tone may tell.]"
+        ],
         "options": [
             {
-                "option": "\"Who's Olive?\"",
-                "jumpto": "2(1)311"
+                "option": "\"...Huh? I'm not Olive. I'm Autumn. Autumn Sky. You must have confused me for someone else.\""
             }
         ]
     },
     {
-        "id": "2(1)311",
-        "msg": "Roulx: \u201cHmm? You\u2019re Olive. Right?\u201d\n[They tilt their head, a gesture of confusion. A right hand which taps less patient than their tone may tell.]\n\"...Huh?\" I'm not Olive. I'm Autumn. Autumn Sky. You must have confused me for someone else.\"\n[Their expression drops, even if there weren\u2019t much except for the way they stared at you.] \nRoulx: \u201cO-Oh.\u201d \n[They fidget, eyes darting away to the ground beside and their hand fiddling with tote bag straps on their shoulder.]\nRoulx: \u201cAh\u2026 My apologies. I.. Must\u2019ve mistaken you for a friend of mine.\u201d \n[Friend.]",
+        "id": "2(1)3111",
+        "msg": 
+        [
+            "[Their expression drops, even if there weren't much except for the way they stared at you.]",
+            "",
+            "Roulx: \"O-Oh. ...\"",
+            "[They fidget, eyes darting away to the ground beside and their hand fiddling with tote bag straps on their shoulder.]",
+            "Roulx: \"Ah... My apologies. I.. Must've mistaken you for a friend of mine.",
+            "",
+            "[Friend.]"
+        ],
         "options": [
             {
                 "option": "\"That's alright. Mistakes happen all the time.\"",
@@ -895,7 +1224,14 @@
     },
     {
         "id": "2(1)1",
-        "msg": "[You go very, very still. As though that will help you now, Heh.]\n[How silly of you!. Well they simply stare down at you, huffing, but slowing breaths noticeable as they stand right in front of you.] \nRoulx: \u201c\u2026\u201d \n[It stares.]",
+        "msg": 
+        [
+            "[You go very, very still. As though that will help you now, Heh.]",
+            "[How silly of you!. Well they simply stare down at you, huffing, but slowing breaths noticeable as they stand right in front of you.]",
+            "",
+            "Roulx: \"...\"",
+            "[It stares.]"
+        ],
         "options": [
             {
                 "option": "[Stare back.]"
@@ -912,7 +1248,13 @@
     },
     {
         "id": "2(1)13",
-        "msg": "[They take a step back, surprised.]\nRoulx: \"Ol-Olive?\"\n\"...  ...  ........\"",
+        "msg": 
+        [
+            "[They take a step back, surprised.]",
+            "Roulx: \"Ol-Olive?\"",
+            "",
+            "\"...  ...  ........\""
+        ],
         "options": [
             {
                 "option": "Who's Olive?"
@@ -921,7 +1263,14 @@
     },
     {
         "id": "2(1)131",
-        "msg": "[There is a pause in their movement, as they pull a gap between the gaps of their fingers, in a peeking and examining kind of way.] \nRoulx: \"?... But you?\" \n[They pull both their hands off their face, a hand nudging their totebag over their shoulder again. Their head tilted a curious way. Would be an innocent gaze of obliviousness if you didn't know.]",
+        "msg": 
+        [
+            "[There is a pause in their movement, as they pull a gap between the gaps of their fingers, in a peeking and examining kind of way.]",
+            "",
+            "Roulx: \"?... But you?\"",
+            "",
+            "[They pull both their hands off their face, a hand nudging their totebag over their shoulder again. Their head tilted a curious way. Would be an innocent gaze of obliviousness if you didn't know.]"
+        ],
         "options": [
             {
                 "option": "\"I'm Autumn. Autumn Sky. You must have confused me for someone else.\""
@@ -930,7 +1279,11 @@
     },
     {
         "id": "2(1)1311",
-        "msg": "Roulx: \"Huh... Haven't, then I've mistaken you for someone else.. My apologies.\" \n[How cruel? But they smile at you.]",
+        "msg": 
+        [
+            "Roulx: \"Huh... Haven't, then I've mistaken you for someone else.. My apologies.\"",
+            "[How cruel? But they smile at you.]"
+        ],
         "options": [
             {
                 "option": "\"That's alright. Mistakes happen all the time.\"",
@@ -940,7 +1293,18 @@
     },
     {
         "id": "2(1)11",
-        "msg": "[Oh a staring contest?\u2026]\n[\u2026]\n[\u2026]\n[\u2026]\n[Their face scrunches up uncomfortably.]",
+        "msg": 
+        [
+            "[Oh a staring contest?...]",
+            "",
+            "[...]",
+            "[...]",
+            "[...]",
+            "[...]",
+            "[...]",
+            "",
+            "[Their face scrunches up uncomfortably.]"
+        ],
         "options": [
             {
                 "option": "[You're on.]"
@@ -957,7 +1321,16 @@
     },
     {
         "id": "2(1)111",
-        "msg": "[Oh so it's on.]\n[You raise your head ever so slightly to match up. Staring. Glaring.]\n[...]\n[... Yeah no, they're physically leaning backwards. In the way they seem to be squinting.]\n[Oop- You won. Roulx'd looked away, taking a step backwards. And a two hands covering their face and eyes.]",
+        "msg": 
+        [
+            "[Oh so it's on.]",
+            "",
+            "[You raise your head ever so slightly to match up. Staring. Glaring.]",
+            "[...]",
+            "",
+            "[... Yeah no, they're physically leaning backwards. In the way they seem to be squinting.]",
+            "[Oop- You won. Roulx'd looked away, taking a step backwards. And a two hands covering their face and eyes.]"
+        ],
         "options": [
             {
                 "option": "\"...Roulx?\"",
@@ -966,6 +1339,193 @@
             {
                 "option": "\"...Hello, Roulx.\"",
                 "jumpto": "2(1)13"
+            }
+        ]
+    },
+    {
+        "id": "3111321222",
+        "msg": 
+        [
+            "Roulx: \"Oh! Uhm, he's. Uh. Very... I'm rather fond of him.\"",
+            "[It looks around curiously, stopping at a centre on the table between them. An index finger circles the spot playfully.]",
+            "",
+            "Roulx: \"You should've. He can be rather tactical as well, so... You, uhm, you two might've gotten along as well.  Where back in the days, when you were scheming and... Well. Yeah. If you don't want to talk about that, it's all good with me.\""
+        ],
+        "options": [
+            {
+                "option": "\"I'd... rather not talk about it, yes. Thank you.\"",
+                "chased_option": null
+            },
+            {
+                "option": "\"..What schemes?\"",
+                "pre_scene":
+                [
+                    "Roulx \"Oh.\"",
+                    "[Roulx leans back on its seat. Looking around the space again, but this time seeming to be more observing than evading your gaze.]"
+                ],
+                "jumpto": [
+                    "3111321222(1)",
+                    "3111321222(2)"
+                ],
+                "chance": "coin"
+            }
+        ]
+    },
+    {
+        "id": "3111321222(1)",
+        "msg":
+        [
+            "Roulx: \"... It's been a while hasn't it. Perhaps it's good that you've already forgotten.\"",
+            "[They smile at you, but why does it seem ever so saturnine.]"
+        ],
+        "options":
+        [
+            {
+                "option": "\"... Yeah.\""
+            },
+            {
+                "option": "\"Where were we? Yes, Hugo.\""
+            }
+        ]
+    },
+    {
+        "id": "3111321222(2)",
+        "msg":
+        [
+            "Roulx: \"... It's been too long hasn't it?. You, gathering the valiant group of people. A rebellion it was.\"",
+            "Roulx: \"Like a dream even.\"",
+            "",
+            "Roulx: \"Do you remember?\""
+        ],
+        "options":[
+            {
+                "option": "\"Yes. Like a dream.\""
+            },
+            {
+                "option": "\"..I don't remember as much as I'd like, to be honest. What were we talking about again?\""
+            }
+        ]
+    },
+    {
+        "id": "3111321221",
+        "msg":
+        [
+            "Roulx: \"He is good to me! I can't really go a day without seeing him, so he's nearly always there for me.\"", 
+            "[Roulx cups kir face in kir hands, pair of eyes playfully glancing around kir surroundings in an embarrassed way to avoid eye contact.]",
+            "Roulx: \"Charismatic... That is certainly a way to describe him.\""
+        ],
+        "options": [
+            {
+                "option": ""
+            }
+        ]
+    },
+    {
+        "id": "3111321223",
+        "msg":
+        [
+            "Roulx \"Yeah! We're actually here too for a business discussion.\"",
+            "[Roulx smiles with no teeth, a hand coming to slowly tap on the surface of the table.]",
+            "Roulx: \"As to what it is... Well, it's confidential. But I'm sure you can imagine!\""
+        ],
+        "options": [
+            {
+                "option": ""
+            }
+        ]
+    },
+    {
+        "id": "2(2)22221121(2)11",
+        "msg": 
+        [
+            "[... You are following them. Again.]",
+            "",
+            "[May the vibrant lights of the windows follow you through, light up your paths and leave not a trace of yours. But watch theirs.]",
+            "[They turn, again, again. Surely they could've taken a shorter route, but they don't look back, turning into an obscure room after heading into an emergency exit. There is a sign on the door, \"Janitor Clocker\"... A loose compound of a closet, and a locker.]"
+        ],
+        "options":[
+            {
+                "option": "[Hide near the entrance and see if they come back out.]"
+            },
+            {
+                "option": "[Follow them in.]",
+                "location": "mall_office",
+                "jumpto": "5"
+            }
+        ],
+        "location": "clocker"
+    },
+    {
+        "id": "5",
+        "msg":
+        [
+            "[... Wh. How. Where.]",
+            "",
+            "[This is not a Janitor Clocket. Clocker. Whatever you kids call them these days. This is an office building. Matt-blurred walls made of glass, behind them there are darkened figures burlling away at desks. The barely visible similarly glass doors, decorated mindlessly with metal nameplates.]",
+            "",
+            "[What... What is Roulx doing here? Why is there a this here?]"
+        ],
+        "options":[
+            {
+                "option": "['...Enlite?']"
+            },
+            {
+                "option": "[\"A finance office for regulating the mall behind the scenes?\"]",
+                "finance_theory": true,
+                "jumpto": "51"
+            }
+        ]
+    },
+    {
+        "id": "51",
+        "msg": "[This looks just like any other cookie cutter rent out business building. At least on the inside. You can't be sure of anything, except there is no Enlite's logo, not anywhere you can see yet.]",
+        "options":[
+            {
+                "option": "[Hide.]"
+            },
+            {
+                "option": "[Look for Roulx.]"
+            },
+            {
+                "option": "[Ask someone politely where this is.]"
+            }
+        ]
+    },
+    {
+        "id": "512",
+        "msg":
+        [
+            "[Hmm. You're efficient at this. In fact, you can still hear Roulx's footsteps.]",
+            "[You follow them. You can't help but notice how quiet it is despite their footsteps filling up the space.]"
+        ],
+        "options":[
+            {
+                "option": "[Become very conscious of your own footsteps.]"
+            },
+            {
+                "option": "[Look towards where they are headed.]"
+            }
+        ]
+    },
+    {
+        "id": "5122",
+        "msg":
+        [
+            "[The room is almost walled with rooms. Floor tiled with dark granite flooring. They turn at points where it seems like a dead-end, the walls also layered a modern, minimalistic dark,, material. Tables set against the walls seem almost casual with printers and other devices that beep when you get too close.]",
+            "",
+            "[Something tells you that you should not be here.]",
+            "",
+            "[But Roulx has already turned again, opening the glass door and walking into a room.]"
+        ],
+        "options": [
+            {
+                "option": "[Peer through the door.]"
+            },
+            {
+                "option": "[Follow Roulx in.]"
+            },
+            {
+                "option": "[Ask someone politely where this is.]"
             }
         ]
     }

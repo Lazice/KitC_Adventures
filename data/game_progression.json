@@ -1,6 +1,11 @@
 {
-    "location": "mall",
+    "location": "mall1",
     "Hugo": 0,
     "wedding": false,
-    "chase": false
+    "chased": false,
+    "idle_wonder": false,
+    "lost": true,
+    "feign_surprise": false,
+    "creeping": false,
+    "finance_theory": false
 }

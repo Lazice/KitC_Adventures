@@ -2,6 +2,7 @@ import './App.css';
 import Button from './Components/Button';
 import {mapMachine} from './Machines/mapMachine.ts';
 import {useMachine} from '@xstate/react';
+import script from './data/game_script.json';
 
 function App() {
   const [state, send] = useMachine(mapMachine);
@@ -30,7 +31,7 @@ function App() {
       <div className="game-wrapper">
         <h1 class="box-heading">{JSON.stringify(state.value)}</h1>
         <div className="text-wrapper">
-          <p>dialogueeee</p>
+          <p>{script.map(scene => scene.msg)}</p>
         </div>
       </div>
       <Button/>
