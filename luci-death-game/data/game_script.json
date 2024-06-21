@@ -493,6 +493,20 @@
         ]
     },
     {
+        "id": "03",
+        "msg":
+        [
+            "Ending 3. It's snowing.",
+            "Perhaps in a happier ending you'll bother to remember what you claim to have forgotten."
+        ],
+        "options": [
+            {
+                "option": "Restart.",
+                "jumpto": "0"
+            }
+        ]
+    },
+    {
         "id": "2(2)22",
         "msg": 
         [
@@ -756,7 +770,8 @@
         "options": [
             {
                 "option": "[\"Who's Olive?\"]",
-                "jumpto": "#"
+                "jumpto": "#",
+                "prescene": "Ending 2."
             }
         ]
     },
@@ -840,7 +855,9 @@
                 "option": "[Poke around a bit.]"
             },
             {
-                "option": "[...Open the group chat.]"
+                "option": "[...Open the group chat.]",
+                "jumpto": "4",
+                "remember_id": true
             }
         ]
     },
@@ -1438,6 +1455,23 @@
         ]
     },
     {
+        "id": "3111321222(1)2",
+        "msg":
+        [
+            "[It nods back, gently somehow, saccharine in a way you can't quite pin down.]", 
+            "Roulx: \"Hugo! Yes, yeah. We've been, around. Yes.",
+            "[Not one to stutter a lot, either to stay silent, or only speak when needed to.]",
+            "",
+            "[You recall them. A difference. Ah., Ki's changed.]"
+        ],
+        "options":
+        [
+            {
+                "option": ""
+            }
+        ]
+    },
+    {
         "id": "3111321222(2)",
         "msg":
         [
@@ -1452,6 +1486,26 @@
             },
             {
                 "option": "\"..I don't remember as much as I'd like, to be honest. What were we talking about again?\""
+            }
+        ]
+    },
+    {
+        "id": "3111321222(2)1",
+        "msg":
+        [
+            "Roulx: \"Like a dream huh?\"",
+            "[Its chin rests on the back of its hand, looking down aside for a moment.]",
+            "[They do look back.]",
+            "Roulx: \"Don't worry, it's that way for me too.\"",
+            "",
+            "[Roulx dreams often. For some reason, you remember that about it.]"
+        ],
+        "options":[
+            {
+                "option": "\"Have any nice dreams lately?\""
+            },
+            {
+                "option": "\"What else were we talking about?\""
             }
         ]
     },
@@ -1613,8 +1667,7 @@
                 "option": "[Listen to an audiobook or something while you're waiting.]"
             },
             {
-                "option": "[Observe the snow.]",
-                "jumpto": "2(1)33(1)1(2)2(1)1"
+                "option": "[Observe the snow.]"
             }
         ]
     },
@@ -1622,17 +1675,92 @@
         "id": "2(1)33(1)1(2)2(1)1",
         "msg":
         [
-            ""
+            "[You get up an audiobook to listen to, pulling out half tangled wired earbuds from your pockets. You shiver a little. The narrator's voice rings through your earbuds as you wait.]"
         ],
         "options":[
             {
-                "option": "[Ride home.]",
-                "jumpto": "01"
+                "option": ""
             },
             {
-                "option": "[Ride back to the mall.]",
+                "option": "",
+                "jumpto": "2(1)33(1)1(2)2(1)11"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)2",
+        "msg": [
+            "[It's cold outside. It's no wonder, as the grassy lawns of those behind you are covered in a visible layer of white. Blinding, like patches of unrendered webpages.]",
+            "",
+            "[They remind you of Roulx.]",
+            "[The way that totality of whiteness, stands out from every other earth tones around it.]",
+            "[And the way it's still. Not unmoving, but unnoticeable, until you made the effort to look...]",
+            "[Nothing was gained from learning that.]"
+        ],
+        "options": [
+            {
+                "option": "[Nothing was gained.]"
+            }
+        ],
+        "snow": true
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)21",
+        "msg": "[It's not your intention. You begin to notice snow everywhere. On the streets, on the shoulders of a person walking by, on the leaves of trees. None on the bus that's arriving though. Your ears turn red from the coldness, cold to your palms as you cover them for some reason.]",
+        "options": [
+            {
+                "option": "[Get on the bus.]",
+                "jumpto": "2(1)33(1)1(2)2(1)11"
+            }
+        ],
+        "snow": true
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)11",
+        "msg": "[You ride the bus. The sounds of the outside are muffled, the bus rocks back and forth along the road to...]",
+        "options":[
+            {
+                "option": "[... Home. You're going home.]",
+                "jumpto": "01",
+                "remember_id": true
+            },
+            {
+                "option": "[... to the mall.]",
                 "jumpto": "2(1)33(1)1(2)11",
                 "bus": true
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)111",
+        "msg": "[Home? Are you really going to go home? After all of that, even after you remembered it?]",
+        "options":[
+            {
+                "option": "['...']",
+                "jumpto": "2(1)33(1)1(2)2(1)11",
+                "voice_in_head": true
+            },
+            {
+                "option": "[\"Nonsense. I'd already forgotten.\"]"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(1)1112",
+        "msg": [
+            "[You arrive home. Hands tucked into your pockets unlike always. But maybe just like always, it's because you're",
+            "",
+            "",
+            "[cold. Who were you talking to?]"
+        ],
+        "options": [
+            {
+                "option": "[No one. no one no one no one no one no one no one no one no one no one no one no one no one no one no one no one no one no one no one no one no one]",
+                "jumpto": "03"
+            },
+            {
+                "option": "[It's so cold.]",
+                "jumpto": "03"
             }
         ]
     },
@@ -1678,9 +1806,125 @@
         ],
         "options":[
             {
-                "option": 
+                "option": "Something like that, yeah."
+            },
+            {
+                "option": "Not exactly."
             }
         ],
         "groupchat": "true"
+    },
+    {
+        "id": "41",
+        "msg":
+        [
+            "MrBlueSky: Something like that, yeah.",
+            "goodbyeyellowbrickroad: Can't you just message them then?",
+            "MrBlueSky: I can't, unfortunately. I think ki's changed kir contact number, haven't been able to connect.",
+            "MrBlueSky: I haven't seen them in a while, you see",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: awkward situation"
+        ],
+        "options": [
+            {
+                "option":"[Scroll.]"
+            }
+        ],
+        "friend": true
+    },
+    {
+        "id": "42",
+        "msg": 
+        [
+            "MrBlueSky: Not exactly. I knew kime a while back though.",
+            "MrBlueSky: So acquaintances, more like.",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: i see."
+        ],
+        "options": [
+            {
+                "option": "[Scroll.]",
+                "jumpto": "411"
+            }
+        ]
+    },
+    {
+        "id": "411",
+        "msg":
+        [
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: welp i hope you find them then.",
+            "MrBlueSky: Thx",
+            "MrBlueSky: I'm pretty sure ki was wearing a white suit and yellow bow tie last I saw kime. White hair, good fashion sense.",
+            "MyBlueSky: Could you keep an eye out for someone like that?",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: sure",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: i'm trying to find clay supplies on the art shop on the second floor, i'll let you know if i see anyone like that.",
+            "MrBlueSky: Thank you Drew, really appreciate it.",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: np"
+        ],
+        "options": [
+            {
+                "option": "[Scroll.]"
+            }
+        ]
+    },
+    {
+        "id": "4111",
+        "msg": "girl in red: Isn't that like stalking?",
+        "options":[
+            {
+                "option": "No it's not."
+            },
+            {
+                "option": "[Wait for someone else to respond.]"
+            }
+        ]
+    },
+    {
+        "id": "41111",
+        "msg":[
+            "MrBlueSky: I don't think so.",
+            "MrBlueSky: I mean I'm just trying to reconnect with someone I used to know.",
+            "MrBlueSky: I don't think that's too unreasonable."
+        ],
+        "options": [
+            {
+                "option": "[Scroll.]"
+            }
+        ]
+    },
+    {
+        "id": "41112",
+        "msg": [
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: duude wtf",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: i'm just helping out with autumn's reunion with a friend. it's not stalking.",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: it's not like i'm spying on a rando or anything weird like that. idk if i'll even find them lmao."
+        ],
+        "options": [
+            {
+                "option": "[Scroll.]",
+                "jumpto": "411111"
+            }
+        ]
+    },
+    {
+        "id": "411111",
+        "msg":[
+            "girl in red: Not a friend. An 'acquaintance'.",
+            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: so? still not a complete stranger.",
+            "girl in red: Fine. If you say so.",
+            "girl in red: Good luck, Autumn."
+        ],
+        "options": [
+            {
+                "option": "Thank you, Zoe.",
+                "jumpto": "2(1)33(1)1(2)1122"
+            }
+        ]
+    },
+    {
+        "id": "3111212",
+        "msg": [
+            "Roulx: \"Oh this. It's some vows that are stars and astronomy themed.\"",
+            "[They take it off, turning its rings around to expose most of its engravings out. The gold glistens with a tarnished luster, the termination of light blurs on the metal.]",
+            "Roulx: \"I don't understand all of them, I'm not too invested in stars. But I like it!\""
+        ]
     }
 ]

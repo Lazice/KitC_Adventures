@@ -1,14 +1,14 @@
 from modify_scene import *
 
-coin_sound = "Media/coin-toss.wav"
-dice_sound = "Media/dice-roll.wav"
+coin_sound = "luci-death-game/Media/coin-toss.wav"
+dice_sound = "luci-death-game/Media/dice-roll.wav"
 
 
 def scene_display(statements):
     if isinstance(statements, list):
         msg = "\n".join(statements)
     else:
-        msg = scene["msg"]
+        msg = statements
     print("\n" + msg + "\n")
 
 

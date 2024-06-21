@@ -9,5 +9,8 @@
     "creeping": false,
     "finance_theory": false,
     "time_passage": false,
-    "bus": false
+    "bus": false,
+    "groupchat": true,
+    "snow": false,
+    "voice_in_head": false
 }

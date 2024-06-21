@@ -2,11 +2,12 @@ import random
 import winsound
 import json
 
-script_file = "data/game_script.json"
-progression_file = "data/game_progression.json"
-
+script_file = "luci-death-game/data/game_script.json"
+progression_file = "luci-death-game/data/game_progression.json"
+groupchat_file = "luci-death-game/python_game/groupchat.py"
 
 input_msg = "Please input a number > "
+chat_fade = "-----------------------"
 creep_down = {"option": "[Creep back downstairs.]", "creeping": True, "location": "mall1"}
 idle = {"option": "[Idly wonder what they are buying.]", "jumpto": "2(2)222211", "idle_wonder": True}
 creep_down_msg = ["[You creep back downstairs.]", "",
@@ -58,10 +59,6 @@ def cycle_progress(lst):
 def update_progress(scene):
     cycle_progress(scene)
 
-    if progress["groupchat"]:
-        with open("groupchat.py") as file:
-        exec(file.read())
-
     match scene["id"]:
         case "2(2)222":
             if progress["time_passage"]:
@@ -110,6 +107,16 @@ def update_progress(scene):
         case "51":
             if progress["finance_theory"]:
                 scene["msg"] = "[If you'd like to think that way. Everything looks the same when they're in that category of way too modern offices, just for the sake of efficiency.]"
+        case "2(1)33(1)1(2)1122":
+            if progress["groupchat"]:
+                scene["msg"] = chat_fade
+                progress["groupchat"] = False
+        case "2(1)33(1)1(2)2(1)11":
+            if progress["snow"]:
+                if progress["voice_in_head"]:
+                    scene["options"][0]["jumpto"] = "2(1)33(1)1(2)2(1)1112"
+                else:
+                    scene["options"][0]["jumpto"] = "2(1)33(1)1(2)2(1)111"
 
     if progress["chased"]:
         mark = []
