@@ -44,6 +44,32 @@ def roll(option):
         return option["jumpto"][counter-1]
 
 
+def option_effects(option, scene, option_index):
+    global remember_id
+    cycle_progress(chosen_option)
+    if "pre_scene" in option:
+        scene_display(option["pre_scene"])
+    if "remember_id" in option:
+        remember_id = scene["id"]
+        print("id remembered: " + remember_id)
+    if "pop" in option:
+        del scene["options"][option_index]
+        option["jumpto"] = scene["id"]
+        scene["msg"] = option["pop"]
+    if "jumpto" in option:
+        if isinstance(option["jumpto"], list):
+            return roll(option)
+        elif option["jumpto"] == "01" and progress["snow"]:
+            if progress["voice_in_head"]:
+                return "0312"
+            else:
+                return "031"
+        else: 
+            return option["jumpto"]
+    else:
+        return allocate(scene["id"], option_index + 1)
+
+
 end_game = False
 scene_pos = 0
 
@@ -78,7 +104,8 @@ while not end_game:
             else:
                 print("Ts ts ts... Thaat's not a number. yikes! :/")
         elif 1 <= int(ans) <= option_counter:
-            chosen_option = scene["options"][int(ans) - 1]
+            option_index = int(ans) - 1
+            chosen_option = scene["options"][option_index]
             valid = True
         else:
             error(option_counter)
@@ -86,18 +113,7 @@ while not end_game:
     # print selected response
     if not dev_mode:
         print(str(ans) + ". " + chosen_option["option"] + "\n")
-        cycle_progress(chosen_option)
-        if "pre_scene" in chosen_option:
-            scene_display(chosen_option["pre_scene"])
-        if "remember_id" in chosen_option:
-            remember_id = scene["id"]
-            print("id remembered: " + remember_id)
-        if "jumpto" in chosen_option:
-            if isinstance(chosen_option["jumpto"], list):
-                id = roll(chosen_option)
-            else: id = chosen_option["jumpto"]
-        else:
-            id = allocate(scene["id"], int(ans))
+        id = option_effects(chosen_option, scene, option_index)
 
     print(id)
     scene_pos = search_new_scene(id, remember_id, True)

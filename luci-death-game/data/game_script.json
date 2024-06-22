@@ -139,7 +139,13 @@
                 "option": "\"Do you like the moon?\""
             },
             {
-                "option": "\"What do those engravings say?\""
+                "option": "\"What do those engravings say?\"",
+                "pop": [
+                    "Roulx: \"Oh this. It's some vows that are stars and astronomy themed.\"",
+                    "[They take it off, turning its rings around to expose most of its engravings out. The gold glistens with a tarnished luster, the termination of light blurs on the metal.]",
+                    "Roulx: \"I don't understand all of them, I'm not too invested in stars. But I like it!\"",
+                    "\"I'm sure the vows are as elegant as they appear.\""
+                ]
             },
             {
                 "option": "\"Wow, those must have been expensive.\""
@@ -521,7 +527,8 @@
                 "remember_id": true
             },
             {
-                "option": "[Return to the mall.]"
+                "option": "[Return to the mall.]",
+                "voice_in_head": false
             }
         ]
     },
@@ -1056,7 +1063,29 @@
             "[How curious.. What do they have... Clothes, jewels, tools...]",
             "[As you inspect the items abound, you don't forget who *you* are looking out for. Roulx has found their way into a tools repair workshop.]"
         ],
-        "options": []
+        "options": [
+            {
+                "option": "[Idly wonder what they are buying.]",
+                "pop": [
+                    "[You ponder what they might be buying, staying in spot. Roulx is inside the tools repair workshop.]",
+                    "[Roulx... Usually utilises tools that are more ordinary for their work. It's rather peculiar to see them ponder items that,, by what you know, seldom in their standard.]"
+                    ]
+            },
+            {
+                "option": "[Creep back downstairs.]",
+                "location": "mall1",
+                "pop": [
+                    "[You creep back downstairs.]", "",
+                    "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
+                    ],
+                "flagged": true
+            },
+            {
+                "option": "[Crane your head over the railing to get a better look.]",
+                "jumpto": "2(2)2222112",
+                "flagged": true
+            }
+        ]
     },
     {
         "id": "2(2)2222112",
@@ -1169,7 +1198,7 @@
         "id": "2(2)22221121(1)1",
         "msg": 
         [
-            "[You spin around before you they get the chance to make eye contact with you. Tucking your hands in pockets and sucking in a quick breath, you walk off. The way that you turn, almost reminds one of a video game NPC.]",
+            "[You spin around before they get the chance to make eye contact with you. Tucking your hands in pockets and sucking in a quick breath, you walk off. The way that you turn, almost reminds one of a video game NPC.]",
             "[But they don't move. Completely silent the moment that they've spotted you. That when you turn away, you can tell from the net zero audio cue, that they have hadn't taken any steps away at all.]"
         ],
         "options": [
@@ -1207,18 +1236,9 @@
         ],
         "options": [
             {
-                "option": "[Just browse, then.]"
+                "option": "[Just browse, then.]",
+                "pop": "\"...\""
             },
-            {
-                "option": "[Watch Roulx.]",
-                "jumpto": "2(2)22221121(2)1"
-            }
-        ]
-    },
-    {
-        "id": "2(2)22221121(1)211",
-        "msg": "\"...\"",
-        "options": [
             {
                 "option": "[Watch Roulx.]",
                 "jumpto": "2(2)22221121(2)1"
@@ -1254,7 +1274,8 @@
             {
                 "option": "\"Who's Olive?\""
             }
-        ]
+        ],
+        "location": "mall1"
     },
     {
         "id": "2(1)311",
@@ -1570,11 +1591,12 @@
         ],
         "options":[
             {
-                "option": "['...Enlite?']"
+                "option": "['...Enlite?']",
+                "enlite_oblivion": false
             },
             {
                 "option": "[\"A finance office for regulating the mall behind the scenes?\"]",
-                "finance_theory": true,
+                "enlite_oblivion": true,
                 "jumpto": "51"
             }
         ]
@@ -1669,7 +1691,8 @@
             {
                 "option": "[Observe the snow.]"
             }
-        ]
+        ],
+        "location": "bus_stop"
     },
     {
         "id": "2(1)33(1)1(2)2(1)1",
@@ -1727,17 +1750,18 @@
             {
                 "option": "[... to the mall.]",
                 "jumpto": "2(1)33(1)1(2)11",
-                "bus": true
+                "bus": "mall",
+                "voice_in_head": false
             }
         ]
     },
     {
-        "id": "2(1)33(1)1(2)2(1)111",
+        "id": "031",
         "msg": "[Home? Are you really going to go home? After all of that, even after you remembered it?]",
         "options":[
             {
                 "option": "['...']",
-                "jumpto": "2(1)33(1)1(2)2(1)11",
+                "jumpto": "remember_id",
                 "voice_in_head": true
             },
             {
@@ -1746,9 +1770,10 @@
         ]
     },
     {
-        "id": "2(1)33(1)1(2)2(1)1112",
+        "id": "0312",
         "msg": [
             "[You arrive home. Hands tucked into your pockets unlike always. But maybe just like always, it's because you're",
+            "",
             "",
             "",
             "[cold. Who were you talking to?]"
@@ -1762,17 +1787,21 @@
                 "option": "[It's so cold.]",
                 "jumpto": "03"
             }
-        ]
+        ],
+        "location": "doesnt_feel_like_home"
     },
     {
         "id": "2(1)33(1)1(2)2(2)",
         "msg": "[Is this guy just... Lost at this point? Wha? The houses and an occasional park remains the usual sighting in your fore going tracks.]",
         "options":[
             {
-                "option": "['...Wait. I recognise this place.']"
+                "option": "['...Wait. I recognise this place.']",
+                "enlite_oblivion": false
             },
             {
-                "option": "[\"...Completedly foreign area. Huh.\"]"
+                "option": "[\"...Completedly foreign area. Huh.\"]",
+                "jumpto": "2(1)33(1)1(2)2(2)1",
+                "enlite_oblivion": true
             }
         ]
     },
@@ -1788,21 +1817,107 @@
                 "option": "[Enter the building.]"
             },
             {
-                "option": "['what the fuck do you think you're doing']"
+                "option": "['what the fuck do you think you're doing']",
+                "jumpto": "2(1)33(1)1(2)2(2)11"
             }
         ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)11",
+        "msg": 
+        [
+            "[Surely you'd come back here for something normal right?]",
+            "",
+            "[There's of course things that you know are normaller to be, other than the brand itself and the iconic brand highlighter green stretched decoratively across wherever the exterior decorators knew.]",
+            "[The inside is slightly more furbished. You don't wish to know what they've done to this place over the time that you were gone. Though worthy of note, there is a medicine store down to your left. Other places as well. But your gut wrenches at the recollection they bring.]"
+        ],
+        "options":[
+            {
+                "option": "[Buy some painkillers.]"
+            },
+            {
+                "option": "['No. What the fuck. Leave. Before someone recognises you.']"
+            }
+        ],
+        "location": "enlite_headquarters"
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)112",
+        "msg":[
+            "[Yeah! Like what if someone you haven't seen in nearly half a dozen years recognise your colours? Your clean, bloodless hands and lord forbid, your scarred face?!]",
+            "[... What if the AIs recognise you?]",
+            "",
+            "[Oh please. As if they're actually going to do anything to you, as if you would even matter in their mechanical eyes now, come on now, walk.]"
+        ],
+        "options": [
+            {
+                "option": "[Buy some painkillers for yourself.]",
+                "jumpto": "2(1)33(1)1(2)2(2)111"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)111",
+        "msg": 
+        [
+            "[You walk into the shop, remembering finally to buy some painkillers for yourself. Having been on your list of things to buy for quite some time now.]",
+            "[The right kind of chemicals, the right kind of dosage, the right kind of gender and age group...]",
+            "[Who cares, the last two doesn't even matter when buying painkillers. You still pick up a pack that matches closer with your own criterions. Afterall, who *actually knows* what they put in there besides that it works and it's cheap.]"
+        ],
+        "options": [
+            {
+                "option": "['Well doesn't this pill look familiar.']",
+                "enlite_oblivion": false
+            },
+            {
+                "option": "[\"I've never seen a tablet like this before in my life.\"]",
+                "jumpto": "2(1)33(1)1(2)2(2)1111",
+                "enlite_oblivion": true
+            }
+        ],
+        "painkillers": 1
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)1111",
+        "msg": 
+        [
+            "[Of course not! It's the newest one out, and you haven't been catching up with Enlite's newest products quite yet. You're too healthy to be their target audience I'd say.]",
+            "",
+            "[Don't forget to buy some for Roulx as well.]"
+        ],
+        "options": [
+            {
+                "option": "[Buy a pack for Roulx.]"
+            },
+            {
+                "option": "['FOR WHOM??????']",
+                "jumpto": "2(1)33(1)1(2)2(2)11111"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)11111",
+        "msg": "[You purchase a box of painkillers for Roulx as well.]",
+        "options": [
+            {
+                "option": "[Go find a bus stop. There should be a bus stop nearby.]",
+                "lost": false,
+                "jumpto": "2(1)33(1)1(2)2(1)"
+            }
+        ],
+        "painkillers": 2
     },
     {
         "id": "4",
         "msg":
         [
             "-----------------------",
-            "MrBlueSky: Hey, is anyone at the shopping centre near palm street right now? Just wondering.",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: yeah, are you there too?",
-            "MrBlueSky: Yes, I’m nearby actually.",
-            "MrBlueSky: I’m looking for someone. I saw a glimpse of them before but it seems that I’ve lost them. So I think it should still be somewhere around but I can't seem to find it.",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: huh okay",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: friend of yours?"
+            "b Hey, is anyone at the shopping centre near palm street right now? Just wondering.",
+            "w yeah, are you there too?",
+            "b Yes, I'm nearby actually.",
+            "b I'm looking for someone. I saw a glimpse of them before but it seems that I've lost them. So I think it should still be somewhere around but I can't seem to find it.",
+            "w huh okay",
+            "w friend of yours?"
         ],
         "options":[
             {
@@ -1818,11 +1933,11 @@
         "id": "41",
         "msg":
         [
-            "MrBlueSky: Something like that, yeah.",
-            "goodbyeyellowbrickroad: Can't you just message them then?",
-            "MrBlueSky: I can't, unfortunately. I think ki's changed kir contact number, haven't been able to connect.",
-            "MrBlueSky: I haven't seen them in a while, you see",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: awkward situation"
+            "b Something like that, yeah.",
+            "y Can't you just message them then?",
+            "b I can't, unfortunately. I think ki's changed kir contact number, haven't been able to connect.",
+            "b I haven't seen them in a while, you see",
+            "w awkward situation"
         ],
         "options": [
             {
@@ -1835,9 +1950,9 @@
         "id": "42",
         "msg": 
         [
-            "MrBlueSky: Not exactly. I knew kime a while back though.",
-            "MrBlueSky: So acquaintances, more like.",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: i see."
+            "b Not exactly. I knew kime a while back though.",
+            "b So acquaintances, more like.",
+            "w i see."
         ],
         "options": [
             {
@@ -1850,14 +1965,14 @@
         "id": "411",
         "msg":
         [
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: welp i hope you find them then.",
-            "MrBlueSky: Thx",
-            "MrBlueSky: I'm pretty sure ki was wearing a white suit and yellow bow tie last I saw kime. White hair, good fashion sense.",
-            "MyBlueSky: Could you keep an eye out for someone like that?",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: sure",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: i'm trying to find clay supplies on the art shop on the second floor, i'll let you know if i see anyone like that.",
-            "MrBlueSky: Thank you Drew, really appreciate it.",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: np"
+            "w welp i hope you find them then.",
+            "b Thx",
+            "b I'm pretty sure ki was wearing a white suit and yellow bow tie last I saw kime. White hair, good fashion sense.",
+            "b Could you keep an eye out for someone like that?",
+            "w sure",
+            "w i'm trying to find clay supplies on the art shop on the second floor, i'll let you know if i see anyone like that.",
+            "b Thank you Drew, really appreciate it.",
+            "w np"
         ],
         "options": [
             {
@@ -1867,7 +1982,7 @@
     },
     {
         "id": "4111",
-        "msg": "girl in red: Isn't that like stalking?",
+        "msg": "r Isn't that like stalking?",
         "options":[
             {
                 "option": "No it's not."
@@ -1880,9 +1995,9 @@
     {
         "id": "41111",
         "msg":[
-            "MrBlueSky: I don't think so.",
-            "MrBlueSky: I mean I'm just trying to reconnect with someone I used to know.",
-            "MrBlueSky: I don't think that's too unreasonable."
+            "b I don't think so.",
+            "b I mean I'm just trying to reconnect with someone I used to know.",
+            "b I don't think that's too unreasonable."
         ],
         "options": [
             {
@@ -1893,9 +2008,9 @@
     {
         "id": "41112",
         "msg": [
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: duude wtf",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: i'm just helping out with autumn's reunion with a friend. it's not stalking.",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: it's not like i'm spying on a rando or anything weird like that. idk if i'll even find them lmao."
+            "w duude wtf",
+            "w i'm just helping out with autumn's reunion with a friend. it's not stalking.",
+            "w it's not like i'm spying on a rando or anything weird like that. idk if i'll even find them lmao."
         ],
         "options": [
             {
@@ -1907,24 +2022,16 @@
     {
         "id": "411111",
         "msg":[
-            "girl in red: Not a friend. An 'acquaintance'.",
-            "✧⋆WELCOME TO THE BLACK PARADE⋆✧: so? still not a complete stranger.",
-            "girl in red: Fine. If you say so.",
-            "girl in red: Good luck, Autumn."
+            "r Not a friend. An 'acquaintance'.",
+            "w so? still not a complete stranger.",
+            "r Fine. If you say so.",
+            "r Good luck, Autumn."
         ],
         "options": [
             {
                 "option": "Thank you, Zoe.",
                 "jumpto": "2(1)33(1)1(2)1122"
             }
-        ]
-    },
-    {
-        "id": "3111212",
-        "msg": [
-            "Roulx: \"Oh this. It's some vows that are stars and astronomy themed.\"",
-            "[They take it off, turning its rings around to expose most of its engravings out. The gold glistens with a tarnished luster, the termination of light blurs on the metal.]",
-            "Roulx: \"I don't understand all of them, I'm not too invested in stars. But I like it!\""
         ]
     }
 ]
