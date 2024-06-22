@@ -12,5 +12,7 @@
     "voice_in_head": false,
     "enlite_oblivion": false,
     "painkillers": 0,
-    "friend": false
+    "friend": false,
+
+    "alter_next": 0
 }

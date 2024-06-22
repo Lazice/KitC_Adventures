@@ -19,29 +19,55 @@ def error(options):
         print("... Literally only one option. :|. just decide.")
 
 
-def roll(option):
-    if option["chance"] in ([0.5,0.5], "coin"):
-        print("Coin tossed.")
-        winsound.PlaySound(coin_sound, winsound.SND_FILENAME)
-        outcome = ''.join(random.choices(["Heads", "Tails"]))
-        print(outcome  + ".\n")
-        if outcome == "Heads":
-            return option["jumpto"][0]
-        else:
-            return option["jumpto"][1]
+def coin():
+    winsound.PlaySound(coin_sound, winsound.SND_FILENAME)
+    outcome = ''.join(random.choices(["Heads", "Tails"]))
+    print(outcome)
+    if outcome == "Heads":
+        return 0
     else:
-        print("Dice rolled.")
-        winsound.PlaySound(dice_sound, winsound.SND_FILENAME)
-        dice_value = random.randint(1, 20)
-        print(str(dice_value) + "\n")
-        dice_percentage = dice_value / 20
-        counter = 0
-        for value in option["chance"]:
-            dice_percentage -= value
-            if dice_percentage <= 0:
-                return option["jumpto"][counter]
-            counter += 1
-        return option["jumpto"][counter-1]
+        return 1
+    
+
+def dice(option):
+    winsound.PlaySound(dice_sound, winsound.SND_FILENAME)
+    dice_value = random.randint(1, 20)
+    print(str(dice_value))
+    dice_percentage = dice_value / 20
+    counter = 0
+    for value in option["chance"]:
+        dice_percentage -= value
+        if dice_percentage <= 0:
+            return counter
+        counter += 1
+    return counter-1
+
+
+def roll(option):
+    option_num = []
+    count = 1
+    special = None
+    if option["chance"] in ([0.5,0.5], "coin"):
+        base_msg = "Coin tossed"
+    else:
+        base_msg = "Dice rolled"
+    if "roll_special" in option:
+        special = option["roll_special"]
+        count = 2
+        print(base_msg + " with " + special["type"] + " due to " + special["reason"] + ".")
+    else:
+        print(base_msg + ".")
+    
+    for i in range(count):
+        if option["chance"] in ([0.5,0.5], "coin"):
+            option_num.append(coin())
+        else:
+            option_num.append(dice(option))
+    print("")
+    option_num.sort()
+    if special and special["type"] == "advantage":
+        return option_num[-1]
+    return option_num[0]
 
 
 def option_effects(option, scene, option_index):
@@ -56,18 +82,18 @@ def option_effects(option, scene, option_index):
         del scene["options"][option_index]
         option["jumpto"] = scene["id"]
         scene["msg"] = option["pop"]
+    if "alter_next" in option:
+        progress["alter_next"] = roll(option)
     if "jumpto" in option:
         if isinstance(option["jumpto"], list):
-            return roll(option)
-        elif option["jumpto"] == "01" and progress["snow"]:
+            id_index = roll(option)
+            return option["jumpto"][id_index]
+        if option["jumpto"] == "01" and progress["snow"]:
             if progress["voice_in_head"]:
                 return "0312"
-            else:
-                return "031"
-        else: 
-            return option["jumpto"]
-    else:
-        return allocate(scene["id"], option_index + 1)
+            return "031"
+        return option["jumpto"]
+    return allocate(scene["id"], option_index + 1)
 
 
 end_game = False

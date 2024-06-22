@@ -165,6 +165,7 @@
             "Roulx: \"The moon!! Yes, of course.\"",
             "[They look to Autumn with excitement!]",
             "Roulx: \"I well, have it as an earring because me and Hugo were married on the moon! It's rather romantic,.. But also yes, I do quite like the moon for all its beauty in the night sky.\"",
+            "",
             "[A left hand touches the earring fondly. Gayass.]"
         ],
         "options": [
@@ -833,10 +834,12 @@
             {
                 "option": "[Leave on the closest bus. Try to forget who you saw.]",
                 "jumpto": "01",
-                "remember_id": true
+                "remember_id": true,
+                "bus": null
             },
             {
-                "option": "...Roulx is still here somewhere."
+                "option": "...Roulx is still here somewhere.",
+                "bus": null
             }
         ],
         "location": "mall_entrance",
@@ -1107,7 +1110,11 @@
                 ]
             },
             {
-                "option": "[Listen in on their conversation.]"
+                "option": "[Listen in on their conversation.]",
+                "alter_next": 0,
+                "chance": [
+                    0.2, 0.2, 0.2, 0.2, 0.2
+                ]
             }
         ]
     },
@@ -1669,7 +1676,7 @@
                 "jumpto": "2(1)33(1)1(2)1"
             },
             {
-                "option": "[Keep going, he's got this.]",
+                "option": "[Keep going, you've got this.]",
                 "jumpto": [
                     "2(1)33(1)1(2)2(1)",
                     "2(1)33(1)1(2)2(2)"

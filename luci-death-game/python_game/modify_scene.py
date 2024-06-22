@@ -42,7 +42,7 @@ def option_check(scene):
     for option in scene["options"]:
         future_id = ""
         if "pop" in option:
-            return
+            continue
         if "jumpto" in option:
             if isinstance(option["jumpto"], str):
                 future_id = option["jumpto"]
@@ -129,6 +129,7 @@ def update_progress(scene):
                 scene["msg"].insert(1, "")
                 scene["options"].insert(2, creep_down)
                 scene["options"][0]["jumpto"] = "2(2)22221121(2)"
+                scene["options"][1]["roll_special"] = {"type": "advantage", "reason": "being downstairs"}
         case "2(1)31":
             if progress["feign_surprise"]:
                 scene["msg"].insert(0, "[You approach them with a look of surprise.]")
@@ -160,6 +161,16 @@ def update_progress(scene):
         case "411111":
             if progress["friend"]:
                 del scene["msg"][:2]
+        case "2(2)22221122":
+            match progress["alter_next"]:
+                case 0:
+                    scene["msg"].append("1")
+                case 1:
+                    scene["msg"].append("2")
+                case 2:
+                    scene["msg"].append("3")
+                case 3:
+                    scene["msg"].append("4")
 
     if progress["chased"]:
         mark = []
