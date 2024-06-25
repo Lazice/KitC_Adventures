@@ -797,12 +797,12 @@
             {
                 "option": "[Try to retrace steps back to the mall.]",
                 "jumpto": [
-                    "2(1)33(1)1(2)2",
-                    "2(1)33(1)1(2)11"
+                    "2(1)33(1)1(2)11",
+                    "2(1)33(1)1(2)2"
                     ],
                 "chance": [
-                    0.66666666666,
-                    0.33333333333
+                    0.33333333333,
+                    0.66666666666
                 ]
             }
         ]
@@ -1720,12 +1720,14 @@
     {
         "id": "2(1)33(1)1(2)2(1)2",
         "msg": [
-            "[It's cold outside. It's no wonder, as the grassy lawns of those behind you are covered in a visible layer of white. Blinding, like patches of unrendered webpages.]",
+            "~6[It's cold outside. It's no wonder, as the grassy lawns of those behind you are covered in a visible layer of white. Blinding, like patches of unrendered webpages.]",
             "",
-            "[They remind you of Roulx.]",
-            "[The way that totality of whiteness, stands out from every other earth tones around it.]",
-            "[And the way it's still. Not unmoving, but unnoticeable, until you made the effort to look...]",
-            "[Nothing was gained from learning that.]"
+            "~2[They remind you of Roulx.]",
+            "~4[The way that totality of whiteness, stands out from every other earth tones around it.]",
+            "~5[And the way it's still. Not unmoving, but unnoticeable, until you made the effort to look...]",
+            "",
+            "",
+            "~2[Nothing was gained from learning that.]"
         ],
         "options": [
             {
@@ -1742,8 +1744,7 @@
                 "option": "[Get on the bus.]",
                 "jumpto": "2(1)33(1)1(2)2(1)11"
             }
-        ],
-        "snow": true
+        ]
     },
     {
         "id": "2(1)33(1)1(2)2(1)11",
@@ -1888,7 +1889,8 @@
         "id": "2(1)33(1)1(2)2(2)1111",
         "msg": 
         [
-            "[Of course not! It's the newest one out, and you haven't been catching up with Enlite's newest products quite yet. You're too healthy to be their target audience I'd say.]",
+            "[Familiar. It's the very one that you'd given to your love. You think they'd blame you. At least that's what you believed for however many years it's been.]",
+            "[Surprisingly haven't changed the capsule's appearance one bit. Keeping it iconic.]",
             "",
             "[Don't forget to buy some for Roulx as well.]"
         ],

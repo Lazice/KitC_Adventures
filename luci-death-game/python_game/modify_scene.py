@@ -80,7 +80,7 @@ def cycle_progress(lst):
 
 def abbreviate2(shorthand, msg):
     for key in shorthand.keys():
-        if msg[0] == key:
+        if msg.startswith(key):
             return shorthand[key] + ":" + msg[1:]
     return msg
         
@@ -94,13 +94,9 @@ def abbreviate(shorthand, scene):
 
 
 def hitlist(scene, label):
-    hitlist = []
-    for counter, option in enumerate(scene["options"]):
+    for counter, option in reversed(list(enumerate(scene["options"]))):
         if label in option:
-            hitlist.append(counter)
-    hitlist.reverse()
-    for counter in hitlist:
-        del scene["options"][counter]
+            del scene["options"][counter]
 
 
 def update_progress(scene):
@@ -150,9 +146,9 @@ def update_progress(scene):
             if progress["enlite_oblivion"]:
                 scene["msg"][0] = "[You used to work there. Dumbass.]"
         case "2(1)33(1)1(2)2(2)1111":
-            if not progress["enlite_oblivion"]:
-                scene["msg"][0] = "[Familiar. It's the very one that you'd given to your love. You think they'd blame you. At least that's what you believed for however many years it's been.]"
-                scene["msg"].insert(1, "[Surprisingly haven't changed the capsule's appearance one bit. Keeping it iconic.]")
+            if progress["enlite_oblivion"]:
+                scene["msg"][0] = "[Of course not! It's the newest one out, and you haven't been catching up with Enlite's newest products quite yet. You're too healthy to be their target audience I'd say.]"
+                del scene["msg"][1]
         case "01" | "03":
             if progress["painkillers"] > 0:
                 scene["msg"].extend(["",
@@ -173,16 +169,12 @@ def update_progress(scene):
                     scene["msg"].append("4")
 
     if progress["chased"]:
-        mark = []
-        for counter, option in enumerate(scene["options"]):
+        for counter, option in reversed(list(enumerate(scene["options"]))):
             if "chased_option" in option:
                 if option["chased_option"] == None:
-                    mark.append(counter)
+                    del scene["options"][counter]
                 else:
                     option["option"] = option["chased_option"]
-        mark.reverse()
-        for counter in mark:
-            del scene["options"][counter]
         match scene["id"]:
             case "311132":
                 scene["msg"] = [scene["msg"][5], "",

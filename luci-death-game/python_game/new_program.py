@@ -1,10 +1,25 @@
 from modify_scene import *
+import time
 
 coin_sound = "luci-death-game/Media/coin-toss.wav"
 dice_sound = "luci-death-game/Media/dice-roll.wav"
 
 
-def scene_display(statements):
+def pause_words(statements):
+    print("\n")
+    for msg in statements:
+        sleep_time = 0
+        if msg.startswith("~"):
+            sleep_time = int(msg[1])
+        print(msg[2:])
+        time.sleep(int(sleep_time))
+    print("\n")
+
+
+def scene_display(statements, bool):
+    if bool:
+        pause_words(statements)
+        return
     if isinstance(statements, list):
         msg = "\n".join(statements)
     else:
@@ -107,7 +122,7 @@ while not end_game:
     option_counter = 0
 
     update_progress(scene)
-    scene_display(scene["msg"])
+    scene_display(scene["msg"], "snow" in scene)
 
     # list options
     for option in scene["options"]:
