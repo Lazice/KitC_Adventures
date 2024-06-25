@@ -779,7 +779,7 @@
             {
                 "option": "[\"Who's Olive?\"]",
                 "jumpto": "#",
-                "prescene": "Ending 2."
+                "pre_scene": "Ending 2."
             }
         ]
     },

@@ -89,7 +89,7 @@ def option_effects(option, scene, option_index):
     global remember_id
     cycle_progress(chosen_option)
     if "pre_scene" in option:
-        scene_display(option["pre_scene"])
+        scene_display(option["pre_scene"], False)
     if "remember_id" in option:
         remember_id = scene["id"]
         print("id remembered: " + remember_id)
