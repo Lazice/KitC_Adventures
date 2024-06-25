@@ -23,6 +23,10 @@ pen_names = {
     "r": "girl in red"
     }
 
+irl_names = {
+    "r:": "Roulx:"
+}
+
 remember_id = ""
 script = []
 progress = {}
@@ -78,19 +82,19 @@ def cycle_progress(lst):
             print(key + " set to " + str(progress[key]))
 
 
-def abbreviate2(shorthand, msg):
+def abbreviate2(shorthand, msg, divider):
     for key in shorthand.keys():
         if msg.startswith(key):
-            return shorthand[key] + ":" + msg[1:]
+            return shorthand[key] + divider + msg[len(key):]
     return msg
         
 
-def abbreviate(shorthand, scene):
+def abbreviate(shorthand, scene, divider):
     if isinstance(scene["msg"], list):
         for counter, msg in enumerate(scene["msg"]):
-            scene["msg"][counter] = abbreviate2(shorthand, msg)
+            scene["msg"][counter] = abbreviate2(shorthand, msg, divider)
     else:
-        scene["msg"] = abbreviate2(shorthand, scene["msg"])
+        scene["msg"] = abbreviate2(shorthand, scene["msg"], divider)
 
 
 def hitlist(scene, label):
@@ -103,7 +107,9 @@ def update_progress(scene):
     cycle_progress(scene)
 
     if progress["groupchat"]:
-        abbreviate(pen_names, scene)
+        abbreviate(pen_names, scene, ":")
+    else:
+        abbreviate(irl_names, scene, "")
 
     match scene["id"]:
         case "2(2)222":
