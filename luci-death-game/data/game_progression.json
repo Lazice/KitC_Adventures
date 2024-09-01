@@ -2,15 +2,18 @@
     "location": "mall1",
     "mode": "default",
 
+    "chased": false,
+    "snow": false,
+    "painkillers": 0,
+    "drink": null,
+
     "Hugo": 0,
     "wedding": false,
-    "chased": false,
+    "chat_progress": 0,
+
     "feign_surprise": false,
     "time_passage": false,
-    "chat_progress": 0,
-    "snow": false,
     "voice_in_head": false,
-    "painkillers": 0,
     "friend": false,
 
     "alter_next": 0,

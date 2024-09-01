@@ -176,13 +176,14 @@
                 "option": "\"That's cute. Congratulations!\""
             }
         ],
-        "wedding": true
+        "wedding": true,
+        "Hugo": 1
     },
     {
         "id": "31112112",
         "msg": 
         [
-            "[\"I didn't know you two were\u2014\"]",
+            "['I didn't know you two were\u2014']",
             "",
             "\"That's cute. Congratulations!\"",
             "[You say with a grin.]",
@@ -267,11 +268,21 @@
         "options": [
             {
                 "option": "\"Alright. Maybe I'll just have that too.\"",
-                "chased_option": "\"Two waters, then.\""
+                "chased_option": "\"Two waters, then.\"",
+                "drink": "water"
             },
             {
                 "option": "\"I'll get a latte. Tends to be the usual choice.\"",
-                "chased_option": "\"I'll have a latte.\""
+                "chased_option": "\"I'll have a latte.\"",
+                "drink": "latte",
+                "jumpto": "31113211",
+                "replace": {
+                    "0": "[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]",
+                    "4": "[You take a sip of the latte, served to you atop a small black plate and along with a ceramic teaspoon."
+                },
+                "insert": {
+                    "5": "Mmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]"
+                }
             },
             {
                 "option": "[Smile.] \"Please make yourself comfortable.\"",
@@ -280,22 +291,27 @@
         ]
     },
     {
-        "id": "31113212",
+        "id": "31113211",
         "msg": 
         [
-            "[You call up the waiter again and ask for some water, as well as your usual selection of cinnamon iced latte. They make good coffee here.]",
+            "[You call up the waiter again and ask for two glasses of water.]",
             "r: \"Alrighty.\"",
             "",
             "[Ki leans, tapping a hand on the table mindlessly.]",
-            "[You take a sip of the latte, served to you atop a small black plate and along with a ceramic teaspoon.",
-            "Mmm. Cold. There's just something inexplicably satisfying about having a cold drink in the middle of winter.]"
+            "[You take a quick sip.]"
         ],
         "options": [
             {
                 "option": "\"Are you sure you don't want anything else?\""
             },
             {
-                "option": "\"How is Hugo doing?\""
+                "option": "How have you been?",
+                "jumpto": "31111"
+            },
+            {
+                "option": "\"How is Hugo doing?\"",
+                "prereq": {"Hugo": 1},
+                "jumpto": "311132112"
             },
             {
                 "option": "\"Yeah. So, what were we talking about before?\""
@@ -303,7 +319,7 @@
         ]
     },
     {
-        "id": "311132122",
+        "id": "311132112",
         "msg": 
         [
             "r: \"He's been doing fine. It wouldn't've been a long time since he'd left. But I'll say that he's doing fine.\"",
@@ -313,13 +329,20 @@
         ],
         "options": [
             {
-                "option": "\"He certainly lightens the room with his presence. Charismatic, might be the word. They're a good fit for you, I think. Is he good to you?\""
+                "option": "\"He certainly lightens the room with his presence. Charismatic, might be the word. They're a good fit for you, I think. Is he good to you?\"",
+                "pop":[
+                    "r: \"He is good to me! I can't really go a day without seeing him, so he's nearly always there for me.\"", 
+                    "[Roulx cups kir face in kir hands, pair of eyes playfully glancing around kir surroundings in an embarrassed way to avoid eye contact.]",
+                    "r: \"Charismatic... That is certainly a way to describe him.\""
+                ]
             },
             {
-                "option": "\"Honestly I don't think I know them as well as I could have, but they seemed like a good person. Friendly, easy to talk to. What do *you* think of him?\""
+                "option": "\"Honestly I don't think I know them as well as I could have, but they seemed like a good person. Friendly, easy to talk to. What do *you* think of him?\"",
+                "jumpto": "3111321122"
             },
             {
-                "option": "\"He's a time traveller, right? We talked a few times, he told me about some of his journeys. There must be so much going on out there, I can't possibly imagine. Do you two travel often?\""
+                "option": "\"He's a time traveller, right? We talked a few times, he told me about some of his journeys. There must be so much going on out there, I can't possibly imagine. Do you two travel often?\"",
+                "jumpto": "3111321123"
             }
         ]
     },
@@ -764,8 +787,16 @@
         ],
         "options":[
             {
-                "option": "[Make the difficult choice.]"
+                "option": "[Make the difficult choice.]",
+                "jumpto": "2(1)33(1)1(1)222111"
             }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(1)222111",
+        "msg":
+        [
+            "\"Could we talk? Somewhere else.\""
         ]
     },
     {
@@ -1410,11 +1441,14 @@
             },
             {
                 "option": "[Search downstairs for Roulx.]",
-                "prereq": {"location": "mall2"}
+                "prereq": {"location": "mall2"},
+                "jumpto": "2(2)22221121(1)2(1)2"
             },
             {
-                "option": "[Open the groupchat and ask around for Roulx.] (if hadn't done yet)",
-                "prereq": {"chat_progress": "0"}
+                "option": "[Open the group chat and ask around for Roulx.]",
+                "prereq": {"chat_progress": "0"},
+                "jumpto": "4",
+                "remember_id": true
             },
             {
                 "option": "[Use logic to try to predict Roulx's next destination.]"
@@ -1424,6 +1458,21 @@
             },
             {
                 "option": "[\"Gee maybe I should check out this shop for realsies sometime..\"]"
+            }
+        ]
+    },
+    {
+        "id": "2(2)22221121(1)2(1)2",
+        "msg":
+        [
+            "[Downstairs. There seems to be visages of white flicking in your vision, it's easy to miss them as Roulx! Don't.]",
+            "[You think you're going to need some painkillers if you keep on running like this.]"
+        ],
+        "options":
+        [
+            {
+                "option": "[Follow them. You can't afford to lose them.]",
+                "jumpto": "2(2)22221121(2)11"
             }
         ]
     },
@@ -1598,7 +1647,7 @@
         ]
     },
     {
-        "id": "3111321222",
+        "id": "3111321122",
         "msg": 
         [
             "r: \"Oh! Uhm, he's. Uh. Very... I'm rather fond of him.\"",
@@ -1619,15 +1668,15 @@
                     "[Roulx leans back on its seat. Looking around the space again, but this time seeming to be more observing than evading your gaze.]"
                 ],
                 "jumpto": [
-                    "3111321222(1)",
-                    "3111321222(2)"
+                    "3111321122(1)",
+                    "3111321122(2)"
                 ],
                 "chance": "coin"
             }
         ]
     },
     {
-        "id": "3111321222(1)",
+        "id": "3111321122(1)",
         "msg":
         [
             "r: \"... It's been a while hasn't it. Perhaps it's good that you've already forgotten.\"",
@@ -1644,7 +1693,7 @@
         ]
     },
     {
-        "id": "3111321222(1)2",
+        "id": "3111321122(1)2",
         "msg":
         [
             "[It nods back, gently somehow, saccharine in a way you can't quite pin down.]", 
@@ -1661,7 +1710,7 @@
         ]
     },
     {
-        "id": "3111321222(2)",
+        "id": "3111321122(2)",
         "msg":
         [
             "r: \"... It's been too long hasn't it?. You, gathering the valiant group of people. A rebellion it was.\"",
@@ -1679,7 +1728,7 @@
         ]
     },
     {
-        "id": "3111321222(2)1",
+        "id": "3111321122(2)1",
         "msg":
         [
             "r: \"Like a dream huh?\"",
@@ -1699,26 +1748,14 @@
         ]
     },
     {
-        "id": "3111321221",
-        "msg":
-        [
-            "r: \"He is good to me! I can't really go a day without seeing him, so he's nearly always there for me.\"", 
-            "[Roulx cups kir face in kir hands, pair of eyes playfully glancing around kir surroundings in an embarrassed way to avoid eye contact.]",
-            "r: \"Charismatic... That is certainly a way to describe him.\""
-        ],
-        "options": [
-            {
-                "option": ""
-            }
-        ]
-    },
-    {
-        "id": "3111321223",
+        "id": "3111321123",
         "msg":
         [
             "r: \"Yeah! We're actually here too for a business discussion.\"",
             "[Roulx smiles with no teeth, a hand coming to slowly tap on the surface of the table.]",
-            "r: \"As to what it is... Well, it's confidential. But I'm sure you can imagine!\""
+            "r: \"As to what it is... Well, it's confidential. But I'm sure you can imagine!\"",
+            "",
+            "\"Oh? I probably couldn't, what with the intergalactic nature of your voyages likely being well beyond my understanding.. But if you still attend business meetings, then perhaps our worlds aren't so far apart.\""
         ],
         "options": [
             {

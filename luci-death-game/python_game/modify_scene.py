@@ -122,6 +122,9 @@ def update_progress(scene):
         case "2(1)31":
             if progress["feign_surprise"]:
                 scene["msg"].insert(0, "[You approach them with a look of surprise.]")
+        case "2(1)33(1)1(2)2(2)111111":
+            if progress["snow"]:
+                scene["msg"].extend(["[You wonder even why you need to kill.]"])
         case "01" | "03":
             if progress["painkillers"] > 0:
                 scene["msg"].extend(["",
