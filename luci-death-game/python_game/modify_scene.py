@@ -106,7 +106,7 @@ def hitlist(scene, label):
 def update_progress(scene):
     cycle_progress(scene)
 
-    if progress["groupchat"]:
+    if progress["chat_mode"]:
         abbreviate(pen_names, scene, ":")
     else:
         abbreviate(irl_names, scene, "")
@@ -131,6 +131,7 @@ def update_progress(scene):
                 scene["msg"].insert(1, "")
                 scene["options"].insert(2, creep_down)
                 scene["options"][0]["jumpto"] = "2(2)22221121(2)"
+            else:
                 scene["options"][1]["roll_special"] = {"type": "advantage", "reason": "being downstairs"}
         case "2(1)31":
             if progress["feign_surprise"]:
@@ -145,9 +146,9 @@ def update_progress(scene):
             if progress["enlite_oblivion"]:
                 scene["msg"] = "[If you'd like to think that way. Everything looks the same when they're in that category of way too modern offices, just for the sake of efficiency.]"
         case "2(1)33(1)1(2)1122":
-            if progress["groupchat"]:
+            if progress["chat_mode"]:
                 scene["msg"] = chat_fade
-                progress["groupchat"] = False
+                progress["chat_mode"] = False
         case "2(1)33(1)1(2)2(2)1":
             if progress["enlite_oblivion"]:
                 scene["msg"][0] = "[You used to work there. Dumbass.]"
@@ -168,11 +169,20 @@ def update_progress(scene):
                 case 0:
                     scene["msg"].append("1")
                 case 1:
-                    scene["msg"].append("2")
+                    scene["msg"][3] = "\"      May       what            is?\""
+                    scene["msg"][4] = "\"It's a       . But         need         its           .\""
+                    scene["msg"][5] = "\"    where might                    \""
+                    scene["msg"][7] = "\"             \""
+                    scene["msg"][8] = "\"That's              can le            and    you                          information,               done                    \""
+                    del scene["msg"][6]
+                    del scene["msg"][2]
                 case 2:
                     scene["msg"].append("3")
                 case 3:
                     scene["msg"].append("4")
+        case "2(2)22221121(2)1":
+            if not progress["distracted"]:
+                del scene["msg"][2]
 
     if progress["chased"]:
         for counter, option in reversed(list(enumerate(scene["options"]))):
@@ -186,6 +196,14 @@ def update_progress(scene):
                 scene["msg"] = [scene["msg"][5], "",
                                 "\"Um, so,,, yeah.\" [You ask the waiter for two seats inside, gesturing Roulx to follow.] \"Here would be nice. ...\""
                                 ]
+
+
+    for counter, option in reversed(list(enumerate(scene["options"]))):
+        if "prereq" in option:
+            for key in option["prereq"]:
+                if option["prereq"][key] != progress[key]: 
+                    del scene["options"][counter]
+        
 
     # check if option is added
     option_check(scene)

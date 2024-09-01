@@ -636,10 +636,10 @@
         "options":
         [
             {
-                "option": "Who's Olive?"
+                "option": "\"Who's Olive?\""
             },
             {
-                "option": "I have nothing to tell you. I have nothing to tell you that I can be proud of. I am sorry."
+                "option": "\"I have nothing to tell you. I have nothing to tell you that I can be proud of. I am sorry.\""
             }
         ]
     },
@@ -660,6 +660,24 @@
         ]
     },
     {
+        "id": "2(1)33(1)1(1)2211",
+        "msg":
+        [
+            "[True to your strange words,  Roulx's gaze turns further aside, looking to the ground. It seems hesitant to lift back up its head, its draping white hair obscures its true expression.]",
+            "r: \"Ah...\"",
+            "",
+            "[Inline, their excitement vividly drained out of them, remnant symptoms of their hands slightly shaking besides them.]",
+            "",
+            "[White gloves - They seem new.]"
+        ],
+        "options":
+        [
+            {
+                "option": ""
+            }
+        ]
+    },
+    {
         "id": "2(1)33(1)1(1)222",
         "msg":
         [
@@ -667,7 +685,7 @@
             "",
             "[Ki fiddles with their hands, fingertips intersecting each other like polygons that were poorly joined.]",
             "r: \"I mean, it's okay, we can. We can restart from the beginning? You're here, I'm, here as well.\"",
-            "[Who cares what lead to the end the years ago, Roulx doesn't.]",
+            "[Who cares what lead to the end years ago, Roulx doesn't.]",
             "[Ki smiles taut and pulled outwards for you, outstretched hands shaking before you noticed and they retracted behind kimself.]",
             "",
             "",
@@ -677,7 +695,29 @@
         "options":
         [
             {
-                "option": "What is there to restart?"
+                "option": "\"What is there to restart?\""
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(1)2221",
+        "msg":
+        [
+            "r: \"I-i-i don't know. Anything!\"",
+            "[The fool babbles out reckless instincts.]",
+            "[Ki should know better, but ki's genuine I guess.]",
+            "[...]",
+            "",
+            "[Roulx is glancing around, seeming more, expressly so, irritated than yourself has seen kime. Kir own  hands gripping around each other, actually trying to think of a reason on the spot, a reason for their request to you.]",
+            "r: \"I'll help you,, with which ever things you're interested in! I'll be the best- Let me be your best hand right? Again?\"",
+            "[...]",
+            "",
+            "[Its emotions seems to waver waves in its voice. Slightly pathetic if you think about it; Someone you're so used to being silent most of the time, who values efficiency would use *begging* out of everything.]"
+        ],
+        "options":
+        [
+            {
+                "option": ""
             }
         ]
     },
@@ -1199,7 +1239,8 @@
                 "option": "[Watch Roulx.]",
                 "jumpto": "2(2)22221121(2)1"
             }
-        ]
+        ],
+        "distracted": false
     },
     {
         "id": "2(2)22221121(1)1",
@@ -1229,9 +1270,18 @@
             },
             {
                 "option": "[Watch Roulx.]",
-                "jumpto": "2(2)22221121(2)1"
+                "jumpto": 
+                [
+                    "2(2)22221121(1)2(1)",
+                    "2(2)22221121(2)1"
+                ],
+                "chance":
+                [
+                    0.4, 0.6
+                ]
             }
-        ]
+        ],
+        "distracted": true
     },
     {
         "id": "2(2)22221121(1)21",
@@ -1248,9 +1298,19 @@
             },
             {
                 "option": "[Watch Roulx.]",
-                "jumpto": "2(2)22221121(2)1"
+                "jumpto": 
+                [
+                    "2(2)22221121(1)2(1)",
+                    "2(2)22221121(2)1"
+                ],
+                "chance":
+                [
+                    0.3333333333333333,
+                    0.6666666666666666
+                ]
             }
-        ]
+        ],
+        "distracted": true
     },
     {
         "id": "2(2)22221121(2)1",
@@ -1258,11 +1318,49 @@
         [
             "[... You come to the sense, to watch. Roulx.]",
             "",
-            "[You turn around to them away. How they move as quiet as you remembered with coldness. But they haven't left your sight. Or to say, you haven't allowed them to leave your sight.]"
+            "[You turn around to them away.]",
+            "[How they move as quiet as you remembered with coldness. But they haven't left your sight. Or to say, you haven't allowed them to leave your sight.]"
         ],
         "options": [
             {
                 "option": "[Follow them. You can't afford to lose them.]"
+            }
+        ]
+    },
+    {
+        "id": "2(2)22221121(1)2(1)",
+        "msg":
+        [
+            "[... You come to the sense, to watch. Roulx.]",
+            "",
+            "[The store is oddly busy. Not with customers, not for a store like this. Rather the items are cluttered. Gears and mechanics and its brownish tone and grey. Whatever that was that'd seemed to obscure your vision just for a moment and.",
+            "[Ki's gone. Roulx seemed to suddenly disappear as you turn your head around searching for kime again.]"
+        ],
+        "options":
+        [
+            {
+                "option": "['Roulx!? Where's Roulx...']",
+                "pop": [
+                    "[You flip your head around rapidly, are you frantic? Gosh.]",
+                    "[Well, as it appears as you continue to look around, that Roulx is no longer present in this very store. That sneaky being.]"
+                ]
+            },
+            {
+                "option": "[Search downstairs for Roulx.]",
+                "prereq": {"location": "mall2"}
+            },
+            {
+                "option": "[Open the groupchat and ask around for Roulx.] (if hadn't done yet)",
+                "prereq": {"chat_progress": "0"}
+            },
+            {
+                "option": "[Use logic to try to predict Roulx's next destination.]"
+            },
+            {
+                "option": "[Search blindly around for Roulx.]"
+            },
+            {
+                "option": "[\"Gee maybe I should check out this shop for realsies sometime..\"]"
             }
         ]
     },
@@ -1818,6 +1916,7 @@
         "msg": 
         [
             "[Obviously. You used to work there dumbass.]",
+            "",
             "[Some ways ahead, across the wide, busy street, stands the recognisable sliding doors into Enlite's Sydney headquarters. The pavement of the sidewalk transforms into a series of furbished grey tiles at its entrance, letting people into its quiet maw.]"
         ],
         "options": [
@@ -1854,6 +1953,7 @@
         "msg":[
             "[Yeah! Like what if someone you haven't seen in nearly half a dozen years recognise your colours? Your clean, bloodless hands and lord forbid, your scarred face?!]",
             "[... What if the AIs recognise you?]",
+            "",
             "",
             "[Oh please. As if they're actually going to do anything to you, as if you would even matter in their mechanical eyes now, come on now, walk.]"
         ],
@@ -1936,7 +2036,8 @@
                 "option": "Not exactly."
             }
         ],
-        "groupchat": "true"
+        "chat_mode": "true",
+        "chat_progress": "1"
     },
     {
         "id": "41",
