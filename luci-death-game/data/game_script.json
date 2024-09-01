@@ -673,7 +673,10 @@
         "options":
         [
             {
-                "option": ""
+                "option": "\"...\""
+            },
+            {
+                "option": "\"What do you want from me.\""
             }
         ]
     },
@@ -717,7 +720,51 @@
         "options":
         [
             {
-                "option": ""
+                "option": "\"No, no, you can't.\""
+            },
+            {
+                "option": "\"I can't be that person, anymore.\" (You deserve better, anyway.)"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(1)22211",
+        "msg":
+        [
+            "r: \"But I must!\"",
+            "",
+            "[Roulx is hunched, pointing to kimself as kir source of argument.]",
+            "r: \"… This is selfish of me, I realise that.\"",
+            "r: \"But. You and I are here now. So, so why not try again? Please?\"",
+            "",
+            "r: \"This time, you'll win.\"", 
+            "[Ew. A promise.]",
+            "",
+            "",
+            "[...]"
+        ],
+        "options":[
+            {
+                "option": "[You can't run anymore. You've run out of excuses.]"
+            }
+        ]
+    },
+    {
+        "id": "2(1)33(1)1(1)22212",
+        "msg":
+        [
+            "[It is looking at the ground, concrete, gravel.]",
+            "[Snow?... Its brown dress shoes ought to be stained. But did you even look down.]",
+            "",
+            "r: \"… I'm sorry for asking that of you.\"",
+            "[It mutters, barely above its breath, air out.]",
+            "",
+            "",
+            "[...]"
+        ],
+        "options":[
+            {
+                "option": "[Make the difficult choice.]"
             }
         ]
     },
@@ -837,12 +884,12 @@
             {
                 "option": "[Try to retrace steps back to the mall.]",
                 "jumpto": [
-                    "2(1)33(1)1(2)11",
-                    "2(1)33(1)1(2)2"
+                    "2(1)33(1)1(2)2",
+                    "2(1)33(1)1(2)11"
                     ],
                 "chance": [
-                    0.33333333333,
-                    0.66666666666
+                    0.66666666666,
+                    0.33333333333
                 ]
             }
         ]
@@ -857,10 +904,10 @@
         ],
         "options": [
             {
-                "option": "[Retrace steps back to the mall.]"
+                "option": "[Retrace steps back to the mall.]",
+                "replace": {"0": "[You have retraced your steps.]"}
             }
-        ],
-        "lost": false
+        ]
     },
     {
         "id": "2(1)33(1)1(2)11",
@@ -874,12 +921,16 @@
             {
                 "option": "[Leave on the closest bus. Try to forget who you saw.]",
                 "jumpto": "01",
-                "remember_id": true,
-                "bus": null
+                "remember_id": true
             },
             {
-                "option": "...Roulx is still here somewhere.",
-                "bus": null
+                "option": "['...Roulx is still here somewhere.']"
+            },
+            {
+                "option": "[Take painkiller.]",
+                "prereq": {"painkillers": 2},
+                "jumpto": "2(1)33(1)1(2)2(2)111111",
+                "remember_id": true
             }
         ],
         "location": "mall_entrance",
@@ -1077,7 +1128,8 @@
             {
                 "option": "[Go up the escalator to observe them from above.]",
                 "jumpto": "2(2)22221",
-                "location": "mall2"
+                "location": "mall2",
+                "replace": {"0": "[You make your way up the escalator.]"}
             }
         ]
     },
@@ -1126,6 +1178,11 @@
             {
                 "option": "[Crane your head over the railing to get a better look.]",
                 "jumpto": "2(2)2222112",
+                "insert": 
+                    {  
+                        "0": "[You crane your head over the railings, they feel cold under your hands.]",
+                        "1": ""
+                    },
                 "flagged": true
             }
         ]
@@ -1155,6 +1212,14 @@
                 "chance": [
                     0.2, 0.2, 0.2, 0.2, 0.2
                 ]
+            },
+            {
+                "option": "[Creep back downstairs.]",
+                "location": "mall1",
+                "pop": ["[You creep back downstairs.]", "",
+                        "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
+                        ],
+                "prereq": {"location": "mall2"}
             }
         ]
     },
@@ -1237,10 +1302,10 @@
         "options": [
             {
                 "option": "[Watch Roulx.]",
-                "jumpto": "2(2)22221121(2)1"
+                "jumpto": "2(2)22221121(2)1",
+                "del": [2]
             }
-        ],
-        "distracted": false
+        ]
     },
     {
         "id": "2(2)22221121(1)1",
@@ -1280,8 +1345,7 @@
                     0.4, 0.6
                 ]
             }
-        ],
-        "distracted": true
+        ]
     },
     {
         "id": "2(2)22221121(1)21",
@@ -1309,8 +1373,7 @@
                     0.6666666666666666
                 ]
             }
-        ],
-        "distracted": true
+        ]
     },
     {
         "id": "2(2)22221121(2)1",
@@ -1696,13 +1759,12 @@
         ],
         "options":[
             {
-                "option": "['...Enlite?']",
-                "enlite_oblivion": false
+                "option": "['...Enlite?']"
             },
             {
                 "option": "[\"A finance office for regulating the mall behind the scenes?\"]",
-                "enlite_oblivion": true,
-                "jumpto": "51"
+                "jumpto": "51",
+                "replace_all": "[If you'd like to think that way. Everything looks the same when they're in that category of way too modern offices, just for the sake of efficiency.]"
             }
         ]
     },
@@ -1794,6 +1856,12 @@
                 "option": "[Listen to an audiobook or something while you're waiting.]"
             },
             {
+                "option": "[Take your painkillers.]",
+                "prereq": {"painkillers": 2},
+                "jumpto": "2(1)33(1)1(2)2(2)111111",
+                "remeber_id": true
+            },
+            {
                 "option": "[Observe the snow.]"
             }
         ],
@@ -1830,7 +1898,12 @@
         "options": [
             {
                 "option": "[Nothing was gained.]"
-            }
+            },
+            {
+                "option": "[Take your painkillers.]",
+                "prereq": {"painkillers": 2},
+                "jumpto": "2(1)33(1)1(2)2(2)111111"
+           }
         ],
         "snow": true
     },
@@ -1856,10 +1929,11 @@
             {
                 "option": "[... to the mall.]",
                 "jumpto": "2(1)33(1)1(2)11",
-                "bus": "mall",
+                "replace_all": "[You stand in front of the mall's still open glass doors. Bright afternoon sun, shines warm tracing your back. The mall is placed at a very nice position in the suburb, good potential, good flow of people. There's even two bus stops near by.]",
                 "voice_in_head": false
             }
-        ]
+        ],
+        "location": "bus"
     },
     {
         "id": "031",
@@ -1901,13 +1975,12 @@
         "msg": "[Is this guy just... Lost at this point? Wha? The houses and an occasional park remains the usual sighting in your fore going tracks.]",
         "options":[
             {
-                "option": "['...Wait. I recognise this place.']",
-                "enlite_oblivion": false
+                "option": "['...Wait. I recognise this place.']"
             },
             {
                 "option": "[\"...Completedly foreign area. Huh.\"]",
-                "jumpto": "2(1)33(1)1(2)2(2)1",
-                "enlite_oblivion": true
+                "replace": {"0": "[You used to work there. Dumbass.]"},
+                "jumpto": "2(1)33(1)1(2)2(2)1"
             }
         ]
     },
@@ -1974,13 +2047,13 @@
         ],
         "options": [
             {
-                "option": "['Well doesn't this pill look familiar.']",
-                "enlite_oblivion": false
+                "option": "['Well doesn't this pill look familiar.']"
             },
             {
                 "option": "[\"I've never seen a tablet like this before in my life.\"]",
                 "jumpto": "2(1)33(1)1(2)2(2)1111",
-                "enlite_oblivion": true
+                "replace": {"0": "[Of course not! It's the newest one out, and you haven't been catching up with Enlite's newest products quite yet. You're too healthy to be their target audience I'd say.]"},
+                "del": [1]
             }
         ],
         "painkillers": 1
@@ -2009,12 +2082,41 @@
         "msg": "[You purchase a box of painkillers for Roulx as well.]",
         "options": [
             {
+                "option": "[Take a painkiller.]",
+                "prereq": {"painkillers": 2},
+                "remember_id": true
+            },
+            {
                 "option": "[Go find a bus stop. There should be a bus stop nearby.]",
-                "lost": false,
                 "jumpto": "2(1)33(1)1(2)2(1)"
             }
         ],
         "painkillers": 2
+    },
+    {
+        "id": "2(1)33(1)1(2)2(2)111111",
+        "msg": 
+        [
+            "[The capsule lays in your hand, the weight perhaps familiar.]",
+            "[Isn't it ironic to call painkillers \"pain-killers\"? Pain comes in many different forms, like would the persistent ache in your mind ever unwound?]",
+            "[Could that be killed?]",
+            "",
+            "[You wonder what else can painkillers kill.]"
+        ],
+        "options":[
+            {
+                "option": "[Kill the part of you that hides.]",
+                "jumpto": "771>1"
+            },
+            {
+                "option": "[Kill the part of you that screams.]",
+                "jumpto": "771>1"
+            },
+            {
+                "option": "[Kill the pain.]",
+                "jumpto": "771>1"
+            }
+        ]
     },
     {
         "id": "4",
@@ -2036,7 +2138,7 @@
                 "option": "Not exactly."
             }
         ],
-        "chat_mode": "true",
+        "mode": "chat",
         "chat_progress": "1"
     },
     {
@@ -2140,7 +2242,9 @@
         "options": [
             {
                 "option": "Thank you, Zoe.",
-                "jumpto": "2(1)33(1)1(2)1122"
+                "jumpto": "2(1)33(1)1(2)1122",
+                "mode": "default",
+                "insert": {"0": "-----------------------"}
             }
         ]
     }

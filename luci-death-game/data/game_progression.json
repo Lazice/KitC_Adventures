@@ -1,20 +1,21 @@
 {
     "location": "mall1",
+    "mode": "default",
+
     "Hugo": 0,
     "wedding": false,
     "chased": false,
-    "distracted": false,
-    "lost": true,
     "feign_surprise": false,
     "time_passage": false,
-    "bus": null,
-    "chat_mode": true,
     "chat_progress": 0,
     "snow": false,
     "voice_in_head": false,
-    "enlite_oblivion": false,
     "painkillers": 0,
     "friend": false,
 
-    "alter_next": 0
+    "alter_next": 0,
+    "replace": {},
+    "replace_all": "",
+    "insert": {},
+    "del": []
 }

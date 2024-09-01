@@ -7,14 +7,6 @@ progression_file = "luci-death-game/data/game_progression.json"
 groupchat_file = "luci-death-game/python_game/groupchat.py"
 
 input_msg = "Please input a number > "
-chat_fade = "-----------------------"
-creep_down = {
-                "option": "[Creep back downstairs.]",
-                "location": "mall1",
-                "pop": ["[You creep back downstairs.]", "",
-                        "[The shadows of the layer above you, masked by overhead lights, casting a warm glow over the tiled floorings. Dark metallic steel door frames, make contrast with the glass and signage of the other storefronts around, by their signage made of metal. They're right there. You can't see them. But. *They're there*.]"
-                        ]
-                }
 
 pen_names = {
     "b": "MrBlueSky",
@@ -106,7 +98,7 @@ def hitlist(scene, label):
 def update_progress(scene):
     cycle_progress(scene)
 
-    if progress["chat_mode"]:
+    if progress["mode"] == "chat":
         abbreviate(pen_names, scene, ":")
     else:
         abbreviate(irl_names, scene, "")
@@ -116,9 +108,6 @@ def update_progress(scene):
             if progress["time_passage"]:
                 scene["msg"] = (["[You enter the mall in hurried steps, to find that, indeed, Roulx is still in the mall.]",
                                  "", "", "[Phew.]", "", "", scene["msg"]])
-        case "2(2)22221":
-            if progress["location"] == "mall2":
-                scene["msg"][0] = "[You make your way up the escalator.]"
         case "2(2)222211":
             if progress["location"] == "mall1":
                 hitlist(scene, "flagged")
@@ -127,35 +116,12 @@ def update_progress(scene):
                                         ])
         case "2(2)2222112":
             if progress["location"] == "mall2":
-                scene["msg"].insert(0, "[You crane your head over the railings, they feel cold under your hands.]")
-                scene["msg"].insert(1, "")
-                scene["options"].insert(2, creep_down)
                 scene["options"][0]["jumpto"] = "2(2)22221121(2)"
             else:
                 scene["options"][1]["roll_special"] = {"type": "advantage", "reason": "being downstairs"}
         case "2(1)31":
             if progress["feign_surprise"]:
                 scene["msg"].insert(0, "[You approach them with a look of surprise.]")
-        case "2(1)33(1)1(2)11":
-            if progress["bus"] == "mall":
-                scene["msg"] = scene["msg"][2]
-                progress["bus"] = None
-            elif not progress["lost"]:
-                scene["msg"][0] = "[You have retraced your steps.]"
-        case "51":
-            if progress["enlite_oblivion"]:
-                scene["msg"] = "[If you'd like to think that way. Everything looks the same when they're in that category of way too modern offices, just for the sake of efficiency.]"
-        case "2(1)33(1)1(2)1122":
-            if progress["chat_mode"]:
-                scene["msg"] = chat_fade
-                progress["chat_mode"] = False
-        case "2(1)33(1)1(2)2(2)1":
-            if progress["enlite_oblivion"]:
-                scene["msg"][0] = "[You used to work there. Dumbass.]"
-        case "2(1)33(1)1(2)2(2)1111":
-            if progress["enlite_oblivion"]:
-                scene["msg"][0] = "[Of course not! It's the newest one out, and you haven't been catching up with Enlite's newest products quite yet. You're too healthy to be their target audience I'd say.]"
-                del scene["msg"][1]
         case "01" | "03":
             if progress["painkillers"] > 0:
                 scene["msg"].extend(["",
@@ -180,9 +146,6 @@ def update_progress(scene):
                     scene["msg"].append("3")
                 case 3:
                     scene["msg"].append("4")
-        case "2(2)22221121(2)1":
-            if not progress["distracted"]:
-                del scene["msg"][2]
 
     if progress["chased"]:
         for counter, option in reversed(list(enumerate(scene["options"]))):
@@ -198,10 +161,33 @@ def update_progress(scene):
                                 ]
 
 
+    if progress["replace_all"]:
+        scene["msg"] = progress["replace_all"]
+        progress["replace_all"] = ""
+
+
+    if progress["replace"] != {}:
+        for key in progress["replace"]:
+            scene["msg"][int(key)] = progress["replace"][key]
+        progress["replace"] = {}
+
+    
+    if progress["insert"] != {}:
+        for key in progress["insert"]:
+            scene["msg"].insert(int(key), progress["insert"][key])
+        progress["insert"] = {}
+
+
+    if progress["del"] != []:
+        for key in reversed(progress["del"]):
+            del scene["msg"][key]
+        progress["del"] = {}
+
+
     for counter, option in reversed(list(enumerate(scene["options"]))):
         if "prereq" in option:
             for key in option["prereq"]:
-                if option["prereq"][key] != progress[key]: 
+                if option["prereq"][key] != progress[key]:
                     del scene["options"][counter]
         
 
