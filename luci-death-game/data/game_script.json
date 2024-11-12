@@ -1900,7 +1900,8 @@
                 "remeber_id": true
             },
             {
-                "option": "[Observe the snow.]"
+                "option": "[Observe the snow.]",
+                "jumpto": "2(1)33(1)1(2)2(1)2"
             }
         ],
         "location": "bus_stop"
