@@ -304,6 +304,7 @@
             {
                 "option": "\"Are you sure you don't want anything else?\""
             },
+            
             {
                 "option": "How have you been?",
                 "jumpto": "31111"
@@ -1664,7 +1665,7 @@
                 "option": "\"..What schemes?\"",
                 "pre_scene":
                 [
-                    "r: \"Oh.\"",
+                    "Roulx: \"Oh.\"",
                     "[Roulx leans back on its seat. Looking around the space again, but this time seeming to be more observing than evading your gaze.]"
                 ],
                 "jumpto": [
