@@ -1,1 +1,2 @@
 - no rememeber_id error!
+- "are you sure you want to quit?" prompts

@@ -142,6 +142,10 @@ while not end_game:
                 dev_mode = True
                 id = input("pls enter the id you want to search for :3 ")
                 valid = True
+            elif ans == 'help':
+                print("Easy! Just pick one of the numbers from the options above and follow along with the story, ya know? :3")
+            elif ans in ['quit', 'exit', 'bye']:
+                exit()
             else:
                 print("Ts ts ts... Thaat's not a number. yikes! :/")
         elif 1 <= int(ans) <= option_counter:

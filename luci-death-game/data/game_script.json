@@ -679,7 +679,7 @@
         "options":
         [
             {
-                "option": "I don't know them."
+                "option": "\"I don't know them.\""
             }
         ]
     },
@@ -735,11 +735,11 @@
             "[Ki should know better, but ki's genuine I guess.]",
             "[...]",
             "",
-            "[Roulx is glancing around, seeming more, expressly so, irritated than yourself has seen kime. Kir own  hands gripping around each other, actually trying to think of a reason on the spot, a reason for their request to you.]",
+            "[Roulx is glancing around, seeming more, expressly so, irritated than yourself has seen kime. Kir own hands gripping around each other, actually trying to think of a reason on the spot, a reason for their request to you.]",
             "r: \"I'll help you,, with which ever things you're interested in! I'll be the best- Let me be your best hand right? Again?\"",
             "[...]",
             "",
-            "[Its emotions seems to waver waves in its voice. Slightly pathetic if you think about it; Someone you're so used to being silent most of the time, who values efficiency would use *begging* out of everything.]"
+            "[Its emotions seem to waver waves in its voice. Slightly pathetic if you think about it; Someone you're so used to being silent most of the time, who values efficiency would use *begging* out of everything.]"
         ],
         "options":
         [
@@ -758,7 +758,7 @@
             "r: \"But I must!\"",
             "",
             "[Roulx is hunched, pointing to kimself as kir source of argument.]",
-            "r: \"… This is selfish of me, I realise that.\"",
+            "r: \"... This is selfish of me, I realise that.\"",
             "r: \"But. You and I are here now. So, so why not try again? Please?\"",
             "",
             "r: \"This time, you'll win.\"", 
@@ -780,7 +780,7 @@
             "[It is looking at the ground, concrete, gravel.]",
             "[Snow?... Its brown dress shoes ought to be stained. But did you even look down.]",
             "",
-            "r: \"… I'm sorry for asking that of you.\"",
+            "r: \"... I'm sorry for asking that of you.\"",
             "[It mutters, barely above its breath, air out.]",
             "",
             "",
@@ -798,6 +798,11 @@
         "msg":
         [
             "\"Could we talk? Somewhere else.\""
+        ],
+        "options": [
+            {
+                "option": ""
+            }
         ]
     },
     {
